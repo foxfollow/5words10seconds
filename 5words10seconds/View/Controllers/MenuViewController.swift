@@ -7,10 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MenuViewController: UIViewController {
 
+    let gameLevel: [GameLevelModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Menu"
+        view.backgroundColor = .cyan
         // Do any additional setup after loading the view.
     }
 

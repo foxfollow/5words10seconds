@@ -9,21 +9,43 @@
 /* Begin PBXBuildFile section */
 		BFE8209C2AEFD33F00B303F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209B2AEFD33F00B303F9 /* AppDelegate.swift */; };
 		BFE8209E2AEFD33F00B303F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209D2AEFD33F00B303F9 /* SceneDelegate.swift */; };
-		BFE820A02AEFD33F00B303F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209F2AEFD33F00B303F9 /* ViewController.swift */; };
+		BFE820A02AEFD33F00B303F9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209F2AEFD33F00B303F9 /* MenuViewController.swift */; };
 		BFE820A32AEFD33F00B303F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE820A12AEFD33F00B303F9 /* Main.storyboard */; };
 		BFE820A52AEFD34000B303F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE820A42AEFD34000B303F9 /* Assets.xcassets */; };
 		BFE820A82AEFD34000B303F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE820A62AEFD34000B303F9 /* LaunchScreen.storyboard */; };
+		BFE820B52AEFD41B00B303F9 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820B42AEFD41B00B303F9 /* CategoryModel.swift */; };
+		BFE820B72AEFDFD600B303F9 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820B62AEFDFD600B303F9 /* TeamModel.swift */; };
+		BFE820B92AEFE12C00B303F9 /* GameLevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820B82AEFE12C00B303F9 /* GameLevelModel.swift */; };
+		BFE820BB2AEFE17B00B303F9 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820BA2AEFE17A00B303F9 /* TeamsViewController.swift */; };
+		BFE820BD2AEFE24A00B303F9 /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820BC2AEFE24A00B303F9 /* WordViewController.swift */; };
+		BFE820BF2AEFE4C900B303F9 /* MenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820BE2AEFE4C900B303F9 /* MenuButtonView.swift */; };
+		BFE820C12AEFE4FA00B303F9 /* TeamTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820C02AEFE4FA00B303F9 /* TeamTextFieldView.swift */; };
+		BFE820C32AEFE50D00B303F9 /* TeamCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820C22AEFE50D00B303F9 /* TeamCellView.swift */; };
+		BFE820C52AEFE52000B303F9 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820C42AEFE52000B303F9 /* TimerView.swift */; };
+		BFE820CB2AEFE68700B303F9 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820CA2AEFE68700B303F9 /* Service.swift */; };
+		BFE820CD2AEFE9B600B303F9 /* WordCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820CC2AEFE9B600B303F9 /* WordCategoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BFE820982AEFD33F00B303F9 /* 5words10seconds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5words10seconds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE8209B2AEFD33F00B303F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE8209D2AEFD33F00B303F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BFE8209F2AEFD33F00B303F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BFE8209F2AEFD33F00B303F9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		BFE820A22AEFD33F00B303F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFE820A42AEFD34000B303F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFE820A72AEFD34000B303F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFE820A92AEFD34000B303F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFE820B42AEFD41B00B303F9 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		BFE820B62AEFDFD600B303F9 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
+		BFE820B82AEFE12C00B303F9 /* GameLevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLevelModel.swift; sourceTree = "<group>"; };
+		BFE820BA2AEFE17A00B303F9 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
+		BFE820BC2AEFE24A00B303F9 /* WordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
+		BFE820BE2AEFE4C900B303F9 /* MenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonView.swift; sourceTree = "<group>"; };
+		BFE820C02AEFE4FA00B303F9 /* TeamTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTextFieldView.swift; sourceTree = "<group>"; };
+		BFE820C22AEFE50D00B303F9 /* TeamCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCellView.swift; sourceTree = "<group>"; };
+		BFE820C42AEFE52000B303F9 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		BFE820CA2AEFE68700B303F9 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		BFE820CC2AEFE9B600B303F9 /* WordCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCategoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +78,98 @@
 		BFE8209A2AEFD33F00B303F9 /* 5words10seconds */ = {
 			isa = PBXGroup;
 			children = (
-				BFE8209B2AEFD33F00B303F9 /* AppDelegate.swift */,
-				BFE8209D2AEFD33F00B303F9 /* SceneDelegate.swift */,
-				BFE8209F2AEFD33F00B303F9 /* ViewController.swift */,
-				BFE820A12AEFD33F00B303F9 /* Main.storyboard */,
-				BFE820A42AEFD34000B303F9 /* Assets.xcassets */,
-				BFE820A62AEFD34000B303F9 /* LaunchScreen.storyboard */,
-				BFE820A92AEFD34000B303F9 /* Info.plist */,
+				BFE820C92AEFE63A00B303F9 /* Service */,
+				BFE820C82AEFE5AC00B303F9 /* Preferences */,
+				BFE820C72AEFE56000B303F9 /* Storyboards */,
+				BFE820C62AEFE55300B303F9 /* App+Scene */,
+				BFE820B12AEFD36C00B303F9 /* ViewModel */,
+				BFE820B02AEFD36100B303F9 /* View */,
+				BFE820AF2AEFD35B00B303F9 /* Model */,
 			);
 			path = 5words10seconds;
+			sourceTree = "<group>";
+		};
+		BFE820AF2AEFD35B00B303F9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFE820B42AEFD41B00B303F9 /* CategoryModel.swift */,
+				BFE820B62AEFDFD600B303F9 /* TeamModel.swift */,
+				BFE820B82AEFE12C00B303F9 /* GameLevelModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BFE820B02AEFD36100B303F9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFE820B32AEFD38A00B303F9 /* Controllers */,
+				BFE820B22AEFD37F00B303F9 /* Views */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFE820B12AEFD36C00B303F9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BFE820CC2AEFE9B600B303F9 /* WordCategoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BFE820B22AEFD37F00B303F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFE820BE2AEFE4C900B303F9 /* MenuButtonView.swift */,
+				BFE820C02AEFE4FA00B303F9 /* TeamTextFieldView.swift */,
+				BFE820C22AEFE50D00B303F9 /* TeamCellView.swift */,
+				BFE820C42AEFE52000B303F9 /* TimerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BFE820B32AEFD38A00B303F9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFE8209F2AEFD33F00B303F9 /* MenuViewController.swift */,
+				BFE820BA2AEFE17A00B303F9 /* TeamsViewController.swift */,
+				BFE820BC2AEFE24A00B303F9 /* WordViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BFE820C62AEFE55300B303F9 /* App+Scene */ = {
+			isa = PBXGroup;
+			children = (
+				BFE8209B2AEFD33F00B303F9 /* AppDelegate.swift */,
+				BFE8209D2AEFD33F00B303F9 /* SceneDelegate.swift */,
+			);
+			path = "App+Scene";
+			sourceTree = "<group>";
+		};
+		BFE820C72AEFE56000B303F9 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BFE820A12AEFD33F00B303F9 /* Main.storyboard */,
+				BFE820A62AEFD34000B303F9 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BFE820C82AEFE5AC00B303F9 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				BFE820A42AEFD34000B303F9 /* Assets.xcassets */,
+				BFE820A92AEFD34000B303F9 /* Info.plist */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		BFE820C92AEFE63A00B303F9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BFE820CA2AEFE68700B303F9 /* Service.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +243,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFE820A02AEFD33F00B303F9 /* ViewController.swift in Sources */,
+				BFE820A02AEFD33F00B303F9 /* MenuViewController.swift in Sources */,
+				BFE820CB2AEFE68700B303F9 /* Service.swift in Sources */,
+				BFE820B72AEFDFD600B303F9 /* TeamModel.swift in Sources */,
 				BFE8209C2AEFD33F00B303F9 /* AppDelegate.swift in Sources */,
 				BFE8209E2AEFD33F00B303F9 /* SceneDelegate.swift in Sources */,
+				BFE820C32AEFE50D00B303F9 /* TeamCellView.swift in Sources */,
+				BFE820CD2AEFE9B600B303F9 /* WordCategoryViewModel.swift in Sources */,
+				BFE820B92AEFE12C00B303F9 /* GameLevelModel.swift in Sources */,
+				BFE820C52AEFE52000B303F9 /* TimerView.swift in Sources */,
+				BFE820BF2AEFE4C900B303F9 /* MenuButtonView.swift in Sources */,
+				BFE820C12AEFE4FA00B303F9 /* TeamTextFieldView.swift in Sources */,
+				BFE820BB2AEFE17B00B303F9 /* TeamsViewController.swift in Sources */,
+				BFE820BD2AEFE24A00B303F9 /* WordViewController.swift in Sources */,
+				BFE820B52AEFD41B00B303F9 /* CategoryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +410,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 729B6K44G8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = 5words10seconds/Info.plist;
+				INFOPLIST_FILE = 5words10seconds/Preferences/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -322,7 +438,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 729B6K44G8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = 5words10seconds/Info.plist;
+				INFOPLIST_FILE = 5words10seconds/Preferences/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
