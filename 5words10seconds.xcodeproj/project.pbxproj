@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF0A30962AF4139A004A4301 /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A30952AF4139A004A4301 /* ObservableObject.swift */; };
+		BF0A309C2AF447FF004A4301 /* TeamsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A309B2AF447FF004A4301 /* TeamsCellView.swift */; };
+		BF0A309E2AF44DE9004A4301 /* TeamsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A309D2AF44DE9004A4301 /* TeamsTableView.swift */; };
+		BF0A30A02AF44F45004A4301 /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A309F2AF44F45004A4301 /* TeamsViewModel.swift */; };
+		BF94BA742AF6885E0085C4ED /* WordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA732AF6885E0085C4ED /* WordViewModel.swift */; };
+		BF94BA762AF688800085C4ED /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA752AF688800085C4ED /* WordView.swift */; };
+		BF94BA792AF6B6ED0085C4ED /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA782AF6B6ED0085C4ED /* TimerViewModel.swift */; };
+		BF94BA7B2AF6B6FF0085C4ED /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA7A2AF6B6FF0085C4ED /* TimerView.swift */; };
 		BFE8209C2AEFD33F00B303F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209B2AEFD33F00B303F9 /* AppDelegate.swift */; };
 		BFE8209E2AEFD33F00B303F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209D2AEFD33F00B303F9 /* SceneDelegate.swift */; };
 		BFE820A02AEFD33F00B303F9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209F2AEFD33F00B303F9 /* MenuViewController.swift */; };
@@ -18,15 +26,21 @@
 		BFE820B92AEFE12C00B303F9 /* GameLevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820B82AEFE12C00B303F9 /* GameLevelModel.swift */; };
 		BFE820BB2AEFE17B00B303F9 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820BA2AEFE17A00B303F9 /* TeamsViewController.swift */; };
 		BFE820BD2AEFE24A00B303F9 /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820BC2AEFE24A00B303F9 /* WordViewController.swift */; };
-		BFE820BF2AEFE4C900B303F9 /* MenuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820BE2AEFE4C900B303F9 /* MenuButtonView.swift */; };
-		BFE820C12AEFE4FA00B303F9 /* TeamTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820C02AEFE4FA00B303F9 /* TeamTextFieldView.swift */; };
-		BFE820C32AEFE50D00B303F9 /* TeamCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820C22AEFE50D00B303F9 /* TeamCellView.swift */; };
-		BFE820C52AEFE52000B303F9 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820C42AEFE52000B303F9 /* TimerView.swift */; };
+		BFE820BF2AEFE4C900B303F9 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820BE2AEFE4C900B303F9 /* MenuView.swift */; };
+		BFE820C12AEFE4FA00B303F9 /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820C02AEFE4FA00B303F9 /* TeamsView.swift */; };
 		BFE820CB2AEFE68700B303F9 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820CA2AEFE68700B303F9 /* Service.swift */; };
-		BFE820CD2AEFE9B600B303F9 /* WordCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820CC2AEFE9B600B303F9 /* WordCategoryViewModel.swift */; };
+		BFE820CD2AEFE9B600B303F9 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820CC2AEFE9B600B303F9 /* MenuViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF0A30952AF4139A004A4301 /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
+		BF0A309B2AF447FF004A4301 /* TeamsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCellView.swift; sourceTree = "<group>"; };
+		BF0A309D2AF44DE9004A4301 /* TeamsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableView.swift; sourceTree = "<group>"; };
+		BF0A309F2AF44F45004A4301 /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
+		BF94BA732AF6885E0085C4ED /* WordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewModel.swift; sourceTree = "<group>"; };
+		BF94BA752AF688800085C4ED /* WordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
+		BF94BA782AF6B6ED0085C4ED /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		BF94BA7A2AF6B6FF0085C4ED /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		BFE820982AEFD33F00B303F9 /* 5words10seconds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5words10seconds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE8209B2AEFD33F00B303F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE8209D2AEFD33F00B303F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,12 +54,10 @@
 		BFE820B82AEFE12C00B303F9 /* GameLevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLevelModel.swift; sourceTree = "<group>"; };
 		BFE820BA2AEFE17A00B303F9 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		BFE820BC2AEFE24A00B303F9 /* WordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
-		BFE820BE2AEFE4C900B303F9 /* MenuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButtonView.swift; sourceTree = "<group>"; };
-		BFE820C02AEFE4FA00B303F9 /* TeamTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTextFieldView.swift; sourceTree = "<group>"; };
-		BFE820C22AEFE50D00B303F9 /* TeamCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCellView.swift; sourceTree = "<group>"; };
-		BFE820C42AEFE52000B303F9 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		BFE820BE2AEFE4C900B303F9 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		BFE820C02AEFE4FA00B303F9 /* TeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsView.swift; sourceTree = "<group>"; };
 		BFE820CA2AEFE68700B303F9 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		BFE820CC2AEFE9B600B303F9 /* WordCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCategoryViewModel.swift; sourceTree = "<group>"; };
+		BFE820CC2AEFE9B600B303F9 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +71,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF0A30972AF42958004A4301 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BF0A30982AF42972004A4301 /* Menu */,
+				BF0A30992AF42978004A4301 /* Teams */,
+				BF0A309A2AF42982004A4301 /* Word */,
+				BF94BA772AF691D50085C4ED /* Waiting */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		BF0A30982AF42972004A4301 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				BFE820CC2AEFE9B600B303F9 /* MenuViewModel.swift */,
+				BFE8209F2AEFD33F00B303F9 /* MenuViewController.swift */,
+				BFE820BE2AEFE4C900B303F9 /* MenuView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		BF0A30992AF42978004A4301 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				BF0A309F2AF44F45004A4301 /* TeamsViewModel.swift */,
+				BFE820BA2AEFE17A00B303F9 /* TeamsViewController.swift */,
+				BFE820C02AEFE4FA00B303F9 /* TeamsView.swift */,
+				BF0A309D2AF44DE9004A4301 /* TeamsTableView.swift */,
+				BF0A309B2AF447FF004A4301 /* TeamsCellView.swift */,
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
+		BF0A309A2AF42982004A4301 /* Word */ = {
+			isa = PBXGroup;
+			children = (
+				BF94BA732AF6885E0085C4ED /* WordViewModel.swift */,
+				BFE820BC2AEFE24A00B303F9 /* WordViewController.swift */,
+				BF94BA752AF688800085C4ED /* WordView.swift */,
+				BF94BA782AF6B6ED0085C4ED /* TimerViewModel.swift */,
+				BF94BA7A2AF6B6FF0085C4ED /* TimerView.swift */,
+			);
+			path = Word;
+			sourceTree = "<group>";
+		};
+		BF94BA772AF691D50085C4ED /* Waiting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Waiting;
+			sourceTree = "<group>";
+		};
 		BFE8208F2AEFD33F00B303F9 = {
 			isa = PBXGroup;
 			children = (
@@ -78,13 +142,13 @@
 		BFE8209A2AEFD33F00B303F9 /* 5words10seconds */ = {
 			isa = PBXGroup;
 			children = (
-				BFE820C92AEFE63A00B303F9 /* Service */,
-				BFE820C82AEFE5AC00B303F9 /* Preferences */,
-				BFE820C72AEFE56000B303F9 /* Storyboards */,
 				BFE820C62AEFE55300B303F9 /* App+Scene */,
-				BFE820B12AEFD36C00B303F9 /* ViewModel */,
-				BFE820B02AEFD36100B303F9 /* View */,
+				BFE820C72AEFE56000B303F9 /* Storyboards */,
+				BFE820C82AEFE5AC00B303F9 /* Preferences */,
 				BFE820AF2AEFD35B00B303F9 /* Model */,
+				BF0A30972AF42958004A4301 /* Screens */,
+				BFE820C92AEFE63A00B303F9 /* Service */,
+				BF0A30952AF4139A004A4301 /* ObservableObject.swift */,
 			);
 			path = 5words10seconds;
 			sourceTree = "<group>";
@@ -97,44 +161,6 @@
 				BFE820B82AEFE12C00B303F9 /* GameLevelModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		BFE820B02AEFD36100B303F9 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BFE820B32AEFD38A00B303F9 /* Controllers */,
-				BFE820B22AEFD37F00B303F9 /* Views */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		BFE820B12AEFD36C00B303F9 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				BFE820CC2AEFE9B600B303F9 /* WordCategoryViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		BFE820B22AEFD37F00B303F9 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				BFE820BE2AEFE4C900B303F9 /* MenuButtonView.swift */,
-				BFE820C02AEFE4FA00B303F9 /* TeamTextFieldView.swift */,
-				BFE820C22AEFE50D00B303F9 /* TeamCellView.swift */,
-				BFE820C42AEFE52000B303F9 /* TimerView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		BFE820B32AEFD38A00B303F9 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				BFE8209F2AEFD33F00B303F9 /* MenuViewController.swift */,
-				BFE820BA2AEFE17A00B303F9 /* TeamsViewController.swift */,
-				BFE820BC2AEFE24A00B303F9 /* WordViewController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		BFE820C62AEFE55300B303F9 /* App+Scene */ = {
@@ -243,20 +269,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF94BA742AF6885E0085C4ED /* WordViewModel.swift in Sources */,
 				BFE820A02AEFD33F00B303F9 /* MenuViewController.swift in Sources */,
 				BFE820CB2AEFE68700B303F9 /* Service.swift in Sources */,
 				BFE820B72AEFDFD600B303F9 /* TeamModel.swift in Sources */,
 				BFE8209C2AEFD33F00B303F9 /* AppDelegate.swift in Sources */,
 				BFE8209E2AEFD33F00B303F9 /* SceneDelegate.swift in Sources */,
-				BFE820C32AEFE50D00B303F9 /* TeamCellView.swift in Sources */,
-				BFE820CD2AEFE9B600B303F9 /* WordCategoryViewModel.swift in Sources */,
+				BF0A30962AF4139A004A4301 /* ObservableObject.swift in Sources */,
+				BF94BA7B2AF6B6FF0085C4ED /* TimerView.swift in Sources */,
+				BF0A309E2AF44DE9004A4301 /* TeamsTableView.swift in Sources */,
+				BFE820CD2AEFE9B600B303F9 /* MenuViewModel.swift in Sources */,
 				BFE820B92AEFE12C00B303F9 /* GameLevelModel.swift in Sources */,
-				BFE820C52AEFE52000B303F9 /* TimerView.swift in Sources */,
-				BFE820BF2AEFE4C900B303F9 /* MenuButtonView.swift in Sources */,
-				BFE820C12AEFE4FA00B303F9 /* TeamTextFieldView.swift in Sources */,
+				BFE820BF2AEFE4C900B303F9 /* MenuView.swift in Sources */,
+				BFE820C12AEFE4FA00B303F9 /* TeamsView.swift in Sources */,
 				BFE820BB2AEFE17B00B303F9 /* TeamsViewController.swift in Sources */,
 				BFE820BD2AEFE24A00B303F9 /* WordViewController.swift in Sources */,
+				BF94BA762AF688800085C4ED /* WordView.swift in Sources */,
 				BFE820B52AEFD41B00B303F9 /* CategoryModel.swift in Sources */,
+				BF94BA792AF6B6ED0085C4ED /* TimerViewModel.swift in Sources */,
+				BF0A309C2AF447FF004A4301 /* TeamsCellView.swift in Sources */,
+				BF0A30A02AF44F45004A4301 /* TeamsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

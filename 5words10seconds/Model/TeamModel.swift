@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TeamModel {
+struct TeamModel: Hashable {
     var name: String
     var score: Int
 }

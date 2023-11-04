@@ -8,6 +8,7 @@
 import Foundation
 
 struct CategoryModel {
-    let сategories: [String]
+    let name: String
+    let level: Int
     
 }
