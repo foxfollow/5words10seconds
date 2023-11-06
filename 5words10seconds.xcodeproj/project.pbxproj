@@ -15,6 +15,10 @@
 		BF94BA762AF688800085C4ED /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA752AF688800085C4ED /* CategoryView.swift */; };
 		BF94BA792AF6B6ED0085C4ED /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA782AF6B6ED0085C4ED /* TimerViewModel.swift */; };
 		BF94BA7B2AF6B6FF0085C4ED /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA7A2AF6B6FF0085C4ED /* TimerView.swift */; };
+		BF94BA7D2AF989FC0085C4ED /* PopupViewsFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA7C2AF989FC0085C4ED /* PopupViewsFuncs.swift */; };
+		BF94BA7F2AF990B00085C4ED /* PopupTeamsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA7E2AF990B00085C4ED /* PopupTeamsCellView.swift */; };
+		BF94BA852AF9992D0085C4ED /* PopupTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA842AF9992D0085C4ED /* PopupTeamsViewController.swift */; };
+		BF94BA882AF999A00085C4ED /* PopupTeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA872AF999A00085C4ED /* PopupTeamsViewModel.swift */; };
 		BFE8209C2AEFD33F00B303F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209B2AEFD33F00B303F9 /* AppDelegate.swift */; };
 		BFE8209E2AEFD33F00B303F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209D2AEFD33F00B303F9 /* SceneDelegate.swift */; };
 		BFE820A02AEFD33F00B303F9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209F2AEFD33F00B303F9 /* MenuViewController.swift */; };
@@ -41,6 +45,10 @@
 		BF94BA752AF688800085C4ED /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		BF94BA782AF6B6ED0085C4ED /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		BF94BA7A2AF6B6FF0085C4ED /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		BF94BA7C2AF989FC0085C4ED /* PopupViewsFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewsFuncs.swift; sourceTree = "<group>"; };
+		BF94BA7E2AF990B00085C4ED /* PopupTeamsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTeamsCellView.swift; sourceTree = "<group>"; };
+		BF94BA842AF9992D0085C4ED /* PopupTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTeamsViewController.swift; sourceTree = "<group>"; };
+		BF94BA872AF999A00085C4ED /* PopupTeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTeamsViewModel.swift; sourceTree = "<group>"; };
 		BFE820982AEFD33F00B303F9 /* 5words10seconds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5words10seconds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE8209B2AEFD33F00B303F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE8209D2AEFD33F00B303F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,9 +115,9 @@
 		BF0A309A2AF42982004A4301 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				BF94BA732AF6885E0085C4ED /* CategoryViewModel.swift */,
-				BFE820BC2AEFE24A00B303F9 /* CategoryViewController.swift */,
-				BF94BA752AF688800085C4ED /* CategoryView.swift */,
+				BF94BA802AF991010085C4ED /* Category */,
+				BF94BA812AF9910F0085C4ED /* PopupTeams */,
+				BF94BA7C2AF989FC0085C4ED /* PopupViewsFuncs.swift */,
 				BF94BA782AF6B6ED0085C4ED /* TimerViewModel.swift */,
 				BF94BA7A2AF6B6FF0085C4ED /* TimerView.swift */,
 			);
@@ -121,6 +129,26 @@
 			children = (
 			);
 			path = Waiting;
+			sourceTree = "<group>";
+		};
+		BF94BA802AF991010085C4ED /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				BF94BA732AF6885E0085C4ED /* CategoryViewModel.swift */,
+				BFE820BC2AEFE24A00B303F9 /* CategoryViewController.swift */,
+				BF94BA752AF688800085C4ED /* CategoryView.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		BF94BA812AF9910F0085C4ED /* PopupTeams */ = {
+			isa = PBXGroup;
+			children = (
+				BF94BA872AF999A00085C4ED /* PopupTeamsViewModel.swift */,
+				BF94BA842AF9992D0085C4ED /* PopupTeamsViewController.swift */,
+				BF94BA7E2AF990B00085C4ED /* PopupTeamsCellView.swift */,
+			);
+			path = PopupTeams;
 			sourceTree = "<group>";
 		};
 		BFE8208F2AEFD33F00B303F9 = {
@@ -275,8 +303,12 @@
 				BFE820B72AEFDFD600B303F9 /* TeamModel.swift in Sources */,
 				BFE8209C2AEFD33F00B303F9 /* AppDelegate.swift in Sources */,
 				BFE8209E2AEFD33F00B303F9 /* SceneDelegate.swift in Sources */,
+				BF94BA7D2AF989FC0085C4ED /* PopupViewsFuncs.swift in Sources */,
 				BF0A30962AF4139A004A4301 /* ObservableObject.swift in Sources */,
+				BF94BA7F2AF990B00085C4ED /* PopupTeamsCellView.swift in Sources */,
+				BF94BA852AF9992D0085C4ED /* PopupTeamsViewController.swift in Sources */,
 				BF94BA7B2AF6B6FF0085C4ED /* TimerView.swift in Sources */,
+				BF94BA882AF999A00085C4ED /* PopupTeamsViewModel.swift in Sources */,
 				BF0A309E2AF44DE9004A4301 /* TeamsTableView.swift in Sources */,
 				BFE820CD2AEFE9B600B303F9 /* MenuViewModel.swift in Sources */,
 				BFE820B92AEFE12C00B303F9 /* GameLevelModel.swift in Sources */,

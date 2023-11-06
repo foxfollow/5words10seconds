@@ -9,16 +9,18 @@ import Foundation
 
 class CategoryViewModel {
     
-    //    var teams: ObservableObject<[TeamModel]> = ObservableObject(nil)
+    var teams: ObservableObject<[TeamModel]>
+    
+    var currentTeam: ObservableObject<TeamModel?> = ObservableObject(nil)
     var currentCtgr: ObservableObject<CategoryModel?> = ObservableObject(nil)
     
-    var teams: [TeamModel] // TODO: Observable when updates score
+//    var teams: [TeamModel] // TODO: Observable when updates score
     
     var playedCategories = [CategoryModel]()
     var allCategories: [CategoryModel]?
     
     init(teams: [TeamModel]) {
-        self.teams = teams
+        self.teams = ObservableObject(teams)
     }
     
     func fetchCategory() {
