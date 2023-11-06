@@ -1,5 +1,5 @@
 //
-//  WordView.swift
+//  CategoryView.swift
 //  5words10seconds
 //
 //  Created by Heorhii Savoiskyi on 04.11.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension WordViewController {
+extension CategoryViewController {
     
     func setupSubviews() {
         initView()
@@ -24,10 +24,10 @@ extension WordViewController {
     
     private func setupLabels() {
         descriptionLbl.text = "Tell 5 words related to"
-        wordLbl.text = "Board Games"
+        categoryLbl.text = "Board Games"
         
         view.addSubview(descriptionLbl)
-        view.addSubview(wordLbl)
+        view.addSubview(categoryLbl)
 
     }
     
@@ -39,7 +39,7 @@ extension WordViewController {
     
     private func addConstraints() {
         descriptionLbl.translatesAutoresizingMaskIntoConstraints = false
-        wordLbl.translatesAutoresizingMaskIntoConstraints = false
+        categoryLbl.translatesAutoresizingMaskIntoConstraints = false
         timerView.translatesAutoresizingMaskIntoConstraints = false
         
         let sALG = view.safeAreaLayoutGuide
@@ -47,8 +47,8 @@ extension WordViewController {
             descriptionLbl.topAnchor.constraint(equalTo: sALG.topAnchor, constant: 20),
             descriptionLbl.centerXAnchor.constraint(equalTo: sALG.centerXAnchor),
             
-            wordLbl.centerXAnchor.constraint(equalTo: sALG.centerXAnchor),
-            wordLbl.centerYAnchor.constraint(equalTo: sALG.centerYAnchor, constant: -60),
+            categoryLbl.centerXAnchor.constraint(equalTo: sALG.centerXAnchor),
+            categoryLbl.centerYAnchor.constraint(equalTo: sALG.centerYAnchor, constant: -60),
             
             timerView.centerYAnchor.constraint(equalTo: sALG.centerYAnchor, constant: -1),
 //            timerView.bottomAnchor.constraint(equalTo: sALG.bottomAnchor, constant: -50),

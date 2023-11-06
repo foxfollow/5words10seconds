@@ -8,20 +8,23 @@
 import Foundation
 
 class TimerViewModel: NSObject {
-    @objc dynamic var timerValue: Int = 10
+    var timerValue = ObservableObject<Int>(0)
+    var timerDidEnd = ObservableObject<Bool>(false)
+
     private var timer: Timer?
 
-    override init() {
-        super.init()
+    
+    func setupTimer() {
         self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
 
     @objc private func updateTimer() {
-        if timerValue > 0 {
-            timerValue -= 1
+        if timerValue.value > 0 {
+            timerValue.value -= 1
         } else {
             timer?.invalidate()
             timer = nil
+            self.timerDidEnd.value = true
         }
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 
 extension TeamsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.numberOfRows()
+        return teamsViewModel.numberOfRows()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -17,7 +17,7 @@ extension TeamsViewController: UITableViewDataSource {
             withIdentifier: cellsIdentifiers.TeamsCellView.rawValue,
             for: indexPath
         ) as! TeamsCellView
-        let cellVM = viewModel.getCellViewModel(at: indexPath)
+        let cellVM = teamsViewModel.getCellViewModel(at: indexPath)
 //        cell.cellViewModel = cellVM
         cell.teamNameLbl.text = cellVM.name
 

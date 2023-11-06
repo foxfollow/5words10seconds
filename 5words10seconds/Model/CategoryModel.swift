@@ -8,7 +8,8 @@
 import Foundation
 
 struct CategoryModel {
+    
     let name: String
-    let level: Int
+    let level: Int // todo change int to GameLevelModel
     
 }

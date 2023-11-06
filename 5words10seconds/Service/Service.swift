@@ -15,7 +15,7 @@ struct Service {
         
     private init() {}
     
-    func chooseLevel(integet: Int) {
+    func chooseLevel(integet: Int) { // todo level of categories
         
     }
     
@@ -24,28 +24,29 @@ struct Service {
     }
     
     func fetchTeams(_ completion: @escaping (Result<[TeamModel], Error>) -> ()) {
-        completion(.success(teams))
+        completion(.success(teamsTMP))
     }
     
+    func fetchCategories(_ completion: @escaping (Result<[CategoryModel], Error>) -> ()) {
+        completion(.success(categoriesTMP))
+    }
+
     // useless things from exmaple:
 //    static func fetchGameLevels(_ completion: @escaping (Result<[GameLevelModel], Error>) -> ()) {
 //        completion(.success(gameLevels))
 //    }
 //
-//    static func fetchCategories(_ completion: @escaping (Result<[CategoryModel], Error>) -> ()) {
-//        completion(.success(categories))
-//    }
 
 }
 
 //let gameLevels: [GameLevelModel] = []
 //
-let teams: [TeamModel] = [
+let teamsTMP: [TeamModel] = [
     TeamModel(name: "Tomatoes", score: 0),
     TeamModel(name: "Sleepwalkers", score: 0),
 ]
 
-let allTeams: Set = [
+let allTeams: Set = [ // TODO: realise that Service will took 1 random, etc...
     TeamModel(name: "Tomatoes", score: 0),
     TeamModel(name: "Sleepwalkers", score: 0),
     TeamModel(name: "Penguins", score: 0),
@@ -55,4 +56,9 @@ let allTeams: Set = [
 
 ]
 //
-//let categories: [CategoryModel] = []
+let categoriesTMP: [CategoryModel] = [
+    CategoryModel(name: "European countries", level: 0),
+    CategoryModel(name: "Bad Habits", level: 0),
+    CategoryModel(name: "Green fruits and vagitables", level: 0),
+    CategoryModel(name: "Colors", level: 0),
+]

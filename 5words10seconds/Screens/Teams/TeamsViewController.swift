@@ -15,13 +15,13 @@ class TeamsViewController: UIViewController {
     let endBtn = UIButton()
     let descriptionLbl = UILabel()
 
-    let viewModel = TeamsViewModel()
+    let teamsViewModel = TeamsViewModel()
     
 //    var cellDataSource: [TeamModel]?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel.fetchTeams()
+        teamsViewModel.fetchTeams()
     }
     
     override func viewDidLoad() {
@@ -35,14 +35,14 @@ class TeamsViewController: UIViewController {
     }
     
     private func bindViewModel() {
-        viewModel.cellDataSourceTeams.bind { [weak self] teams in
+        teamsViewModel.cellDataSourceTeams.bind { [weak self] teams in
 //            self?.cellDataSource = teams
             self?.initReload()
         }
     }
     
     func initReload() {
-        viewModel.reloadTableView = { [weak self] in
+        teamsViewModel.reloadTableView = { [weak self] in
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }
@@ -60,7 +60,9 @@ class TeamsViewController: UIViewController {
     }
     
     @objc func endBtnClick() {
-        let controller = WordViewController()
+        guard let teams = teamsViewModel.dataSourceTeams else { return }
+        let wordViewModel = CategoryViewModel(teams: teams)
+        let controller = CategoryViewController(viewModel: wordViewModel)
         navigationItem.backButtonTitle = "TODO: remove this"
         navigationController?.pushViewController(controller, animated: true)
 //        present(controller, animated: true)

@@ -7,8 +7,8 @@
 
 import Foundation
 
-class MenuViewModel {
-    //NOTHING CHANGABLE HERE
+class MenuViewModel {   // TODO: create and perfome leveling
+    // NOTHING CHANGABLE HERE
 //    var level: ObservableObject<Int?> = ObservableObject(nil)
 //    
 ////    func getLevel() {

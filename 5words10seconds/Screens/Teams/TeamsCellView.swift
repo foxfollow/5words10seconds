@@ -14,11 +14,11 @@ enum cellsIdentifiers: String {
 class TeamsCellView: UITableViewCell {
     
     let teamNameLbl = UILabel()
-    private let crossImg = UILabel()
+    private let crossImg = UILabel()    // TODO: make it crossmark button to delete teams
     
     let cellView = UILabel()
     
-    var cellViewModel: TeamModel? {
+    var cellViewModel: TeamModel? {     // TODO: remake to use ViewModel not Model
         didSet {
             teamNameLbl.text = cellViewModel?.name
 //            nameLabel.text = cellViewModel?.score
