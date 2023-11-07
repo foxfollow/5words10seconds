@@ -53,8 +53,14 @@ class CategoryViewController: UIViewController {
         
         // MARK: Team binder
         categoryViewModel.currentTeam.bind { [weak self] team in
-            // TODO: "checked if get value" so change text in lbl
+            // TODO: "checked if get value" so change text in lbl (score)
             print("Team changed to \(team?.name ?? "")")
+        }
+        
+        
+        // MARK: Popup teams binder
+        categoryViewModel.currentTeam.bind { [weak self] team in
+            
         }
     }
 }

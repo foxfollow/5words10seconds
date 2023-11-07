@@ -9,21 +9,19 @@ import UIKit
 
 class PopupTeamsViewController: UIViewController {
     
-//    var teams: [PopupTeamsViewModel] //TODO: doesn't work
-    var teams = [PopupTeamsViewModel(team: TeamModel(name: "Team 1", score: 0)),
-                PopupTeamsViewModel(team: TeamModel(name: "Team 2", score: 0))]
+//    var teams: [PopupTeamsViewModel] TODO: Remove
+    var teams: ObservableObject<[PopupTeamsViewModel]>  // TODO: REBUILD to change in value in prev viewcontroller (check Edge)
     
     let tableView = UITableView()
     
-//    init(teams: [PopupTeamsViewModel]) {
-////        self.teams =
-//        self.teams = teams
-//        super.init(nibName: nil, bundle: nil)
-//    }
-//    
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
+    init(teams: [PopupTeamsViewModel]) {
+        self.teams = ObservableObject(teams)
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +37,7 @@ class PopupTeamsViewController: UIViewController {
 extension PopupTeamsViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return teams.count
+        return teams.value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,7 +45,7 @@ extension PopupTeamsViewController: UITableViewDataSource, UITableViewDelegate {
             withIdentifier: "PopupTeamsCellView",
             for: indexPath
         ) as! PopupTeamsCellView
-        cell.teamViewModel = teams[indexPath.row] // teams is an array of PopupTeamsViewModel instances
+        cell.teamViewModel = teams.value[indexPath.row] // teams is an array of PopupTeamsViewModel instances
         cell.incrementBtn.addTarget(self, action: #selector(incrementScore(_:)), for: .touchUpInside)
         cell.decrementBtn.addTarget(self, action: #selector(decrementScore(_:)), for: .touchUpInside)
         cell.incrementBtn.tag = indexPath.row
@@ -56,10 +54,10 @@ extension PopupTeamsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     @objc func incrementScore(_ sender: UIButton) {
-        teams[sender.tag].incrementScore()
+        teams.value[sender.tag].incrementScore()
     }
     
     @objc func decrementScore(_ sender: UIButton) {
-        teams[sender.tag].decrementScore()
+        teams.value[sender.tag].decrementScore()
     }
 }

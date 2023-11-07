@@ -9,10 +9,19 @@ import UIKit
 
 extension CategoryViewController {
     
-    func listTeamsPopup() {
-        let popupViewController = PopupTeamsViewController()
+    private func listTeamsPopup() {
+        let popupViewController = PopupTeamsViewController(teams: generatePopupVM())
         popupViewController.modalPresentationStyle = .overCurrentContext
         present(popupViewController, animated: true, completion: nil)
+    }
+    
+    private func generatePopupVM() -> [PopupTeamsViewModel]{
+        var list = [PopupTeamsViewModel]()
+        for team in categoryViewModel.teams.value {
+            let popupVM = PopupTeamsViewModel(team: team)
+            list.append(popupVM)
+        }
+        return list
     }
     
 //    func listTeamsPopup() {
@@ -38,16 +47,22 @@ extension CategoryViewController {
             self.timerViewModel.setupTimer()
         }))
         
+        alertController.addAction(UIAlertAction(title: "Change teams score", style: .default, handler: { _ in
+            self.listTeamsPopup()
+            self.isReadyPopup()
+        }))
+        
         self.present(alertController, animated: true, completion: nil)
     }
     
-    func timerEndPopup() {  // TODO: add +1 to team score; if true ask if next team ready, relaunch categorie
+    func timerEndPopup() {  // TODO: add +1 to team score; if true ask if next team ready
         let alertController = UIAlertController(title: "Timer Ended",
                                                 message: "Is the team get + 1 point to score",
                                                 preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Yes", style: .default, handler: {_ in
             self.categoryViewModel.currentCtgr.value = nil
-            self.listTeamsPopup()
+            self.categoryViewModel.currentTeam.value?.score += 1 // TODO: Check if it works
+            self.isReadyPopup()
         }))
         alertController.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
         self.present(alertController, animated: true, completion: nil)
