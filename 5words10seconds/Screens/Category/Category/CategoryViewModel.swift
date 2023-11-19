@@ -46,4 +46,20 @@ class CategoryViewModel {
         }
     }
     
+//    func fetchCurrentTeam(index: Int) {
+//        currentTeam.value = teams.value[index]
+//    }
+    
+    func fetchCurrentTeam() {
+        if currentTeam.value == nil || currentTeam.value == teams.value.last {
+            currentTeam.value = teams.value.first
+        } else {
+            if let currentIndex = teams.value.firstIndex(where: { $0 == currentTeam.value }) {
+                let nextIndex = (currentIndex + 1) % teams.value.count
+                currentTeam.value = teams.value[nextIndex]
+            }
+
+        }
+    }
+    
 }

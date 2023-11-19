@@ -16,7 +16,10 @@ class CategoryViewController: UIViewController {
     let categoryViewModel: CategoryViewModel
     
     var timerViewModel = TimerViewModel()
-    var timerView: TimerView! // inited in WordView.swift
+    var timerView: TimerView! // inited in CategoryView.swift - setupTimer()
+    
+    let tableView = UITableView() // setuped in PopupViewsFuncs.swift - listTeamsPopup()
+
     
     init(viewModel: CategoryViewModel) {
         self.categoryViewModel = viewModel
@@ -30,7 +33,7 @@ class CategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupSubviews() // in WordView.swift
+        setupSubviews() // in CategoryView.swift
         setupBinders()
         isReadyPopup() // in PopupViewsFuncs.swift
     }
@@ -55,12 +58,23 @@ class CategoryViewController: UIViewController {
         categoryViewModel.currentTeam.bind { [weak self] team in
             // TODO: "checked if get value" so change text in lbl (score)
             print("Team changed to \(team?.name ?? "")")
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
         }
         
-        
-        // MARK: Popup teams binder
-        categoryViewModel.currentTeam.bind { [weak self] team in
+        categoryViewModel.teams.bind { [weak self] _ in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+        }
+
             
-        }
+        // Bind scoreLabel to teams.value[row].score
+//        categoryViewModel.teams.bind { [weak self] teams in
+//            guard let self = self else { return }
+//            let score = teams[indexPath.row].score
+//            self.scoreLabel.text = "\(score)"
+//        }
     }
 }
