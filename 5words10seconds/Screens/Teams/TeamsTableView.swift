@@ -8,29 +8,43 @@
 import UIKit
 
 extension TeamsViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return teamsViewModel.numberOfRows()
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+        return teamsViewModel.numberOfRows() // TODO: works only if button addNew will have normal constraints (tableView too) - fix it
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(
-            withIdentifier: cellsIdentifiers.TeamsCellView.rawValue,
-            for: indexPath
-        ) as! TeamsCellView
-        let cellVM = teamsViewModel.getCellViewModel(at: indexPath)
-//        cell.cellViewModel = cellVM
-        cell.teamNameLbl.text = cellVM.name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TeamsCellView", for: indexPath) as! TeamsCellView
+        cell.cellViewModel = teamsViewModel.cellViewModels.value?[indexPath.row]
+        cell.selectionStyle = .none // Disable cell selection
+        cell.indexPath = indexPath
+        cell.delegate = self // Set the delegate to self
 
         return cell
     }
+
 }
 
 // MARK: Set dataSource\delegate; register cell
+
 extension TeamsViewController: UITableViewDelegate {
     func setupTableViewData() {
         tableView.register(TeamsCellView.self, forCellReuseIdentifier: cellsIdentifiers.TeamsCellView.rawValue)
         tableView.dataSource = self
         tableView.delegate = self
+
+        teamsViewModel.reloadTableView = { [weak self] in
+            DispatchQueue.main.async {
+                print("Reload tableview")
+                self?.tableView.reloadData()
+            }
+        }
+
+        teamsViewModel.fetchTeams()
     }
 }
 
+extension TeamsViewController: TeamsCellViewModelDelegate {
+    func deleteButtonTapped(at indexPath: IndexPath) {
+        teamsViewModel.deleteTeam(at: indexPath)
+    }
+}

@@ -27,27 +27,27 @@ class TeamsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bindViewModel()
+//        bindViewModel()
         setupSubviews()     // TeamsView.swift
         setupTableViewData()    // TeamsTableView.swift
         setupButtonTargets()
         
     }
     
-    private func bindViewModel() {
-        teamsViewModel.cellDataSourceTeams.bind { [weak self] teams in
-//            self?.cellDataSource = teams
-            self?.initReload()
-        }
-    }
+//    private func bindViewModel() {
+//        teamsViewModel.cellDataSourceTeams.bind { [weak self] teams in
+////            self?.cellDataSource = teams
+//            self?.initReload()
+//        }
+//    }
     
-    func initReload() {
-        teamsViewModel.reloadTableView = { [weak self] in
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
-            }
-        }
-    }
+//    func initReload() {
+//        teamsViewModel.reloadTableView = { [weak self] in
+//            DispatchQueue.main.async {
+//                self?.tableView.reloadData()
+//            }
+//        }
+//    }
     
     private func setupButtonTargets() {
         addBtn.addTarget(self, action: #selector(addTeamBtmClick), for: .touchUpInside)

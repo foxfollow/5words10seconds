@@ -43,7 +43,12 @@ struct Service {
 //
 let teamsTMP: [TeamModel] = [
     TeamModel(name: "Tomatoes", score: 0),
-    TeamModel(name: "Sleepwalkers", score: 0),
+    TeamModel(name: "Sleepwalkers1", score: 0),
+    TeamModel(name: "Sleepwalkers2", score: 0),
+    TeamModel(name: "Sleepwalkers3", score: 0),
+    TeamModel(name: "Sleepwalkers4", score: 0),
+    TeamModel(name: "Sleepwalkers5", score: 0),
+    TeamModel(name: "Sleepwalkers6", score: 0),
 ]
 
 let allTeams: Set = [ // TODO: realise that Service will took 1 random, etc...
@@ -52,7 +57,7 @@ let allTeams: Set = [ // TODO: realise that Service will took 1 random, etc...
     TeamModel(name: "Penguins", score: 0),
     TeamModel(name: "Pineapples", score: 0),
     TeamModel(name: "Pirates", score: 0),
-    TeamModel(name: "Murlocs", score: 0),
+    TeamModel(name: "Angels", score: 0),
 
 ]
 //

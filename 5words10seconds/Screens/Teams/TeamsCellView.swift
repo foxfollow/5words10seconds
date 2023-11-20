@@ -12,50 +12,81 @@ enum cellsIdentifiers: String {
 }
 
 class TeamsCellView: UITableViewCell {
-    
     let teamNameLbl = UILabel()
-    private let crossImg = UILabel()    // TODO: make it crossmark button to delete teams
-    
+    var indexPath: IndexPath?
+    weak var delegate: TeamsCellViewModelDelegate?
+
+    private let crossImg = UIButton(type: .system)
+
     let cellView = UILabel()
-    
-    var cellViewModel: TeamModel? {     // TODO: remake to use ViewModel not Model
+
+    var cellViewModel: TeamsCellViewModel? {
         didSet {
             teamNameLbl.text = cellViewModel?.name
-//            nameLabel.text = cellViewModel?.score
+            crossImg.isUserInteractionEnabled = true
+            crossImg.removeTarget(nil, action: nil, for: .allEvents) // Remove previous targets
+            crossImg.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
         }
     }
-    
+
+    @objc func deleteButtonTapped() {
+        if let indexPath = indexPath {
+            delegate?.deleteButtonTapped(at: indexPath)
+        }
+    }
+
     override func layoutSubviews() {
         super.layoutSubviews()
         setupSubviews()
     }
-    
+
     private func setupSubviews() {
-//                contentView.backgroundColor = #colorLiteral(red: 0.7862124443, green: 0.9268439412, blue: 1, alpha: 1)
-        let cellHeight: CGFloat = 48
+//        contentView.backgroundColor = #colorLiteral(red: 0.7862124443, green: 0.9268439412, blue: 1, alpha: 1)
+//        let cellHeight: CGFloat = 48
 
-        cellView.frame = CGRect(x: 8, y: 4, width: contentView.bounds.width - 16, height: cellHeight)
+        contentView.addSubview(cellView)
+        cellView.addSubview(teamNameLbl)
+        contentView.addSubview(crossImg)
 
-        crossImg.frame = CGRect(x: 8, y: 10, width: cellHeight - 20, height: cellHeight - 20)
+        setupCellConstaints()
+
         crossImg.contentMode = .scaleAspectFit
         crossImg.clipsToBounds = true
-
-        teamNameLbl.frame = CGRect(
-            x:  crossImg.bounds.width + 16,
-            y: 4,
-            width: cellView.bounds.width - 80,
-            height: cellHeight - 8)
-        teamNameLbl.font = .systemFont(ofSize: 18)
-        teamNameLbl.textColor = .darkText
-//        teamNameLbl.textAlignment = .natural
-        teamNameLbl.isUserInteractionEnabled = false
-//        teamNameLbl.numberOfLines = 0
-        
-        contentView.addSubview(cellView)
-        
-        cellView.addSubview(teamNameLbl)
-        cellView.addSubview(crossImg)
-        
+        crossImg.isUserInteractionEnabled = true
+        crossImg.setImage(UIImage(systemName: "trash.fill"), for: .normal)
+        crossImg.tintColor = .orange
+        crossImg.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
     }
+}
 
+extension TeamsCellView {
+    @objc func crossImgTapped() {
+        print("crossImgTapped")
+    }
+}
+
+extension TeamsCellView {
+    func setupCellConstaints() {
+        cellView.translatesAutoresizingMaskIntoConstraints = false
+        teamNameLbl.translatesAutoresizingMaskIntoConstraints = false
+        crossImg.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            // // Cell View Constraints
+            cellView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            cellView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
+            cellView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            cellView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),
+
+            // Team Name Label Constraints
+            teamNameLbl.leadingAnchor.constraint(equalTo: cellView.leadingAnchor, constant: 16),
+            teamNameLbl.centerYAnchor.constraint(equalTo: cellView.centerYAnchor),
+
+            // Cross Image Button Constraints
+            crossImg.leadingAnchor.constraint(equalTo: teamNameLbl.trailingAnchor, constant: 8),
+            crossImg.centerYAnchor.constraint(equalTo: cellView.centerYAnchor),
+            crossImg.trailingAnchor.constraint(equalTo: cellView.trailingAnchor, constant: -16),
+            crossImg.widthAnchor.constraint(equalTo: crossImg.heightAnchor),
+        ])
+    }
 }

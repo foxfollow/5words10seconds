@@ -8,34 +8,49 @@
 import Foundation
 
 class TeamsViewModel {
-    
-    var cellDataSourceTeams: ObservableObject<[TeamModel]?> = ObservableObject(nil)
+    weak var delegate: TeamsCellViewModelDelegate?
+
+    var cellViewModels: ObservableObject<[TeamsCellViewModel]?> = ObservableObject(nil)
     var dataSourceTeams: [TeamModel]? {
         didSet {
+            guard let dataSourceTeams = dataSourceTeams else { return }
+            cellViewModels.value = dataSourceTeams.enumerated().map { _, team in
+                let viewModel = TeamsCellViewModel(team: team)
+                viewModel.delegate = delegate
+//                viewModel.indexPath = IndexPath(row: index, section: 0)
+                return viewModel
+            }
             reloadTableView?()
         }
     }
-    
+
     var reloadTableView: (() -> Void)?
-    
-    func numberOfRows() -> Int {
-        dataSourceTeams?.count ?? 0
-    }
-    
-    func fetchTeams() {
-        Service.shared.fetchTeams { [weak self] (result) in
-            switch result {
-            case .success(let data):
-                self?.dataSourceTeams = data
-            case .failure(let err):
-                print(err.localizedDescription)
-                // maybe: complition(nil, err.localizedDescription)
-            }
+
+    func deleteTeam(at indexPath: IndexPath) {
+        // Remove the team from the data source
+        
+        guard var cellViewModels = cellViewModels.value else { return }
+        if cellViewModels.count > 1 {
+            cellViewModels.remove(at: indexPath.row)
+            self.cellViewModels.value = cellViewModels
+            
+            // Refresh the table view
+            reloadTableView?()
         }
     }
-    
-    func getCellViewModel(at indexPath: IndexPath) -> TeamModel {
-        guard let dataSourceTeams else { return TeamModel(name: "", score: 0)}
-        return dataSourceTeams[indexPath.row]
+
+    func numberOfRows() -> Int {
+        cellViewModels.value?.count ?? 0
+    }
+
+    func fetchTeams() {
+        Service.shared.fetchTeams { [weak self] result in
+            switch result {
+            case let .success(data):
+                self?.dataSourceTeams = data
+            case let .failure(error):
+                print(error)
+            }
+        }
     }
 }

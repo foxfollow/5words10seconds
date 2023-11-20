@@ -20,6 +20,7 @@
 		BF94BA7F2AF990B00085C4ED /* PopupTeamsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA7E2AF990B00085C4ED /* PopupTeamsCellView.swift */; };
 		BF94BA852AF9992D0085C4ED /* PopupTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA842AF9992D0085C4ED /* PopupTeamsViewController.swift */; };
 		BF94BA882AF999A00085C4ED /* PopupTeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA872AF999A00085C4ED /* PopupTeamsViewModel.swift */; };
+		BFA4DD802B0BDDA000A44C87 /* TeamsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4DD7F2B0BDDA000A44C87 /* TeamsCellViewModel.swift */; };
 		BFE8209C2AEFD33F00B303F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209B2AEFD33F00B303F9 /* AppDelegate.swift */; };
 		BFE8209E2AEFD33F00B303F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209D2AEFD33F00B303F9 /* SceneDelegate.swift */; };
 		BFE820A02AEFD33F00B303F9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209F2AEFD33F00B303F9 /* MenuViewController.swift */; };
@@ -51,6 +52,7 @@
 		BF94BA7E2AF990B00085C4ED /* PopupTeamsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTeamsCellView.swift; sourceTree = "<group>"; };
 		BF94BA842AF9992D0085C4ED /* PopupTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTeamsViewController.swift; sourceTree = "<group>"; };
 		BF94BA872AF999A00085C4ED /* PopupTeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTeamsViewModel.swift; sourceTree = "<group>"; };
+		BFA4DD7F2B0BDDA000A44C87 /* TeamsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCellViewModel.swift; sourceTree = "<group>"; };
 		BFE820982AEFD33F00B303F9 /* 5words10seconds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5words10seconds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE8209B2AEFD33F00B303F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE8209D2AEFD33F00B303F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				BFE820BA2AEFE17A00B303F9 /* TeamsViewController.swift */,
 				BFE820C02AEFE4FA00B303F9 /* TeamsView.swift */,
 				BF0A309D2AF44DE9004A4301 /* TeamsTableView.swift */,
+				BFA4DD7F2B0BDDA000A44C87 /* TeamsCellViewModel.swift */,
 				BF0A309B2AF447FF004A4301 /* TeamsCellView.swift */,
 			);
 			path = Teams;
@@ -309,6 +312,7 @@
 				BFE8209E2AEFD33F00B303F9 /* SceneDelegate.swift in Sources */,
 				BF94BA7D2AF989FC0085C4ED /* PopupViewsFuncs.swift in Sources */,
 				BF0A30962AF4139A004A4301 /* ObservableObject.swift in Sources */,
+				BFA4DD802B0BDDA000A44C87 /* TeamsCellViewModel.swift in Sources */,
 				BF94BA7F2AF990B00085C4ED /* PopupTeamsCellView.swift in Sources */,
 				BF94BA852AF9992D0085C4ED /* PopupTeamsViewController.swift in Sources */,
 				BF94BA7B2AF6B6FF0085C4ED /* TimerView.swift in Sources */,
