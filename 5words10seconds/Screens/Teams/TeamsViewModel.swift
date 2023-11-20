@@ -10,10 +10,12 @@ import Foundation
 class TeamsViewModel {
     weak var delegate: TeamsCellViewModelDelegate?
 
+    // var teamsCount: ObservableObject<Int> = ObservableObject(nil)
     var cellViewModels: ObservableObject<[TeamsCellViewModel]?> = ObservableObject(nil)
     var dataSourceTeams: [TeamModel]? {
         didSet {
             guard let dataSourceTeams = dataSourceTeams else { return }
+            // let teamsCount = dataSourceTeams.count
             cellViewModels.value = dataSourceTeams.enumerated().map { _, team in
                 let viewModel = TeamsCellViewModel(team: team)
                 viewModel.delegate = delegate

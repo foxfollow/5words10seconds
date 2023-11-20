@@ -18,10 +18,9 @@ extension TeamsViewController: UITableViewDataSource {
         cell.selectionStyle = .none // Disable cell selection
         cell.indexPath = indexPath
         cell.delegate = self // Set the delegate to self
-
+        cell.bind(to: teamsViewModel) // Bind the cell to the teamsViewModel for counting teams and changing color
         return cell
     }
-
 }
 
 // MARK: Set dataSource\delegate; register cell

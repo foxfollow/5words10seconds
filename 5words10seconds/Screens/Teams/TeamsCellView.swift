@@ -26,6 +26,10 @@ class TeamsCellView: UITableViewCell {
             crossImg.isUserInteractionEnabled = true
             crossImg.removeTarget(nil, action: nil, for: .allEvents) // Remove previous targets
             crossImg.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
+
+//            if let teamsCount = cellViewModel?. {
+//            crossImg.tintColor = teamsCount < 2 ? .gray : .orange
+//            }
         }
     }
 
@@ -59,9 +63,15 @@ class TeamsCellView: UITableViewCell {
     }
 }
 
+// MARK: Bind to ViewModel for color change
+
 extension TeamsCellView {
-    @objc func crossImgTapped() {
-        print("crossImgTapped")
+    func bind(to teamsViewModel: TeamsViewModel) {
+        teamsViewModel.cellViewModels.bind { [weak self] arrayOfCells in // == to array of teams
+            DispatchQueue.main.async {
+                self?.crossImg.tintColor = arrayOfCells?.count ?? 0 < 2 ? .gray : .orange
+            }
+        }
     }
 }
 
