@@ -8,7 +8,8 @@
 import UIKit
 
 class TeamsViewController: UIViewController {
-    
+    var tableViewHeightConstraint: NSLayoutConstraint?
+    var tableViewHeight: CGFloat = 112
 //    let textField = UITextField()
     let tableView = UITableView()
     let addBtn = UIButton()
@@ -56,7 +57,18 @@ class TeamsViewController: UIViewController {
     }
     
     @objc func addTeamBtmClick() {
-        print("Do not work yet")
+        teamsViewModel.addNewTeam() // You need to implement this function in your view model
+        teamsViewModel.reloadTableView?()
+        
+        // Increase the height of the table view by the height of one row
+        tableViewHeight += tableView.rowHeight
+        
+        // Update the height constraint of the table view
+        tableViewHeightConstraint?.constant = tableViewHeight
+        
+        // Update the layout
+        view.layoutIfNeeded()
+        
     }
     
     @objc func endBtnClick() {

@@ -24,12 +24,8 @@ class TeamsCellView: UITableViewCell {
         didSet {
             teamNameLbl.text = cellViewModel?.name
             crossImg.isUserInteractionEnabled = true
-            crossImg.removeTarget(nil, action: nil, for: .allEvents) // Remove previous targets
+            crossImg.removeTarget(nil, action: nil, for: .allEvents)
             crossImg.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
-
-//            if let teamsCount = cellViewModel?. {
-//            crossImg.tintColor = teamsCount < 2 ? .gray : .orange
-//            }
         }
     }
 
@@ -64,7 +60,6 @@ class TeamsCellView: UITableViewCell {
 }
 
 // MARK: Bind to ViewModel for color change
-
 extension TeamsCellView {
     func bind(to teamsViewModel: TeamsViewModel) {
         teamsViewModel.cellViewModels.bind { [weak self] arrayOfCells in // == to array of teams

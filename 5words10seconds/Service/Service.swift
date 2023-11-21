@@ -8,27 +8,29 @@
 import Foundation
 
 struct Service {
-    
     static let shared = Service()
-    
+
     private var level: Int?
-        
+
     private init() {}
-    
-    func chooseLevel(integet: Int) { // todo level of categories
-        
+
+    func chooseLevel(integet _: Int) { // todo level of categories
     }
-    
+
     func getLevel() -> Int? { // very much to do
         return level
     }
-    
-    func fetchTeams(_ completion: @escaping (Result<[TeamModel], Error>) -> ()) {
+
+    func fetchTeams(_ completion: @escaping (Result<[TeamModel], Error>) -> Void) {
         completion(.success(teamsTMP))
     }
-    
-    func fetchCategories(_ completion: @escaping (Result<[CategoryModel], Error>) -> ()) {
+
+    func fetchCategories(_ completion: @escaping (Result<[CategoryModel], Error>) -> Void) {
         completion(.success(categoriesTMP))
+    }
+    
+    func addNewTeam(_ completion: @escaping (Result<TeamModel, Error>) -> Void) {
+        completion(.success(allTeams.randomElement()!))
     }
 
     // useless things from exmaple:
@@ -36,19 +38,13 @@ struct Service {
 //        completion(.success(gameLevels))
 //    }
 //
-
 }
 
-//let gameLevels: [GameLevelModel] = []
+// let gameLevels: [GameLevelModel] = []
 //
-let teamsTMP: [TeamModel] = [
+let teamsTMP: [TeamModel] = [ // TODO: realise that Service will took 2 random, etc... delete this const
     TeamModel(name: "Tomatoes", score: 0),
-    TeamModel(name: "Sleepwalkers1", score: 0),
-    TeamModel(name: "Sleepwalkers2", score: 0),
-    TeamModel(name: "Sleepwalkers3", score: 0),
-    TeamModel(name: "Sleepwalkers4", score: 0),
-    TeamModel(name: "Sleepwalkers5", score: 0),
-    TeamModel(name: "Sleepwalkers6", score: 0),
+    TeamModel(name: "Sleepwalkers", score: 0),
 ]
 
 let allTeams: Set = [ // TODO: realise that Service will took 1 random, etc...
@@ -58,7 +54,6 @@ let allTeams: Set = [ // TODO: realise that Service will took 1 random, etc...
     TeamModel(name: "Pineapples", score: 0),
     TeamModel(name: "Pirates", score: 0),
     TeamModel(name: "Angels", score: 0),
-
 ]
 //
 let categoriesTMP: [CategoryModel] = [

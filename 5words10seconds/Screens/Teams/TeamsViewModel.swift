@@ -9,8 +9,9 @@ import Foundation
 
 class TeamsViewModel {
     weak var delegate: TeamsCellViewModelDelegate?
+    
+//    private let allTeams: [TeamModel]
 
-    // var teamsCount: ObservableObject<Int> = ObservableObject(nil)
     var cellViewModels: ObservableObject<[TeamsCellViewModel]?> = ObservableObject(nil)
     var dataSourceTeams: [TeamModel]? {
         didSet {
@@ -50,6 +51,17 @@ class TeamsViewModel {
             switch result {
             case let .success(data):
                 self?.dataSourceTeams = data
+            case let .failure(error):
+                print(error)
+            }
+        }
+    }
+    
+    func addNewTeam() {
+        Service.shared.addNewTeam { [weak self] result in
+            switch result {
+            case let .success(data):
+                self?.dataSourceTeams?.append(data)
             case let .failure(error):
                 print(error)
             }
