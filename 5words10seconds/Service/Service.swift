@@ -21,17 +21,14 @@ struct Service {
         return level
     }
 
-    func fetchTeams(_ completion: @escaping (Result<[TeamModel], Error>) -> Void) {
-        completion(.success(teamsTMP))
+    func fetchTeams(_ completion: @escaping (Result<Set<TeamModel>, Error>) -> Void) {
+        completion(.success(allTeams))
     }
 
     func fetchCategories(_ completion: @escaping (Result<[CategoryModel], Error>) -> Void) {
         completion(.success(categoriesTMP))
     }
     
-    func addNewTeam(_ completion: @escaping (Result<TeamModel, Error>) -> Void) {
-        completion(.success(allTeams.randomElement()!))
-    }
 
     // useless things from exmaple:
 //    static func fetchGameLevels(_ completion: @escaping (Result<[GameLevelModel], Error>) -> ()) {

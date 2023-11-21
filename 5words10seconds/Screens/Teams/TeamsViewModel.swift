@@ -9,18 +9,16 @@ import Foundation
 
 class TeamsViewModel {
     weak var delegate: TeamsCellViewModelDelegate?
-    
-//    private let allTeams: [TeamModel]
+
+    private var allTeams: Set<TeamModel> = []
 
     var cellViewModels: ObservableObject<[TeamsCellViewModel]?> = ObservableObject(nil)
     var dataSourceTeams: [TeamModel]? {
         didSet {
             guard let dataSourceTeams = dataSourceTeams else { return }
-            // let teamsCount = dataSourceTeams.count
             cellViewModels.value = dataSourceTeams.enumerated().map { _, team in
                 let viewModel = TeamsCellViewModel(team: team)
                 viewModel.delegate = delegate
-//                viewModel.indexPath = IndexPath(row: index, section: 0)
                 return viewModel
             }
             reloadTableView?()
@@ -30,14 +28,10 @@ class TeamsViewModel {
     var reloadTableView: (() -> Void)?
 
     func deleteTeam(at indexPath: IndexPath) {
-        // Remove the team from the data source
-        
         guard var cellViewModels = cellViewModels.value else { return }
         if cellViewModels.count > 1 {
             cellViewModels.remove(at: indexPath.row)
             self.cellViewModels.value = cellViewModels
-            
-            // Refresh the table view
             reloadTableView?()
         }
     }
@@ -50,21 +44,18 @@ class TeamsViewModel {
         Service.shared.fetchTeams { [weak self] result in
             switch result {
             case let .success(data):
-                self?.dataSourceTeams = data
+                self?.allTeams = Set(data)
+                self?.dataSourceTeams = Array(data.shuffled().prefix(2))
             case let .failure(error):
                 print(error)
             }
         }
     }
-    
+
     func addNewTeam() {
-        Service.shared.addNewTeam { [weak self] result in
-            switch result {
-            case let .success(data):
-                self?.dataSourceTeams?.append(data)
-            case let .failure(error):
-                print(error)
-            }
+        let difference = allTeams.subtracting(dataSourceTeams ?? [])
+        if let team = difference.first {
+            dataSourceTeams?.append(team)
         }
     }
 }

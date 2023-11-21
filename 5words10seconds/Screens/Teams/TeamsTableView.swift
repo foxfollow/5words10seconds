@@ -9,7 +9,7 @@ import UIKit
 // TODO: make a function for existsing button to add team to tableview from viewmodel (viewmodel gets new values from service)
 extension TeamsViewController: UITableViewDataSource {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return teamsViewModel.numberOfRows() // TODO: works only if button addNew will have normal constraints (tableView too) - fix it
+        return teamsViewModel.numberOfRows()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
