@@ -10,7 +10,7 @@ import UIKit
 extension CategoryViewController {
     
 
-    private func listTeamsPopup(_ teamsCount: Int) {
+    private func listTeamsTableViewPopup(_ teamsCount: Int) {
         let alert = UIAlertController(title: "Teams",
                                       message: String(repeating: "\n\n\n", count: teamsCount),
                                       preferredStyle: .alert)
@@ -53,7 +53,7 @@ extension CategoryViewController {
         }))
         
         alertController.addAction(UIAlertAction(title: "Change teams score", style: .default, handler: { _ in
-            self.listTeamsPopup(self.categoryViewModel.teams.value.count)
+            self.listTeamsTableViewPopup(self.categoryViewModel.teams.value.count)
             self.isReadyPopup()
         }))
         
@@ -66,7 +66,7 @@ extension CategoryViewController {
                                                 preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Yes", style: .default, handler: {_ in
             self.categoryViewModel.currentCtgr.value = nil
-            self.categoryViewModel.currentTeam.value?.score += 1
+            self.categoryViewModel.currentTeam.value?.score += 1 // TODO: currentTeam is n't a link value, fix it
             self.categoryViewModel.fetchCurrentTeam()
             self.isReadyPopup()
         }))

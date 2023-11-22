@@ -17,9 +17,6 @@
 		BF94BA792AF6B6ED0085C4ED /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA782AF6B6ED0085C4ED /* TimerViewModel.swift */; };
 		BF94BA7B2AF6B6FF0085C4ED /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA7A2AF6B6FF0085C4ED /* TimerView.swift */; };
 		BF94BA7D2AF989FC0085C4ED /* PopupViewsFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA7C2AF989FC0085C4ED /* PopupViewsFuncs.swift */; };
-		BF94BA7F2AF990B00085C4ED /* PopupTeamsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA7E2AF990B00085C4ED /* PopupTeamsCellView.swift */; };
-		BF94BA852AF9992D0085C4ED /* PopupTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA842AF9992D0085C4ED /* PopupTeamsViewController.swift */; };
-		BF94BA882AF999A00085C4ED /* PopupTeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA872AF999A00085C4ED /* PopupTeamsViewModel.swift */; };
 		BFA4DD802B0BDDA000A44C87 /* TeamsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4DD7F2B0BDDA000A44C87 /* TeamsCellViewModel.swift */; };
 		BFE8209C2AEFD33F00B303F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209B2AEFD33F00B303F9 /* AppDelegate.swift */; };
 		BFE8209E2AEFD33F00B303F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209D2AEFD33F00B303F9 /* SceneDelegate.swift */; };
@@ -49,9 +46,6 @@
 		BF94BA782AF6B6ED0085C4ED /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		BF94BA7A2AF6B6FF0085C4ED /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		BF94BA7C2AF989FC0085C4ED /* PopupViewsFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewsFuncs.swift; sourceTree = "<group>"; };
-		BF94BA7E2AF990B00085C4ED /* PopupTeamsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTeamsCellView.swift; sourceTree = "<group>"; };
-		BF94BA842AF9992D0085C4ED /* PopupTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTeamsViewController.swift; sourceTree = "<group>"; };
-		BF94BA872AF999A00085C4ED /* PopupTeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupTeamsViewModel.swift; sourceTree = "<group>"; };
 		BFA4DD7F2B0BDDA000A44C87 /* TeamsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCellViewModel.swift; sourceTree = "<group>"; };
 		BFE820982AEFD33F00B303F9 /* 5words10seconds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5words10seconds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE8209B2AEFD33F00B303F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				BF94BA802AF991010085C4ED /* Category */,
-				BF94BA812AF9910F0085C4ED /* PopupTeams */,
 				BF94BA7C2AF989FC0085C4ED /* PopupViewsFuncs.swift */,
 				BF94BA782AF6B6ED0085C4ED /* TimerViewModel.swift */,
 				BF94BA7A2AF6B6FF0085C4ED /* TimerView.swift */,
@@ -145,16 +138,6 @@
 				BF103FE32B08FFDA0019CC2C /* CategoryTableView.swift */,
 			);
 			path = Category;
-			sourceTree = "<group>";
-		};
-		BF94BA812AF9910F0085C4ED /* PopupTeams */ = {
-			isa = PBXGroup;
-			children = (
-				BF94BA872AF999A00085C4ED /* PopupTeamsViewModel.swift */,
-				BF94BA842AF9992D0085C4ED /* PopupTeamsViewController.swift */,
-				BF94BA7E2AF990B00085C4ED /* PopupTeamsCellView.swift */,
-			);
-			path = PopupTeams;
 			sourceTree = "<group>";
 		};
 		BFE8208F2AEFD33F00B303F9 = {
@@ -313,10 +296,7 @@
 				BF94BA7D2AF989FC0085C4ED /* PopupViewsFuncs.swift in Sources */,
 				BF0A30962AF4139A004A4301 /* ObservableObject.swift in Sources */,
 				BFA4DD802B0BDDA000A44C87 /* TeamsCellViewModel.swift in Sources */,
-				BF94BA7F2AF990B00085C4ED /* PopupTeamsCellView.swift in Sources */,
-				BF94BA852AF9992D0085C4ED /* PopupTeamsViewController.swift in Sources */,
 				BF94BA7B2AF6B6FF0085C4ED /* TimerView.swift in Sources */,
-				BF94BA882AF999A00085C4ED /* PopupTeamsViewModel.swift in Sources */,
 				BF0A309E2AF44DE9004A4301 /* TeamsTableView.swift in Sources */,
 				BFE820CD2AEFE9B600B303F9 /* MenuViewModel.swift in Sources */,
 				BFE820B92AEFE12C00B303F9 /* GameLevelModel.swift in Sources */,

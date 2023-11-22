@@ -65,11 +65,13 @@ extension CategoryViewController: UITableViewDataSource, UITableViewDelegate {
 
     @objc func plusButtonAction(sender: UIButton) {
         categoryViewModel.teams.value[sender.tag].score += 1
+        categoryViewModel.teams.value = categoryViewModel.teams.value
         print("Score for \(categoryViewModel.teams.value[sender.tag].name): \(categoryViewModel.teams.value[sender.tag].score)")
     }
 
     @objc func minusButtonAction(sender: UIButton) {
         categoryViewModel.teams.value[sender.tag].score -= 1
+        categoryViewModel.teams.value = categoryViewModel.teams.value
         print("Score for \(categoryViewModel.teams.value[sender.tag].name): \(categoryViewModel.teams.value[sender.tag].score)")
     }
 }

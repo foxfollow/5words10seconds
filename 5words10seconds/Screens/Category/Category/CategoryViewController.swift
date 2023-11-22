@@ -18,7 +18,7 @@ class CategoryViewController: UIViewController {
     var timerViewModel = TimerViewModel()
     var timerView: TimerView! // inited in CategoryView.swift - setupTimer()
     
-    let tableView = UITableView() // setuped in PopupViewsFuncs.swift - listTeamsPopup()
+    let tableView = UITableView() // setuped in PopupViewsFuncs.swift - listTeamsTableViewPopup()
 
     
     init(viewModel: CategoryViewModel) {
