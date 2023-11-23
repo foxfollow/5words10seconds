@@ -74,32 +74,4 @@ extension TeamsViewController {
             endBtn.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
-
-//     private func addConstraints() {
-//         tableView.translatesAutoresizingMaskIntoConstraints = false
-//         addBtn.translatesAutoresizingMaskIntoConstraints = false
-//         endBtn.translatesAutoresizingMaskIntoConstraints = false
-
-//         let sALG = view.safeAreaLayoutGuide
-//         NSLayoutConstraint.activate([
-//             tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
-//             tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
-//             tableView.topAnchor.constraint(equalTo: sALG.topAnchor),
-    // //            tableView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.7),
-//             tableView.bottomAnchor.constraint(equalTo: addBtn.topAnchor), // TODO: make it dynamic
-
-//             addBtn.leftAnchor.constraint(equalTo: view.leftAnchor),
-//             addBtn.rightAnchor.constraint(equalTo: view.rightAnchor),
-//             addBtn.bottomAnchor.constraint(equalTo: tableView.bottomAnchor),
-//             addBtn.heightAnchor.constraint(equalToConstant: 50),
-    // //            addBtn.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
-
-//             endBtn.leftAnchor.constraint(equalTo: view.leftAnchor),
-//             endBtn.rightAnchor.constraint(equalTo: view.rightAnchor),
-//             endBtn.bottomAnchor.constraint(equalTo: sALG.bottomAnchor),
-//             endBtn.heightAnchor.constraint(equalToConstant: 50),
-    // //            endBtn.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
-
-//         ])
-//     }
 }

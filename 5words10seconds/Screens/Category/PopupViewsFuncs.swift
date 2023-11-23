@@ -37,9 +37,7 @@ extension CategoryViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    // TODO: make func to get currentCtgr with popup windows
     func isReadyPopup() {
-        // TODO: add value current team and track it, if nil current = teams[0]
         if categoryViewModel.currentTeam.value == nil {
             categoryViewModel.fetchCurrentTeam()
         }
@@ -54,7 +52,6 @@ extension CategoryViewController {
         
         alertController.addAction(UIAlertAction(title: "Change teams score", style: .default, handler: { _ in
             self.listTeamsTableViewPopup(self.categoryViewModel.teams.value.count)
-            self.isReadyPopup()
         }))
         
         self.present(alertController, animated: true, completion: nil)
@@ -65,14 +62,12 @@ extension CategoryViewController {
                                                 message: "Is the team \(categoryViewModel.currentTeam.value?.name ?? "No tracking team") get + 1 point to score",
                                                 preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Yes", style: .default, handler: {_ in
-            self.categoryViewModel.currentCtgr.value = nil
-            self.categoryViewModel.currentTeam.value?.score += 1 // TODO: currentTeam is n't a link value, fix it
+            self.categoryViewModel.changeScore(isIncrement: true)
             self.categoryViewModel.fetchCurrentTeam()
             self.isReadyPopup()
         }))
         alertController.addAction(UIAlertAction(title: "No", style: .cancel, handler: {_ in
-            self.categoryViewModel.currentCtgr.value = nil
-//            self.categoryViewModel.currentTeam.value?.score -= 1
+            self.categoryViewModel.changeScore(isIncrement: false)
             self.categoryViewModel.fetchCurrentTeam()
             self.isReadyPopup()
 

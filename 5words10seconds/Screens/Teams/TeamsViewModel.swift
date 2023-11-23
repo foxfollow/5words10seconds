@@ -28,12 +28,10 @@ class TeamsViewModel {
     var reloadTableView: (() -> Void)?
 
     func deleteTeam(at indexPath: IndexPath) {
-        guard var cellViewModels = cellViewModels.value else { return }
-        if cellViewModels.count > 1 {
-            cellViewModels.remove(at: indexPath.row)
-            self.cellViewModels.value = cellViewModels
-            reloadTableView?()
-        }
+        guard var dataSourceTeams = dataSourceTeams, dataSourceTeams.count > 1 else { return }
+        dataSourceTeams.remove(at: indexPath.row)
+        self.dataSourceTeams = dataSourceTeams
+        reloadTableView?()
     }
 
     func numberOfRows() -> Int {

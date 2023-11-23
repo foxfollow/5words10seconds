@@ -6,7 +6,7 @@
 //
 
 import UIKit
-// TODO: make a function for existsing button to add team to tableview from viewmodel (viewmodel gets new values from service)
+
 extension TeamsViewController: UITableViewDataSource {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         return teamsViewModel.numberOfRows()
@@ -44,6 +44,18 @@ extension TeamsViewController: UITableViewDelegate {
 
 extension TeamsViewController: TeamsCellViewModelDelegate {
     func deleteButtonTapped(at indexPath: IndexPath) {
-        teamsViewModel.deleteTeam(at: indexPath)
+
+        if let count = teamsViewModel.dataSourceTeams?.count, count > 1 {
+            // Decrease the height of the table view by the height of one row
+            self.teamsViewModel.deleteTeam(at: indexPath)
+
+            self.tableViewHeight = CGFloat(count - 1) * 56
+
+            // Update the height constraint of the table view
+            self.tableViewHeightConstraint?.constant = self.tableViewHeight
+            DispatchQueue.main.async {
+                self.view.layoutIfNeeded()
+            }
+        }
     }
 }

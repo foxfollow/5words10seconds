@@ -30,21 +30,16 @@ struct Service {
     }
     
 
-    // useless things from exmaple:
+//     useless things from exmaple:
 //    static func fetchGameLevels(_ completion: @escaping (Result<[GameLevelModel], Error>) -> ()) {
 //        completion(.success(gameLevels))
 //    }
-//
+
 }
 
 // let gameLevels: [GameLevelModel] = []
-//
-let teamsTMP: [TeamModel] = [ // TODO: realise that Service will took 2 random, etc... delete this const
-    TeamModel(name: "Tomatoes", score: 0),
-    TeamModel(name: "Sleepwalkers", score: 0),
-]
 
-let allTeams: Set = [ // TODO: realise that Service will took 1 random, etc...
+let allTeams: Set = [
     TeamModel(name: "Tomatoes", score: 0),
     TeamModel(name: "Sleepwalkers", score: 0),
     TeamModel(name: "Penguins", score: 0),
@@ -52,7 +47,7 @@ let allTeams: Set = [ // TODO: realise that Service will took 1 random, etc...
     TeamModel(name: "Pirates", score: 0),
     TeamModel(name: "Angels", score: 0),
 ]
-//
+
 let categoriesTMP: [CategoryModel] = [
     CategoryModel(name: "European countries", level: 0),
     CategoryModel(name: "Bad Habits", level: 0),

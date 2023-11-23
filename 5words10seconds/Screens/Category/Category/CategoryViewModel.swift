@@ -13,8 +13,6 @@ class CategoryViewModel {
     var currentTeam: ObservableObject<TeamModel?> = ObservableObject(nil)
     var currentCtgr: ObservableObject<CategoryModel?> = ObservableObject(nil)
 
-//    var teams: [TeamModel] // TODO: Observable when updates score
-
     var playedCategories = [CategoryModel]()
     var allCategories: [CategoryModel]?
 
@@ -53,9 +51,6 @@ class CategoryViewModel {
         currentCtgr.value = copiedCtgr
     }
 
-//    func fetchCurrentTeam(index: Int) {
-//        currentTeam.value = teams.value[index]
-//    }
 
     func fetchCurrentTeam() {
         if currentTeam.value == nil || currentTeam.value == teams.value.last {
@@ -66,5 +61,21 @@ class CategoryViewModel {
                 currentTeam.value = teams.value[nextIndex]
             }
         }
+    }
+    
+    func changeScore(isIncrement: Bool) {
+        currentCtgr.value = nil
+        if isIncrement {
+            currentTeam.value?.score += 1
+        }
+    }
+        
+    func changeScore(isIncrement: Bool, index: Int) {
+        if isIncrement {
+            teams.value[index].score += 1
+        } else {
+            teams.value[index].score -= 1
+        }
+        teams.value = teams.value
     }
 }

@@ -23,8 +23,8 @@ extension MenuViewController {
     
     // MARK: Menu buttons
     private func setupButtonsView() {
-        game5w10sBtn.setTitle("Start 5 words 10 seconds game", for: .normal)
-        game3w5sBtn.setTitle("Start 3 words 5 seconds game", for: .normal)
+        game5w10sBtn.setTitle("Start \"5 words 10 seconds game\"", for: .normal)
+        game3w5sBtn.setTitle("Start \"3 words 5 seconds game\"\nSorry, did released yet", for: .normal)
         
         game5w10sBtn.setTitleColor(.white, for: .normal)
         game3w5sBtn.setTitleColor(.white, for: .normal)

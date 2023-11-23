@@ -83,7 +83,6 @@
 				BF0A30982AF42972004A4301 /* Menu */,
 				BF0A30992AF42978004A4301 /* Teams */,
 				BF0A309A2AF42982004A4301 /* Category */,
-				BF94BA772AF691D50085C4ED /* Waiting */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -120,13 +119,6 @@
 				BF94BA7A2AF6B6FF0085C4ED /* TimerView.swift */,
 			);
 			path = Category;
-			sourceTree = "<group>";
-		};
-		BF94BA772AF691D50085C4ED /* Waiting */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Waiting;
 			sourceTree = "<group>";
 		};
 		BF94BA802AF991010085C4ED /* Category */ = {
