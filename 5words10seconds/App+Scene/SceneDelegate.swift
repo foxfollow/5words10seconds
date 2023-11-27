@@ -21,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
         
-//        window?.rootViewController = UINavigationController(rootViewController: MenuViewController())
-        window?.rootViewController = UINavigationController(rootViewController: CategoryViewController(viewModel: CategoryViewModel(teams: [TeamModel(name: "Team 1", score: 0), TeamModel(name: "Team 2", score: 0)])))
+        window?.rootViewController = UINavigationController(rootViewController: MenuViewController())
+//        window?.rootViewController = UINavigationController(rootViewController: CategoryViewController(viewModel: CategoryViewModel(teams: [TeamModel(name: "Team 1", score: 0), TeamModel(name: "Team 2", score: 0)])))
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

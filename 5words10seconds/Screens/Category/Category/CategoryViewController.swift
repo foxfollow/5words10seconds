@@ -42,6 +42,7 @@ class CategoryViewController: UIViewController {
         // MARK: Timer binder
 
         timerViewModel.timerDidEnd.bind { [weak self] didEnd in
+            self?.timerView.circle.backgroundColor = didEnd ? .red : .white
             if didEnd && (self?.categoryViewModel.currentCtgr.value != nil) {
                 DispatchQueue.main.async {
                     self?.timerEndPopup()

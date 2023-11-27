@@ -9,12 +9,13 @@ import Foundation
 
 class TimerViewModel: NSObject {
     var timerValue = ObservableObject<Int>(0)
-    var timerDidEnd = ObservableObject<Bool>(false)
+    var timerDidEnd = ObservableObject<Bool>(true)
 
     private var timer: Timer?
 
     
     func setupTimer() {
+        timerDidEnd.value = false
         self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
 
@@ -22,9 +23,12 @@ class TimerViewModel: NSObject {
         if timerValue.value > 0 {
             timerValue.value -= 1
         } else {
+            print("Timer ended")
             timer?.invalidate()
             timer = nil
             self.timerDidEnd.value = true
+            print("timerDidEnd value: \(self.timerDidEnd.value)") // Add this line
+
         }
     }
 }
