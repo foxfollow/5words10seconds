@@ -20,11 +20,6 @@ class TimerView: UIView {
         setupTimer()
         addConstraints()
 
-        viewModel.timerValue.bind { [weak self] newValue in
-            DispatchQueue.main.async {
-                self?.label.text = "\(newValue)"
-            }
-        }
     }
 
     @available(*, unavailable)

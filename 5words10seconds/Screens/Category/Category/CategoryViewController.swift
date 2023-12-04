@@ -5,6 +5,7 @@
 //  Created by Heorhii Savoiskyi on 30.10.2023.
 //
 
+import AudioToolbox // ending number 1053; 1054 or 1313 staring (for last 3 second do 1052 or 1057)
 import UIKit
 
 class CategoryViewController: UIViewController {
@@ -46,10 +47,27 @@ class CategoryViewController: UIViewController {
             if didEnd && (self?.categoryViewModel.currentCtgr.value != nil) {
                 DispatchQueue.main.async {
                     self?.timerEndPopup()
-                    //                    print(Service.shared.)
+                    AudioServicesPlaySystemSound(1053) // 1053 is the ID for the end
+                }
+            } else if !didEnd {
+                DispatchQueue.main.async {
+                    AudioServicesPlaySystemSound(1313) // 1313 is the ID for the start sound
                 }
             }
         }
+        
+        timerViewModel.timerValue.bind { [weak self] newValue in
+            DispatchQueue.main.async {
+                if newValue > 0 && newValue < 4 {
+                    AudioServicesPlaySystemSound(1052) // 1054 is the ID for the 3 second sound
+                }
+            }
+            
+            DispatchQueue.main.async {
+                self?.timerView.label.text = "\(newValue)"
+            }
+        }
+        
 
         // MARK: Category-word binder
 

@@ -12,6 +12,7 @@
 		BF0A309E2AF44DE9004A4301 /* TeamsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A309D2AF44DE9004A4301 /* TeamsTableView.swift */; };
 		BF0A30A02AF44F45004A4301 /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A309F2AF44F45004A4301 /* TeamsViewModel.swift */; };
 		BF103FE42B08FFDA0019CC2C /* CategoryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF103FE32B08FFDA0019CC2C /* CategoryTableView.swift */; };
+		BF4448BF2B16563500999FC2 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4448BE2B16563500999FC2 /* TestViewController.swift */; };
 		BF94BA742AF6885E0085C4ED /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA732AF6885E0085C4ED /* CategoryViewModel.swift */; };
 		BF94BA762AF688800085C4ED /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA752AF688800085C4ED /* CategoryView.swift */; };
 		BF94BA792AF6B6ED0085C4ED /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA782AF6B6ED0085C4ED /* TimerViewModel.swift */; };
@@ -41,6 +42,7 @@
 		BF0A309D2AF44DE9004A4301 /* TeamsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableView.swift; sourceTree = "<group>"; };
 		BF0A309F2AF44F45004A4301 /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
 		BF103FE32B08FFDA0019CC2C /* CategoryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableView.swift; sourceTree = "<group>"; };
+		BF4448BE2B16563500999FC2 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		BF94BA732AF6885E0085C4ED /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		BF94BA752AF688800085C4ED /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		BF94BA782AF6B6ED0085C4ED /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				BF0A30982AF42972004A4301 /* Menu */,
 				BF0A30992AF42978004A4301 /* Teams */,
 				BF0A309A2AF42982004A4301 /* Category */,
+				BF4448BE2B16563500999FC2 /* TestViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				BF94BA7D2AF989FC0085C4ED /* PopupViewsFuncs.swift in Sources */,
 				BF0A30962AF4139A004A4301 /* ObservableObject.swift in Sources */,
 				BFA4DD802B0BDDA000A44C87 /* TeamsCellViewModel.swift in Sources */,
+				BF4448BF2B16563500999FC2 /* TestViewController.swift in Sources */,
 				BF94BA7B2AF6B6FF0085C4ED /* TimerView.swift in Sources */,
 				BF0A309E2AF44DE9004A4301 /* TeamsTableView.swift in Sources */,
 				BFE820CD2AEFE9B600B303F9 /* MenuViewModel.swift in Sources */,
