@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MenuViewController.swift
 //  5words10seconds
 //
 //  Created by Heorhii Savoiskyi on 30.10.2023.
@@ -8,18 +8,21 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-    
+
     let game5w10sBtn = UIButton()
     let game3w5sBtn = UIButton()
     let testBtn = UIButton()
-    
-    //    private let viewModel = MenuViewModel() // not using
-    
+    let hintLangugeTtl = UILabel()
+    let languagePicker = UIPickerView()
+
+    let menuViewModel = MenuViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupSubviews() // in MenuView.swift
         setupButtonTargets()
+        
+        setupLanguagePicker() // in MenuLanguagePickerView.swift
     }
     
     private func setupButtonTargets() {
@@ -48,5 +51,4 @@ class MenuViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .darkText
         navigationController?.pushViewController(controller, animated: true)
     }
-    
 }

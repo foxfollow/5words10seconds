@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		BF0A30A02AF44F45004A4301 /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A309F2AF44F45004A4301 /* TeamsViewModel.swift */; };
 		BF103FE42B08FFDA0019CC2C /* CategoryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF103FE32B08FFDA0019CC2C /* CategoryTableView.swift */; };
 		BF4448BF2B16563500999FC2 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4448BE2B16563500999FC2 /* TestViewController.swift */; };
+		BF4448C22B1DF74700999FC2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = BF4448C12B1DF74700999FC2 /* Localizable.xcstrings */; };
 		BF94BA742AF6885E0085C4ED /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA732AF6885E0085C4ED /* CategoryViewModel.swift */; };
 		BF94BA762AF688800085C4ED /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA752AF688800085C4ED /* CategoryView.swift */; };
 		BF94BA792AF6B6ED0085C4ED /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA782AF6B6ED0085C4ED /* TimerViewModel.swift */; };
@@ -34,6 +35,8 @@
 		BFE820C12AEFE4FA00B303F9 /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820C02AEFE4FA00B303F9 /* TeamsView.swift */; };
 		BFE820CB2AEFE68700B303F9 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820CA2AEFE68700B303F9 /* Service.swift */; };
 		BFE820CD2AEFE9B600B303F9 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820CC2AEFE9B600B303F9 /* MenuViewModel.swift */; };
+		BFEDD8F82B1F0988006C6208 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEDD8F72B1F0988006C6208 /* LanguageModel.swift */; };
+		BFEDD8FA2B1F2497006C6208 /* MenuLanguagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEDD8F92B1F2497006C6208 /* MenuLanguagePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,7 @@
 		BF0A309F2AF44F45004A4301 /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
 		BF103FE32B08FFDA0019CC2C /* CategoryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableView.swift; sourceTree = "<group>"; };
 		BF4448BE2B16563500999FC2 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		BF4448C12B1DF74700999FC2 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = 5words10seconds/Preferences/Localizable.xcstrings; sourceTree = SOURCE_ROOT; };
 		BF94BA732AF6885E0085C4ED /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		BF94BA752AF688800085C4ED /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		BF94BA782AF6B6ED0085C4ED /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 		BFE820C02AEFE4FA00B303F9 /* TeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsView.swift; sourceTree = "<group>"; };
 		BFE820CA2AEFE68700B303F9 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		BFE820CC2AEFE9B600B303F9 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		BFEDD8F72B1F0988006C6208 /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
+		BFEDD8F92B1F2497006C6208 /* MenuLanguagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuLanguagePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,7 @@
 				BFE820CC2AEFE9B600B303F9 /* MenuViewModel.swift */,
 				BFE8209F2AEFD33F00B303F9 /* MenuViewController.swift */,
 				BFE820BE2AEFE4C900B303F9 /* MenuView.swift */,
+				BFEDD8F92B1F2497006C6208 /* MenuLanguagePickerView.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -171,6 +178,7 @@
 				BFE820B42AEFD41B00B303F9 /* CategoryModel.swift */,
 				BFE820B62AEFDFD600B303F9 /* TeamModel.swift */,
 				BFE820B82AEFE12C00B303F9 /* GameLevelModel.swift */,
+				BFEDD8F72B1F0988006C6208 /* LanguageModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +204,7 @@
 		BFE820C82AEFE5AC00B303F9 /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
+				BF4448C12B1DF74700999FC2 /* Localizable.xcstrings */,
 				BFE820A42AEFD34000B303F9 /* Assets.xcassets */,
 				BFE820A92AEFD34000B303F9 /* Info.plist */,
 			);
@@ -246,12 +255,13 @@
 				};
 			};
 			buildConfigurationList = BFE820932AEFD33F00B303F9 /* Build configuration list for PBXProject "5words10seconds" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				uk,
 			);
 			mainGroup = BFE8208F2AEFD33F00B303F9;
 			productRefGroup = BFE820992AEFD33F00B303F9 /* Products */;
@@ -270,6 +280,7 @@
 			files = (
 				BFE820A82AEFD34000B303F9 /* LaunchScreen.storyboard in Resources */,
 				BFE820A52AEFD34000B303F9 /* Assets.xcassets in Resources */,
+				BF4448C22B1DF74700999FC2 /* Localizable.xcstrings in Resources */,
 				BFE820A32AEFD33F00B303F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +305,9 @@
 				BF4448BF2B16563500999FC2 /* TestViewController.swift in Sources */,
 				BF94BA7B2AF6B6FF0085C4ED /* TimerView.swift in Sources */,
 				BF0A309E2AF44DE9004A4301 /* TeamsTableView.swift in Sources */,
+				BFEDD8FA2B1F2497006C6208 /* MenuLanguagePickerView.swift in Sources */,
 				BFE820CD2AEFE9B600B303F9 /* MenuViewModel.swift in Sources */,
+				BFEDD8F82B1F0988006C6208 /* LanguageModel.swift in Sources */,
 				BFE820B92AEFE12C00B303F9 /* GameLevelModel.swift in Sources */,
 				BFE820BF2AEFE4C900B303F9 /* MenuView.swift in Sources */,
 				BFE820C12AEFE4FA00B303F9 /* TeamsView.swift in Sources */,
@@ -389,6 +402,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -445,6 +459,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

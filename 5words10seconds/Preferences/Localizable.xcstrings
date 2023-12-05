@@ -1,0 +1,40 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Start 3words5sec" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start \"3 words 5 seconds game\""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почати \"Поясни 3 слова за 5 секунд\""
+          }
+        }
+      }
+    },
+    "Start 5words10sec" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start \"5 words 10 seconds game\""
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Почати \"Поясни 5 слів за 10 секунд\""
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
