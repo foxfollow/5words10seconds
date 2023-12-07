@@ -11,7 +11,7 @@ extension CategoryViewController {
     
 
     private func listTeamsTableViewPopup(_ teamsCount: Int) {
-        let alert = UIAlertController(title: "Teams",
+        let alert = UIAlertController(title: String(localized: "Teams"),
                                       message: String(repeating: "\n\n\n", count: teamsCount),
                                       preferredStyle: .alert)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -41,16 +41,16 @@ extension CategoryViewController {
         if categoryViewModel.currentTeam.value == nil {
             categoryViewModel.fetchCurrentTeam()
         }
-        let alertController = UIAlertController(title: "Is team \(categoryViewModel.currentTeam.value?.name ?? "No tracking team")",
-                                                message: "Your turn, it starts immidiatly after your press",
+        let alertController = UIAlertController(title: "\(String(localized: "Is team")) \(categoryViewModel.currentTeam.value?.name ?? "No tracking team") \(String(localized: "ready?"))",
+                                                message: String(localized: "Your turn, it starts immidiatly after your press"),
                                                 preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Ready", style: .default, handler: {_ in
+        alertController.addAction(UIAlertAction(title: String(localized: "Ready"), style: .default, handler: {_ in
             self.categoryViewModel.fetchCategory()
             self.timerViewModel.timerValue.value = 10
             self.timerViewModel.setupTimer()
         }))
         
-        alertController.addAction(UIAlertAction(title: "Change teams score", style: .default, handler: { _ in
+        alertController.addAction(UIAlertAction(title: String(localized: "Change teams score"), style: .default, handler: { _ in
             self.listTeamsTableViewPopup(self.categoryViewModel.teams.value.count)
         }))
         
@@ -58,15 +58,15 @@ extension CategoryViewController {
     }
     
     func timerEndPopup() { 
-        let alertController = UIAlertController(title: "Timer Ended",
-                                                message: "Is the team \(categoryViewModel.currentTeam.value?.name ?? "No tracking team") get + 1 point to score",
+        let alertController = UIAlertController(title: String(localized: "Timer Ended"),
+                                                message: "\(String(localized: "Is the team")) \(categoryViewModel.currentTeam.value?.name ?? "No tracking team") \(String(localized: "get + 1 point to score"))",
                                                 preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Yes", style: .default, handler: {_ in
+        alertController.addAction(UIAlertAction(title: String(localized: "Yes"), style: .default, handler: {_ in
             self.categoryViewModel.changeScore(isIncrement: true)
             self.categoryViewModel.fetchCurrentTeam()
             self.isReadyPopup()
         }))
-        alertController.addAction(UIAlertAction(title: "No", style: .cancel, handler: {_ in
+        alertController.addAction(UIAlertAction(title: String(localized: "No"), style: .cancel, handler: {_ in
             self.categoryViewModel.changeScore(isIncrement: false)
             self.categoryViewModel.fetchCurrentTeam()
             self.isReadyPopup()

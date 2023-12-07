@@ -33,7 +33,6 @@ extension TeamsViewController: UITableViewDelegate {
 
         teamsViewModel.reloadTableView = { [weak self] in
             DispatchQueue.main.async {
-                print("Reload tableview")
                 self?.tableView.reloadData()
             }
         }

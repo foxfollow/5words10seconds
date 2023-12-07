@@ -39,7 +39,7 @@ class CategoryViewModel {
 
     private func selectRandomCategory() {
         guard let allCategories = allCategories, !allCategories.isEmpty else {
-            currentCtgr.value = CategoryModel(name: "No categories, sorry", level: 0)
+            currentCtgr.value = CategoryModel(name: String(localized: "No categories, sorry"), level: 0)
             print("Failed to fetch Categories")
             return
         }

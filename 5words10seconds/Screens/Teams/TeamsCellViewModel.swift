@@ -26,7 +26,6 @@ class TeamsCellViewModel {
     }
 
     func deleteButtonTapped(at indexPath: IndexPath) {
-        print("Delegate method called")
         delegate?.deleteButtonTapped(at: indexPath)
     }
 

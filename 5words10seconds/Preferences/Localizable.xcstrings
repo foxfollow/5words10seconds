@@ -1,6 +1,169 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Add new" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Додати нову"
+          }
+        }
+      }
+    },
+    "Are you sure you want to quit?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ви впевнені що хочете покинути гру?"
+          }
+        }
+      }
+    },
+    "Back" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назад"
+          }
+        }
+      }
+    },
+    "Change teams score" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зміни рахунок команд"
+          }
+        }
+      }
+    },
+    "Doesn't work yet (in dev)" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Перепрошуємо, поки не працює, в розробці"
+          }
+        }
+      }
+    },
+    "Double tab a team name to change it, press and hold to enter a team name" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Double tap a team name to change it, press and hold to enter a team name"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Двічі натисніть на команду щоб змінити назву, натисніть і тримайте щоб ввести її імʼя"
+          }
+        }
+      }
+    },
+    "get + 1 point to score" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "отримує +1 бал"
+          }
+        }
+      }
+    },
+    "Is team" : {
+
+    },
+    "Is team " : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чи команда "
+          }
+        }
+      }
+    },
+    "Is the team" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чи команда"
+          }
+        }
+      }
+    },
+    "Next" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Далі"
+          }
+        }
+      }
+    },
+    "No" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ні"
+          }
+        }
+      }
+    },
+    "No categories, sorry" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вибачаємось, але категорії скінчилися"
+          }
+        }
+      }
+    },
+    "Quit" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вихід"
+          }
+        }
+      }
+    },
+    "Ready" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Готова"
+          }
+        }
+      }
+    },
+    "ready?" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "готов?"
+          }
+        }
+      }
+    },
     "Start 3words5sec" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -31,6 +194,72 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Почати \"Поясни 5 слів за 10 секунд\""
+          }
+        }
+      }
+    },
+    "Teams" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Команди"
+          }
+        }
+      }
+    },
+    "Tell 5 words related to" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Розкажіть 5 слів повʼязаних з категорією"
+          }
+        }
+      }
+    },
+    "Timer Ended" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Час скінчився"
+          }
+        }
+      }
+    },
+    "Ukrainian" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Українська"
+          }
+        }
+      }
+    },
+    "Yes" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Так"
+          }
+        }
+      }
+    },
+    "Your turn, it starts immidiatly after your press" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Your turn, it starts immediately after your press. And you should say at least 5 words related to the category"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваша черга, вікторина почнеться одразу як ви натиснете, вам потрібно назвати 5 слів повʼязаних категорією"
           }
         }
       }

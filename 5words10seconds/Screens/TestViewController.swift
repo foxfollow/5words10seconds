@@ -63,7 +63,7 @@ class TestViewController: UIViewController {
     }
 
     @objc private func buttonTapped() {
-        guard let text = textField.text else { print("no text"); return }
+        guard let text = textField.text else { return }
         if let number = Int(text) {
             AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(number), nil)
             print(number)
@@ -73,7 +73,7 @@ class TestViewController: UIViewController {
     // MARK: Plus button adds one to text, saving text and playing sound
 
     @objc private func plusButtonTapped() {
-        guard let text = textField.text else { print("no text"); return }
+        guard let text = textField.text else { return }
         if let number = Int(text) {
             AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(number), nil)
             textField.text = String(number + 1)
@@ -84,7 +84,7 @@ class TestViewController: UIViewController {
     // MARK: Minus button subtracts one from text, saving text and playing sound
 
     @objc private func minusButtonTapped() {
-        guard let text = textField.text else { print("no text"); return }
+        guard let text = textField.text else { return }
         if let number = Int(text) {
             AudioServicesPlayAlertSoundWithCompletion(SystemSoundID(number), nil)
             textField.text = String(number - 1)

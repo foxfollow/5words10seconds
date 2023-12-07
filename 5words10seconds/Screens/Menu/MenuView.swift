@@ -22,7 +22,12 @@ extension MenuViewController {
     private func setupBackgroundView() {
         title = "Menu"
         view.backgroundColor = .lightGray
-
+        
+        backgroundViewUpper.backgroundColor = .orange
+        backgroundViewLower.backgroundColor = .orange
+        view.addSubview(backgroundViewUpper)
+        view.addSubview(backgroundViewLower)
+        
     }
     
     // MARK: Menu buttons
@@ -63,7 +68,7 @@ extension MenuViewController {
         view.addSubview(hintLangugeTtl)
         view.addSubview(languagePicker)
     }
-    
+        
     private func addButtonConstraints() {
         game5w10sBtn.translatesAutoresizingMaskIntoConstraints = false
         game3w5sBtn.translatesAutoresizingMaskIntoConstraints = false

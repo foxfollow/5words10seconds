@@ -22,14 +22,10 @@ class TimerViewModel: NSObject {
     @objc private func updateTimer() {
         if timerValue.value > 0 {
             timerValue.value -= 1
-            print("timer val in viewmodel is: \(timerValue.value)")
         } else {
-            print("Timer ended")
             timer?.invalidate()
             timer = nil
             self.timerDidEnd.value = true
-            print("timerDidEnd value: \(self.timerDidEnd.value)") // Add this line
-
         }
     }
 }

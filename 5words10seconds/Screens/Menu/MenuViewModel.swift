@@ -14,7 +14,7 @@ enum SupportedLanguages: String, CaseIterable {
     var language: LanguageModel {
         switch self {
         case .ukrainian:
-            return LanguageModel(name: "Ukrainian", flag: "🇺🇦")
+            return LanguageModel(name: String(localized: "Ukrainian"), flag: "🇺🇦")
         case .english:
             return LanguageModel(name: "English", flag: "🇬🇧")
         }

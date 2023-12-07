@@ -14,6 +14,8 @@ class MenuViewController: UIViewController {
     let testBtn = UIButton()
     let hintLangugeTtl = UILabel()
     let languagePicker = UIPickerView()
+    let backgroundViewUpper = UIView()
+    let backgroundViewLower = UIView()
 
     let menuViewModel = MenuViewModel()
 
@@ -35,14 +37,14 @@ class MenuViewController: UIViewController {
     
     @objc func fiveTenButtonClicked() {
         let controller = TeamsViewController()
-        navigationItem.backButtonTitle = "Back"
+        navigationItem.backButtonTitle = String(localized: "Back")
         navigationController?.navigationBar.tintColor = .darkText
         navigationController?.pushViewController(controller, animated: true)
         //        present(controller, animated: true)
     }
     
     @objc func threeFiveTenButtonClicked() {
-        print("Doesn't work yet (in dev)")
+        print(String(localized: "Doesn't work yet (in dev)"))
     }
     
     @objc func testButtonClicked() {

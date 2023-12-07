@@ -18,19 +18,21 @@ extension CategoryViewController {
     }
 
     private func initView() {
-        title = "Teams"
+        title = String(localized: "Teams")
         view.backgroundColor = .lightGray
     }
 
     private func setupLabels() {
-        descriptionLbl.text = "Tell 5 words related to"
+        descriptionLbl.text = String(localized: "Tell 5 words related to")
         categoryLbl.text = "Board Games"
         
+        descriptionLbl.textAlignment = .center
+        descriptionLbl.numberOfLines = 0
         categoryLbl.textAlignment = .center
         categoryLbl.numberOfLines = 0
         
-        descriptionLbl.font = .systemFont(ofSize: 20, weight: .medium)
-        categoryLbl.font = .systemFont(ofSize: 25, weight: .bold)
+        descriptionLbl.font = .systemFont(ofSize: 25, weight: .medium)
+        categoryLbl.font = .systemFont(ofSize: 30, weight: .bold)
 
         view.addSubview(descriptionLbl)
         view.addSubview(categoryLbl)
@@ -57,6 +59,8 @@ extension CategoryViewController {
         NSLayoutConstraint.activate([
             descriptionLbl.topAnchor.constraint(equalTo: sALG.topAnchor, constant: 20),
             descriptionLbl.centerXAnchor.constraint(equalTo: sALG.centerXAnchor),
+            descriptionLbl.leadingAnchor.constraint(equalTo: sALG.leadingAnchor, constant: 20),
+            descriptionLbl.trailingAnchor.constraint(equalTo: sALG.trailingAnchor, constant: -20),
 
 
             categoryLbl.widthAnchor.constraint(equalTo: sALG.widthAnchor, constant: -120),

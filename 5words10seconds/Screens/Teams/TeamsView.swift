@@ -17,7 +17,7 @@ extension TeamsViewController {
     }
 
     private func setupBackgroundView() {
-        title = "Teams"
+        title = String(localized: "Teams")
         view.backgroundColor = .lightGray
     }
 
@@ -32,16 +32,16 @@ extension TeamsViewController {
     // MARK: Labels
 
     private func setupLabels() {
-        descriptionLbl.text = "Double tab a team name to change it, press and hold to enter a team name"
+        descriptionLbl.text = String(localized: "Double tab a team name to change it, press and hold to enter a team name")
         view.addSubview(descriptionLbl)
     }
 
     // MARK: Buttons
 
     private func setupButtons() {
-        addBtn.setTitle("Add new", for: .normal)
+        addBtn.setTitle(String(localized: "Add new"), for: .normal)
         addBtn.backgroundColor = .systemOrange
-        endBtn.setTitle("Next", for: .normal)
+        endBtn.setTitle(String(localized: "Next"), for: .normal)
         endBtn.backgroundColor = .systemOrange
 
         view.addSubview(addBtn)

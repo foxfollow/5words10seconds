@@ -101,16 +101,16 @@ class CategoryViewController: UIViewController {
 
 extension CategoryViewController {
     func setupNavigationBar() {
-        let backButton = UIBarButtonItem(title: "Quit", style: .plain, target: self, action: #selector(backButtonTapped))
+        let backButton = UIBarButtonItem(title: String(localized: "Quit"), style: .plain, target: self, action: #selector(backButtonTapped))
         navigationItem.leftBarButtonItem = backButton
     }
 
     @objc func backButtonTapped() {
-        let alert = UIAlertController(title: "Are you sure you want to quit?", message: "", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
+        let alert = UIAlertController(title: String(localized: "Are you sure you want to quit?"), message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: String(localized: "Yes"), style: .default, handler: { _ in
             self.navigationController?.popToRootViewController(animated: true)
         }))
-        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: String(localized: "No"), style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
 }
