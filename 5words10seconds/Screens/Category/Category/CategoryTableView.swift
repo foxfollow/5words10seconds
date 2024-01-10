@@ -16,9 +16,11 @@ extension CategoryViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
 
         let nameLabel = createLabel(withText: categoryViewModel.teams.value[indexPath.row].name)
+        nameLabel.font = UIFont.boldSystemFont(ofSize: 14)
         cell.contentView.addSubview(nameLabel)
 
         let scoreLabel = createLabel(withText: "\(categoryViewModel.teams.value[indexPath.row].score)")
+        scoreLabel.font = UIFont.boldSystemFont(ofSize: 20)
         cell.contentView.addSubview(scoreLabel)
 
         let plusButton = createButton(withTitle: "+1")
@@ -33,16 +35,16 @@ extension CategoryViewController: UITableViewDataSource, UITableViewDelegate {
 
         NSLayoutConstraint.activate([
             nameLabel.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor),
-            nameLabel.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor, constant: 10),
+            nameLabel.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor, constant: 5),
 
             scoreLabel.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor),
-            scoreLabel.trailingAnchor.constraint(equalTo: minusButton.leadingAnchor, constant: -10),
+            scoreLabel.trailingAnchor.constraint(equalTo: minusButton.leadingAnchor, constant: -5),
 
             plusButton.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor),
-            plusButton.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor, constant: -10),
+            plusButton.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor, constant: -2),
 
             minusButton.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor),
-            minusButton.trailingAnchor.constraint(equalTo: plusButton.leadingAnchor, constant: -10),
+            minusButton.trailingAnchor.constraint(equalTo: plusButton.leadingAnchor, constant: 5),
         ])
 
         return cell

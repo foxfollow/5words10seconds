@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import AVFoundation
 
-class MenuViewController: UIViewController {
+class MenuViewController: UIViewController, AVAudioPlayerDelegate {
 
     let game5w10sBtn = UIButton()
     let game3w5sBtn = UIButton()
@@ -18,6 +19,8 @@ class MenuViewController: UIViewController {
     let backgroundViewLower = UIView()
 
     let menuViewModel = MenuViewModel()
+    
+    var endSoundPlayer: AVAudioPlayer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +48,16 @@ class MenuViewController: UIViewController {
     
     @objc func threeFiveTenButtonClicked() {
         print(String(localized: "Doesn't work yet (in dev)"))
+        //        private func playEndSound() {
+        guard let url = Bundle.main.url(forResource: "endringing", withExtension: "mp3", subdirectory: "Sounds") else { print("failed sound"); return }
+        do {
+            endSoundPlayer = try AVAudioPlayer(contentsOf: url)
+            endSoundPlayer?.delegate = self
+            endSoundPlayer?.play()
+        } catch {
+            print("Failed to play end sound: \(error.localizedDescription)")
+        }
+        //        }
     }
     
     @objc func testButtonClicked() {

@@ -27,12 +27,10 @@ struct Service {
             completion(.success(allTeamsUa))
         default:
             completion(.success(allTeamsEng))
-            
         }
     }
 
     func fetchCategories(_ completion: @escaping (Result<[CategoryModel], Error>) -> Void) {
-        
         switch MenuViewModel().currentLanguage.value {
         case "uk":
             completion(.success(categoriesTMPUa))
@@ -160,6 +158,25 @@ let categoriesTMPEng: [CategoryModel] = [
     CategoryModel(name: "Bad Habits", level: 0),
     CategoryModel(name: "Green fruits and vagitables", level: 0),
     CategoryModel(name: "Colors", level: 0),
+    CategoryModel(name: "Superheroes", level: 5),
+    CategoryModel(name: "Anime Series", level: 5),
+    CategoryModel(name: "Computer Games", level: 5),
+    CategoryModel(name: "Music Bands", level: 5),
+    CategoryModel(name: "Fashion Brands", level: 5),
+    CategoryModel(name: "Types of Dances", level: 5),
+    CategoryModel(name: "Historical Events", level: 5),
+    CategoryModel(name: "Famous Inventions", level: 5),
+    CategoryModel(name: "Space Objects", level: 5),
+    CategoryModel(name: "Mythical Creatures", level: 5),
+    CategoryModel(name: "Famous Places of the World", level: 5),
+    CategoryModel(name: "Famous Places of Europe", level: 5),
+    CategoryModel(name: "Famous Places of Asia", level: 5),
+    CategoryModel(name: "Famous Places of America", level: 5),
+    CategoryModel(name: "Famous Places of Africa", level: 5),
+    CategoryModel(name: "Famous Places of Australia", level: 5),
+    CategoryModel(name: "Types of Sports", level: 5),
+    CategoryModel(name: "Types of Art", level: 5),
+    CategoryModel(name: "Types of Science", level: 5),
 ]
 
 let categoriesTMPUa: [CategoryModel] = [
@@ -229,4 +246,23 @@ let diverseCategoriesUa: [CategoryModel] = [
     CategoryModel(name: "Відомі режисери", level: 5),
     CategoryModel(name: "Відомі музиканти", level: 5),
     CategoryModel(name: "Відомі політики", level: 5),
+    CategoryModel(name: "Міста України", level: 5),
+    CategoryModel(name: "Міста Європи", level: 5),
+    CategoryModel(name: "Міста Азії", level: 5),
+    CategoryModel(name: "Міста Америки", level: 5),
+    CategoryModel(name: "Міста Африки", level: 5),
+    CategoryModel(name: "Міста Австралії", level: 5),
+    CategoryModel(name: "Видатні будівлі світу", level: 5),
+    CategoryModel(name: "Видатні мости світу", level: 5),
+    CategoryModel(name: "Видатні парки світу", level: 5),
+    CategoryModel(name: "Супергерої", level: 5),
+    CategoryModel(name: "Аніме серіали", level: 5),
+    CategoryModel(name: "Комп'ютерні ігри", level: 5),
+    CategoryModel(name: "Музичні гурти", level: 5),
+    CategoryModel(name: "Модні бренди", level: 5),
+    CategoryModel(name: "Види танців", level: 5),
+    CategoryModel(name: "Історичні події", level: 5),
+    CategoryModel(name: "Відомі винаходи", level: 5),
+    CategoryModel(name: "Космічні об'єкти", level: 5),
+    CategoryModel(name: "Міфічні істоти", level: 5),
 ]

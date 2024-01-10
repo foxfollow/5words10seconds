@@ -80,15 +80,11 @@
       }
     },
     "Is team" : {
-
-    },
-    "Is team " : {
-      "extractionState" : "stale",
       "localizations" : {
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Чи команда "
+            "value" : "Чи команда"
           }
         }
       }
@@ -159,7 +155,7 @@
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "готов?"
+            "value" : "готова?"
           }
         }
       }
