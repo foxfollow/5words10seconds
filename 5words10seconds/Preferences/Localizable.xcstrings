@@ -249,12 +249,12 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Your turn, it starts immediately after your press. And you should say at least 5 words related to the category"
+            "value" : "Your turn, it starts immediately after you press \"Ready\". And you should say at least 5 words related to the category"
           }
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Ваша черга, вікторина почнеться одразу як ви натиснете, вам потрібно назвати 5 слів повʼязаних категорією"
           }
         }

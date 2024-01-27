@@ -1,5 +1,5 @@
 //
-//  ObservableObject.swift
+//  ObservableObjectCustom.swift
 //  5words10seconds
 //
 //  Created by Heorhii Savoiskyi on 02.11.2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ObservableObject<T> {
+final class ObservableObjectCustom<T> {
     
     var value: T {
         didSet {

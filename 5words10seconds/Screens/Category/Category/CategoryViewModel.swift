@@ -8,34 +8,53 @@
 import Foundation
 
 class CategoryViewModel {
-    var teams: ObservableObject<[TeamModel]>
-
-    var currentTeam: ObservableObject<TeamModel?> = ObservableObject(nil)
-    var currentCtgr: ObservableObject<CategoryModel?> = ObservableObject(nil)
-
+    var teams: ObservableObjectCustom<[TeamModel]>
+    
+    var currentTeam: ObservableObjectCustom<TeamModel?> = ObservableObjectCustom(nil)
+    var currentCtgr: ObservableObjectCustom<CategoryModel?> = ObservableObjectCustom(nil)
+    
     var playedCategories = [CategoryModel]()
     var allCategories: [CategoryModel]?
 
     init(teams: [TeamModel]) {
-        self.teams = ObservableObject(teams)
+        self.teams = ObservableObjectCustom(teams)
     }
-
+    
     func fetchCategory() {
         // If allCategories is nil, fetch categories
         if allCategories == nil {
-            Service.shared.fetchCategories { [weak self] result in
-                switch result {
-                case let .success(data):
-                    self?.allCategories = data
-                    self?.selectRandomCategory()
-                case let .failure(err):
-                    print(err.localizedDescription)
+            // Fetch categories from CloudKit
+            Task {
+                do {
+                    try await CloudMainModel.shared.populateCategories()
+                    self.allCategories = CloudMainModel.shared.categories
+//                    self.selectRandomCategory()
+                } catch {
+                    print("Failed to fetch categories: \(error)")
                 }
             }
         } else {
             selectRandomCategory()
         }
     }
+
+    // MARK: Fetching from service
+//    func fetchCategory() {
+//        // If allCategories is nil, fetch categories
+//        if allCategories == nil {
+//            Service.shared.fetchCategories { [weak self] result in
+//                switch result {
+//                case let .success(data):
+//                    self?.allCategories = data
+//                    self?.selectRandomCategory()
+//                case let .failure(err):
+//                    print(err.localizedDescription)
+//                }
+//            }
+//        } else {
+//            selectRandomCategory()
+//        }
+//    }
 
     private func selectRandomCategory() {
         guard let allCategories = allCategories, !allCategories.isEmpty else {

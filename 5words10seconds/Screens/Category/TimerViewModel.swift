@@ -8,8 +8,8 @@
 import Foundation
 
 class TimerViewModel: NSObject {
-    var timerValue = ObservableObject<Int>(0)
-    var timerDidEnd = ObservableObject<Bool>(true)
+    var timerValue = ObservableObjectCustom<Int>(0)
+    var timerDidEnd = ObservableObjectCustom<Bool>(true)
 
     private var timer: Timer?
 

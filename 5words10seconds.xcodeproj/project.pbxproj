@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF0A30962AF4139A004A4301 /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A30952AF4139A004A4301 /* ObservableObject.swift */; };
+		BF0A30962AF4139A004A4301 /* ObservableObjectCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A30952AF4139A004A4301 /* ObservableObjectCustom.swift */; };
 		BF0A309C2AF447FF004A4301 /* TeamsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A309B2AF447FF004A4301 /* TeamsCellView.swift */; };
 		BF0A309E2AF44DE9004A4301 /* TeamsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A309D2AF44DE9004A4301 /* TeamsTableView.swift */; };
 		BF0A30A02AF44F45004A4301 /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A309F2AF44F45004A4301 /* TeamsViewModel.swift */; };
@@ -20,6 +20,7 @@
 		BF94BA7B2AF6B6FF0085C4ED /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA7A2AF6B6FF0085C4ED /* TimerView.swift */; };
 		BF94BA7D2AF989FC0085C4ED /* PopupViewsFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA7C2AF989FC0085C4ED /* PopupViewsFuncs.swift */; };
 		BFA4DD802B0BDDA000A44C87 /* TeamsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4DD7F2B0BDDA000A44C87 /* TeamsCellViewModel.swift */; };
+		BFD820432B4F206A00785BE8 /* CloudMainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD820422B4F206A00785BE8 /* CloudMainService.swift */; };
 		BFE8209C2AEFD33F00B303F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209B2AEFD33F00B303F9 /* AppDelegate.swift */; };
 		BFE8209E2AEFD33F00B303F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209D2AEFD33F00B303F9 /* SceneDelegate.swift */; };
 		BFE820A02AEFD33F00B303F9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209F2AEFD33F00B303F9 /* MenuViewController.swift */; };
@@ -40,7 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BF0A30952AF4139A004A4301 /* ObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObject.swift; sourceTree = "<group>"; };
+		BF0A30952AF4139A004A4301 /* ObservableObjectCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableObjectCustom.swift; sourceTree = "<group>"; };
 		BF0A309B2AF447FF004A4301 /* TeamsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCellView.swift; sourceTree = "<group>"; };
 		BF0A309D2AF44DE9004A4301 /* TeamsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableView.swift; sourceTree = "<group>"; };
 		BF0A309F2AF44F45004A4301 /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
@@ -53,6 +54,8 @@
 		BF94BA7A2AF6B6FF0085C4ED /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		BF94BA7C2AF989FC0085C4ED /* PopupViewsFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewsFuncs.swift; sourceTree = "<group>"; };
 		BFA4DD7F2B0BDDA000A44C87 /* TeamsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCellViewModel.swift; sourceTree = "<group>"; };
+		BFD820412B4F1E4C00785BE8 /* 5words10seconds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 5words10seconds.entitlements; sourceTree = "<group>"; };
+		BFD820422B4F206A00785BE8 /* CloudMainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudMainService.swift; sourceTree = "<group>"; };
 		BFE820982AEFD33F00B303F9 /* 5words10seconds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5words10seconds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE8209B2AEFD33F00B303F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE8209D2AEFD33F00B303F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,13 +164,14 @@
 		BFE8209A2AEFD33F00B303F9 /* 5words10seconds */ = {
 			isa = PBXGroup;
 			children = (
+				BFD820412B4F1E4C00785BE8 /* 5words10seconds.entitlements */,
 				BFE820C62AEFE55300B303F9 /* App+Scene */,
 				BFE820C72AEFE56000B303F9 /* Storyboards */,
 				BFE820C82AEFE5AC00B303F9 /* Preferences */,
 				BFE820AF2AEFD35B00B303F9 /* Model */,
 				BF0A30972AF42958004A4301 /* Screens */,
 				BFE820C92AEFE63A00B303F9 /* Service */,
-				BF0A30952AF4139A004A4301 /* ObservableObject.swift */,
+				BF0A30952AF4139A004A4301 /* ObservableObjectCustom.swift */,
 			);
 			path = 5words10seconds;
 			sourceTree = "<group>";
@@ -215,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				BFE820CA2AEFE68700B303F9 /* Service.swift */,
+				BFD820422B4F206A00785BE8 /* CloudMainService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -295,12 +300,13 @@
 				BF103FE42B08FFDA0019CC2C /* CategoryTableView.swift in Sources */,
 				BF94BA742AF6885E0085C4ED /* CategoryViewModel.swift in Sources */,
 				BFE820A02AEFD33F00B303F9 /* MenuViewController.swift in Sources */,
+				BFD820432B4F206A00785BE8 /* CloudMainService.swift in Sources */,
 				BFE820CB2AEFE68700B303F9 /* Service.swift in Sources */,
 				BFE820B72AEFDFD600B303F9 /* TeamModel.swift in Sources */,
 				BFE8209C2AEFD33F00B303F9 /* AppDelegate.swift in Sources */,
 				BFE8209E2AEFD33F00B303F9 /* SceneDelegate.swift in Sources */,
 				BF94BA7D2AF989FC0085C4ED /* PopupViewsFuncs.swift in Sources */,
-				BF0A30962AF4139A004A4301 /* ObservableObject.swift in Sources */,
+				BF0A30962AF4139A004A4301 /* ObservableObjectCustom.swift in Sources */,
 				BFA4DD802B0BDDA000A44C87 /* TeamsCellViewModel.swift in Sources */,
 				BF4448BF2B16563500999FC2 /* TestViewController.swift in Sources */,
 				BF94BA7B2AF6B6FF0085C4ED /* TimerView.swift in Sources */,
@@ -469,6 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = 5words10seconds/5words10seconds.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -485,7 +492,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "d3f0ld.-words10seconds";
+				PRODUCT_BUNDLE_IDENTIFIER = d3f0ld.5words10seconds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -499,6 +506,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = 5words10seconds/5words10seconds.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -515,7 +523,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "d3f0ld.-words10seconds";
+				PRODUCT_BUNDLE_IDENTIFIER = d3f0ld.5words10seconds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;

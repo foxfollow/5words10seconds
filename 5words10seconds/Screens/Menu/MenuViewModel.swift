@@ -27,10 +27,10 @@ enum SupportedLanguages: String, CaseIterable {
 
 
 class MenuViewModel {   // TODO: create and perfome leveling
-    var currentLanguage: ObservableObject<String?> {
+    var currentLanguage: ObservableObjectCustom<String?> {
         get {
-            guard let lang: String = UserDefaults.standard.array(forKey: "AppleLanguages")?[0] as? String else { return ObservableObject(nil) }
-            return ObservableObject(lang)
+            guard let lang: String = UserDefaults.standard.array(forKey: "AppleLanguages")?[0] as? String else { return ObservableObjectCustom(nil) }
+            return ObservableObjectCustom(lang)
         }
     }
 
@@ -39,7 +39,7 @@ class MenuViewModel {   // TODO: create and perfome leveling
         UserDefaults.standard.synchronize()
     }
 
-//    var level: ObservableObject<Int?> = ObservableObject(nil)
+//    var level: ObservableObjectCustom<Int?> = ObservableObject(nil)
 ////    func getLevel() {
 ////        level.value = Service.shared.getLevel()
 ////    }

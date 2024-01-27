@@ -11,7 +11,7 @@ import UIKit
 extension MenuViewController {
     
     
-    func setupSubviews(a: Int) {
+    func setupSubviews() {
         setupBackgroundView()
         setupButtonsView()
         setupPickerSubviews()

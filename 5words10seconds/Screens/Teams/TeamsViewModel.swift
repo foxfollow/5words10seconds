@@ -12,7 +12,7 @@ class TeamsViewModel {
 
     private var allTeams: Set<TeamModel> = []
 
-    var cellViewModels: ObservableObject<[TeamsCellViewModel]?> = ObservableObject(nil)
+    var cellViewModels: ObservableObjectCustom<[TeamsCellViewModel]?> = ObservableObjectCustom(nil)
     var dataSourceTeams: [TeamModel]? {
         didSet {
             guard let dataSourceTeams = dataSourceTeams else { return }

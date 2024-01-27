@@ -39,6 +39,8 @@ class CategoryViewController: UIViewController, AVAudioPlayerDelegate {
         setupSubviews() // in CategoryView.swift
         setupBinders()
         isReadyPopup() // in PopupViewsFuncs.swift
+        
+        self.categoryViewModel.fetchCategory() // download all categories from cloudkit
     }
 
     private func setupBinders() {
