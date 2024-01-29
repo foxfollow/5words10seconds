@@ -102,7 +102,12 @@ class CategoryViewController: UIViewController, AVAudioPlayerDelegate {
     }
 
     private func playEndSound() {
-        guard let url = Bundle.main.url(forResource: "endringing", withExtension: "mp3", subdirectory: "Sounds") else { print("failed sound"); return }
+//        let paths = Bundle.main.paths(forResourcesOfType: "mp3", inDirectory: nil)
+//        print(paths)
+        guard let url = Bundle.main.url(forResource: "endringing", withExtension: "mp3") else {
+            print("Failed to get URL for sound file")
+            return
+        }
         do {
             endSoundPlayer = try AVAudioPlayer(contentsOf: url)
             endSoundPlayer?.delegate = self

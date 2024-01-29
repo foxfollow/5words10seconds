@@ -12,6 +12,7 @@
 		BF0A309E2AF44DE9004A4301 /* TeamsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A309D2AF44DE9004A4301 /* TeamsTableView.swift */; };
 		BF0A30A02AF44F45004A4301 /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A309F2AF44F45004A4301 /* TeamsViewModel.swift */; };
 		BF103FE42B08FFDA0019CC2C /* CategoryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF103FE32B08FFDA0019CC2C /* CategoryTableView.swift */; };
+		BF3A81342B677A780035F109 /* endringing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF3A81332B677A780035F109 /* endringing.mp3 */; };
 		BF4448BF2B16563500999FC2 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4448BE2B16563500999FC2 /* TestViewController.swift */; };
 		BF4448C22B1DF74700999FC2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = BF4448C12B1DF74700999FC2 /* Localizable.xcstrings */; };
 		BF94BA742AF6885E0085C4ED /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA732AF6885E0085C4ED /* CategoryViewModel.swift */; };
@@ -46,6 +47,7 @@
 		BF0A309D2AF44DE9004A4301 /* TeamsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableView.swift; sourceTree = "<group>"; };
 		BF0A309F2AF44F45004A4301 /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
 		BF103FE32B08FFDA0019CC2C /* CategoryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableView.swift; sourceTree = "<group>"; };
+		BF3A81332B677A780035F109 /* endringing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = endringing.mp3; sourceTree = "<group>"; };
 		BF4448BE2B16563500999FC2 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		BF4448C12B1DF74700999FC2 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = 5words10seconds/Preferences/Localizable.xcstrings; sourceTree = SOURCE_ROOT; };
 		BF94BA732AF6885E0085C4ED /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
@@ -134,6 +136,14 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		BF3A81322B6538A40035F109 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				BF3A81332B677A780035F109 /* endringing.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		BF94BA802AF991010085C4ED /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +174,7 @@
 		BFE8209A2AEFD33F00B303F9 /* 5words10seconds */ = {
 			isa = PBXGroup;
 			children = (
+				BF3A81322B6538A40035F109 /* Sounds */,
 				BFD820412B4F1E4C00785BE8 /* 5words10seconds.entitlements */,
 				BFE820C62AEFE55300B303F9 /* App+Scene */,
 				BFE820C72AEFE56000B303F9 /* Storyboards */,
@@ -287,6 +298,7 @@
 				BFE820A52AEFD34000B303F9 /* Assets.xcassets in Resources */,
 				BF4448C22B1DF74700999FC2 /* Localizable.xcstrings in Resources */,
 				BFE820A32AEFD33F00B303F9 /* Main.storyboard in Resources */,
+				BF3A81342B677A780035F109 /* endringing.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
