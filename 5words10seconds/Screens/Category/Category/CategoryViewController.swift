@@ -120,16 +120,35 @@ class CategoryViewController: UIViewController, AVAudioPlayerDelegate {
 
 extension CategoryViewController {
     func setupNavigationBar() {
-        let backButton = UIBarButtonItem(title: String(localized: "Quit"), style: .plain, target: self, action: #selector(backButtonTapped))
+        let backButton = UIBarButtonItem(title: String(localized: "Quit"), style: .plain, target: self, action: #selector(backButtonTappedAlert))
         navigationItem.leftBarButtonItem = backButton
     }
 
-    @objc func backButtonTapped() {
-        let alert = UIAlertController(title: String(localized: "Are you sure you want to quit?"), message: "", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: String(localized: "Yes"), style: .default, handler: { _ in
+    @objc func backButtonTappedAlert() {
+        // TODO: stop the timer
+        let overlayView = BlurOverlayFactorView(frame: self.tabBarController?.view.bounds ?? self.view.bounds)
+        self.tabBarController?.view.addSubview(overlayView) ?? self.view.addSubview(overlayView)
+        
+        let alertView = AlertView(frame: CGRect(x: 0, y: 0, width: 350, height: 220))
+        alertView.overlayView = overlayView
+        alertView.center = overlayView.center
+        alertView.titleLabel.text = String(localized: "Are you sure you want to quit?")
+        alertView.messageLabel.text = String(localized: "The game wount be saved?")
+        alertView.messageLabel.numberOfLines = 2
+        alertView.acceptButton.setTitle(String(localized: "Yes"), for: .normal)
+        alertView.DButton.setTitle(String(localized: "No"), for: .normal)
+//        alertView.adjustAlertViewHeight()
+        alertView.center = self.view.center
+
+        alertView.acceptAction = {
             self.navigationController?.popToRootViewController(animated: true)
-        }))
-        alert.addAction(UIAlertAction(title: String(localized: "No"), style: .cancel, handler: nil))
-        present(alert, animated: true, completion: nil)
+        }
+        
+//        alertView.cancelAction = {
+//            // return the timer back
+//        }
+
+        overlayView.addAlert(alertView: alertView)
+
     }
 }

@@ -214,6 +214,22 @@
         }
       }
     },
+    "The game wount be saved?" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The game won't be saved"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Гра не буде збережена"
+          }
+        }
+      }
+    },
     "Timer Ended" : {
       "localizations" : {
         "uk" : {
@@ -254,8 +270,8 @@
         },
         "uk" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Ваша черга, вікторина почнеться одразу як ви натиснете, вам потрібно назвати 5 слів повʼязаних категорією"
+            "state" : "translated",
+            "value" : "Ваша черга, вікторина почнеться одразу як ви натиснете \"Готова\", вам потрібно назвати 5 слів повʼязаних категорією на екрані"
           }
         }
       }

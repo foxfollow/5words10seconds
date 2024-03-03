@@ -12,6 +12,8 @@
 		BF0A309E2AF44DE9004A4301 /* TeamsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A309D2AF44DE9004A4301 /* TeamsTableView.swift */; };
 		BF0A30A02AF44F45004A4301 /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A309F2AF44F45004A4301 /* TeamsViewModel.swift */; };
 		BF103FE42B08FFDA0019CC2C /* CategoryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF103FE32B08FFDA0019CC2C /* CategoryTableView.swift */; };
+		BF28C6132B948FEE00940849 /* BlurOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF28C6122B948FEE00940849 /* BlurOverlayView.swift */; };
+		BF28C6152B94C0AD00940849 /* AlertTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF28C6142B94C0AD00940849 /* AlertTableView.swift */; };
 		BF3A81342B677A780035F109 /* endringing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF3A81332B677A780035F109 /* endringing.mp3 */; };
 		BF4448BF2B16563500999FC2 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4448BE2B16563500999FC2 /* TestViewController.swift */; };
 		BF4448C22B1DF74700999FC2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = BF4448C12B1DF74700999FC2 /* Localizable.xcstrings */; };
@@ -21,6 +23,7 @@
 		BF94BA7B2AF6B6FF0085C4ED /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA7A2AF6B6FF0085C4ED /* TimerView.swift */; };
 		BF94BA7D2AF989FC0085C4ED /* PopupViewsFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA7C2AF989FC0085C4ED /* PopupViewsFuncs.swift */; };
 		BFA4DD802B0BDDA000A44C87 /* TeamsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4DD7F2B0BDDA000A44C87 /* TeamsCellViewModel.swift */; };
+		BFBD0E8A2B67BCEF00A212B5 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD0E892B67BCEF00A212B5 /* AlertView.swift */; };
 		BFD820432B4F206A00785BE8 /* CloudMainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD820422B4F206A00785BE8 /* CloudMainService.swift */; };
 		BFE8209C2AEFD33F00B303F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209B2AEFD33F00B303F9 /* AppDelegate.swift */; };
 		BFE8209E2AEFD33F00B303F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209D2AEFD33F00B303F9 /* SceneDelegate.swift */; };
@@ -47,6 +50,8 @@
 		BF0A309D2AF44DE9004A4301 /* TeamsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableView.swift; sourceTree = "<group>"; };
 		BF0A309F2AF44F45004A4301 /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
 		BF103FE32B08FFDA0019CC2C /* CategoryTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableView.swift; sourceTree = "<group>"; };
+		BF28C6122B948FEE00940849 /* BlurOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurOverlayView.swift; sourceTree = "<group>"; };
+		BF28C6142B94C0AD00940849 /* AlertTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTableView.swift; sourceTree = "<group>"; };
 		BF3A81332B677A780035F109 /* endringing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = endringing.mp3; sourceTree = "<group>"; };
 		BF4448BE2B16563500999FC2 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		BF4448C12B1DF74700999FC2 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = 5words10seconds/Preferences/Localizable.xcstrings; sourceTree = SOURCE_ROOT; };
@@ -56,6 +61,7 @@
 		BF94BA7A2AF6B6FF0085C4ED /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		BF94BA7C2AF989FC0085C4ED /* PopupViewsFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewsFuncs.swift; sourceTree = "<group>"; };
 		BFA4DD7F2B0BDDA000A44C87 /* TeamsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCellViewModel.swift; sourceTree = "<group>"; };
+		BFBD0E892B67BCEF00A212B5 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		BFD820412B4F1E4C00785BE8 /* 5words10seconds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 5words10seconds.entitlements; sourceTree = "<group>"; };
 		BFD820422B4F206A00785BE8 /* CloudMainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudMainService.swift; sourceTree = "<group>"; };
 		BFE820982AEFD33F00B303F9 /* 5words10seconds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5words10seconds.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +99,7 @@
 		BF0A30972AF42958004A4301 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				BFBD0E882B67BCD300A212B5 /* Supported */,
 				BF0A30982AF42972004A4301 /* Menu */,
 				BF0A30992AF42978004A4301 /* Teams */,
 				BF0A309A2AF42982004A4301 /* Category */,
@@ -153,6 +160,16 @@
 				BF103FE32B08FFDA0019CC2C /* CategoryTableView.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		BFBD0E882B67BCD300A212B5 /* Supported */ = {
+			isa = PBXGroup;
+			children = (
+				BFBD0E892B67BCEF00A212B5 /* AlertView.swift */,
+				BF28C6142B94C0AD00940849 /* AlertTableView.swift */,
+				BF28C6122B948FEE00940849 /* BlurOverlayView.swift */,
+			);
+			path = Supported;
 			sourceTree = "<group>";
 		};
 		BFE8208F2AEFD33F00B303F9 = {
@@ -318,6 +335,7 @@
 				BFE8209C2AEFD33F00B303F9 /* AppDelegate.swift in Sources */,
 				BFE8209E2AEFD33F00B303F9 /* SceneDelegate.swift in Sources */,
 				BF94BA7D2AF989FC0085C4ED /* PopupViewsFuncs.swift in Sources */,
+				BFBD0E8A2B67BCEF00A212B5 /* AlertView.swift in Sources */,
 				BF0A30962AF4139A004A4301 /* ObservableObjectCustom.swift in Sources */,
 				BFA4DD802B0BDDA000A44C87 /* TeamsCellViewModel.swift in Sources */,
 				BF4448BF2B16563500999FC2 /* TestViewController.swift in Sources */,
@@ -328,10 +346,12 @@
 				BFEDD8F82B1F0988006C6208 /* LanguageModel.swift in Sources */,
 				BFE820B92AEFE12C00B303F9 /* GameLevelModel.swift in Sources */,
 				BFE820BF2AEFE4C900B303F9 /* MenuView.swift in Sources */,
+				BF28C6152B94C0AD00940849 /* AlertTableView.swift in Sources */,
 				BFE820C12AEFE4FA00B303F9 /* TeamsView.swift in Sources */,
 				BFE820BB2AEFE17B00B303F9 /* TeamsViewController.swift in Sources */,
 				BFE820BD2AEFE24A00B303F9 /* CategoryViewController.swift in Sources */,
 				BF94BA762AF688800085C4ED /* CategoryView.swift in Sources */,
+				BF28C6132B948FEE00940849 /* BlurOverlayView.swift in Sources */,
 				BFE820B52AEFD41B00B303F9 /* CategoryModel.swift in Sources */,
 				BF94BA792AF6B6ED0085C4ED /* TimerViewModel.swift in Sources */,
 				BF0A309C2AF447FF004A4301 /* TeamsCellView.swift in Sources */,
