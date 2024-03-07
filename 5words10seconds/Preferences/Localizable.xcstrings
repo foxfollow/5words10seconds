@@ -160,6 +160,9 @@
         }
       }
     },
+    "Save" : {
+
+    },
     "Start 3words5sec" : {
       "extractionState" : "manual",
       "localizations" : {

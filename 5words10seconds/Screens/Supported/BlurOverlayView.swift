@@ -40,5 +40,18 @@ class BlurOverlayFactorView: UIView {
             }
         }
     }
+    
+    public func addAlert(alertView: AlertCollectionView, isAnimated: Bool = true) {
+
+            
+
+        self.addSubview(alertView)
+        if isAnimated {
+            self.alpha = 0
+            UIView.animate(withDuration: 0.3) {
+                self.alpha = 1
+            }
+        }
+    }
 
 }

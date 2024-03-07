@@ -18,7 +18,7 @@ class CategoryViewController: UIViewController, AVAudioPlayerDelegate {
     var timerViewModel = TimerViewModel()
     var timerView: TimerView! // inited in CategoryView.swift - setupTimer()
 
-    let tableView = UITableView() // setuped in PopupViewsFuncs.swift - listTeamsTableViewPopup()
+    var alertCollectionView: AlertCollectionView?
 
     var endSoundPlayer: AVAudioPlayer?
 
@@ -83,13 +83,15 @@ class CategoryViewController: UIViewController, AVAudioPlayerDelegate {
         categoryViewModel.currentTeam.bind { [weak self] team in
             print("Team changed to \(team?.name ?? "")")
             DispatchQueue.main.async {
-                self?.tableView.reloadData()
+                self?.alertCollectionView?.collectionView.reloadData()
+//                self?.tableView.reloadData()
             }
         }
 
         categoryViewModel.teams.bind { [weak self] _ in
             DispatchQueue.main.async {
-                self?.tableView.reloadData()
+                self?.alertCollectionView?.collectionView.reloadData()
+//                self?.tableView.reloadData()
             }
         }
 
@@ -135,8 +137,11 @@ extension CategoryViewController {
         alertView.titleLabel.text = String(localized: "Are you sure you want to quit?")
         alertView.messageLabel.text = String(localized: "The game wount be saved?")
         alertView.messageLabel.numberOfLines = 2
+        
+        alertView.acceptButtonsColor = .red
+        alertView.declineButtonsColor = .orange
         alertView.acceptButton.setTitle(String(localized: "Yes"), for: .normal)
-        alertView.DButton.setTitle(String(localized: "No"), for: .normal)
+        alertView.declineButton.setTitle(String(localized: "No"), for: .normal)
 //        alertView.adjustAlertViewHeight()
         alertView.center = self.view.center
 
@@ -144,7 +149,7 @@ extension CategoryViewController {
             self.navigationController?.popToRootViewController(animated: true)
         }
         
-//        alertView.cancelAction = {
+//        alertView.declineAction = {
 //            // return the timer back
 //        }
 

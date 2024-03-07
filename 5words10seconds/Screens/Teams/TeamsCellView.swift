@@ -25,7 +25,7 @@ class TeamsCellView: UITableViewCell {
             teamNameLbl.text = cellViewModel?.name
             crossImg.isUserInteractionEnabled = true
             crossImg.removeTarget(nil, action: nil, for: .allEvents)
-            crossImg.addTarget(self, action: #selector(acceptButtonTapped), for: .touchUpInside)
+            crossImg.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
         }
     }
 
@@ -55,7 +55,7 @@ class TeamsCellView: UITableViewCell {
         crossImg.isUserInteractionEnabled = true
         crossImg.setImage(UIImage(systemName: "trash.fill"), for: .normal)
         crossImg.tintColor = .orange
-        crossImg.addTarget(self, action: #selector(acceptButtonTapped), for: .touchUpInside)
+        crossImg.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
     }
 }
 

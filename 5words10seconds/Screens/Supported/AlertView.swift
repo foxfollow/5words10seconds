@@ -47,16 +47,33 @@ class AlertView: UIView {
         return label
     }()
     
+    var acceptButtonsColor: UIColor? {
+        didSet {
+            guard let buttonsColor = acceptButtonsColor else { return }
+            acceptButton.setTitleColor(buttonsColor, for: .normal)
+            acceptButton.setTitleColor(.white, for: .highlighted)
+            acceptButton.layer.borderColor = buttonsColor.cgColor
+            acceptButton.backgroundColor = buttonsColor.withAlphaComponent(0.05)
+        }
+    }
+    
+    
+    var declineButtonsColor: UIColor? {
+        didSet {
+            guard let buttonsColor = declineButtonsColor else { return }
+            declineButton.setTitleColor(buttonsColor, for: .normal)
+            declineButton.setTitleColor(.white, for: .highlighted)
+            declineButton.layer.borderColor = buttonsColor.cgColor
+            declineButton.backgroundColor = buttonsColor.withAlphaComponent(0.05)        }
+    }
+    
     var acceptButton: UIButton = {
         let button = UIButton()
         button.setTitle("Delete", for: .normal)
-//        button.setBackgroundImage(AppConfig.buttonsImg.alertAccept, for: .normal)
-        button.setTitleColor(.red, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 24, weight: .bold)
         
         button.backgroundColor = .lightGray
         button.layer.borderWidth = 4
-        button.layer.borderColor = UIColor.red.cgColor
         button.layer.cornerRadius = 32
         button.clipsToBounds = true
         return button
@@ -65,13 +82,10 @@ class AlertView: UIView {
     var declineButton = {
         let button = UIButton()
         button.setTitle("Cancel", for: .normal)
-//        button.setBackgroundImage(AppConfig.buttonsImg.alertCancel, for: .normal)
-        button.setTitleColor(.orange, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 24, weight: .bold)
         
         button.backgroundColor = .lightGray
         button.layer.borderWidth = 4
-        button.layer.borderColor = UIColor.orange.cgColor
         button.layer.cornerRadius = 32
         button.clipsToBounds = true
         return button
@@ -94,16 +108,8 @@ class AlertView: UIView {
     
     init(frame: CGRect, isFullWidthButtons: Bool = false) {
         self.isFullWidthButtons = isFullWidthButtons
-        super.init(frame: frame)
-        setupView()
-        setupConstraints()
-        
-        self.clipsToBounds = true
-        layoutIfNeeded()
-    }
-    
-    override init(frame: CGRect) {
-        self.isFullWidthButtons = false
+        self.acceptButtonsColor = .systemRed
+        self.declineButtonsColor = .systemOrange
         super.init(frame: frame)
         setupView()
         setupConstraints()
@@ -114,6 +120,9 @@ class AlertView: UIView {
     
     required init?(coder: NSCoder) {
         self.isFullWidthButtons = false
+        self.acceptButtonsColor = .systemRed
+        self.declineButtonsColor = .systemOrange
+
         super.init(coder: coder)
     }
 
