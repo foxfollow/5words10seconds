@@ -233,3 +233,4 @@ listOfCategories = """
 array = listOfCategories.split("\n")
 for categ in array:
   print(f'CategoryModel(name: "{categ}", level: 5),')
+print(len(array))
