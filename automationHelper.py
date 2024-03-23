@@ -229,8 +229,242 @@ listOfCategories = """
 Речі, які люди роблять на роботі
 """
 
+allEnglishCategories = """
+Flowers
+Plants
+Body parts
+Dishware items
+Homemade dishes
+Geometric shapes
+Gardening tools
+Hiking gear
+Two-digit numbers
+Things you can see in the sky
+Bodies of water
+Positive character traits
+Planets
+Confectionery products
+Headwear
+Relatives
+Things you can find at the bottom of the sea
+Tropical fruits
+Units of measurement
+Fish
+Holidays
+Furniture
+Cleaning supplies
+Dairy products
+Farm animals
+Pets
+Clothing items
+Drinks
+Alcoholic beverages
+Emotions
+Cities of Ukraine
+States of the USA
+Fairy tale characters
+Vegetables
+Fruits
+Berries
+Birds
+Car brands
+Hairstyles
+Months of the year
+Items starting with the letter "R"
+Items starting with the letter "S"
+Active games
+Types of transport
+Olympic sports
+Winter Olympic sports
+Large animals
+Natural phenomena
+Red berries
+Jewelry
+Items from a toolbox
+Languages
+Countries of the world
+Sports without a ball
+Sport brands
+Birds you can see in winter
+Sweet things
+The best gift for you
+Places where you can find a mirror
+Male names starting with "S"
+Female names starting with "K"
+Fairy tale princesses
+Board games
+Computer games
+Book titles
+Writers
+Items you can draw with
+Toys
+World's seas
+Sports games with a ball
+Ice cream flavors
+Predatory animals
+Kitchen appliances
+Living creatures with wings
+Clothing accessories
+Types of household appliances
+Peoples of the world
+Hoofed animals
+Garden plants
+Numbers starting with "D"
+Everyday electronic devices
+Yellow fruits
+Sour products
+Streets of your city
+Typical breakfast dishes
+Items from your room
+Animals with tails
+Reptiles
+Animals you've seen in a zoo
+Nuts
+String musical instruments
+Devices for listening to music
+Children's songs
+Consonant letters
+Dishes usually eaten cold
+Cartoon characters
+Green items
+Dishes usually eaten hot
+Animals that can swim
+Mythical creatures
+Flying insects
+Types of pastries
+Holiday table dishes
+Superheroes
+Precious stones
+School supplies
+Professions
+Universities of Ukraine
+World's universities
+Male names starting with "O"
+Female names starting with "N"
+Cartoons
+World landmarks
+Wonders of the world
+Stores
+Vegetables that grow underground
+Dog breeds
+Cat breeds
+Pastry products
+Pets
+Types of fish
+Types of cats
+Types of women's shoes
+Shopping malls
+Spring holidays
+Cleaning tools
+Cities popular among tourists
+Types of skincare cosmetics
+Nationalities
+Reasons to give someone flowers
+Animals living in Ukraine
+Social networks
+World brands
+Kitchen tools
+Negative character traits
+Ways to get to school
+Dishes that make you thirsty
+English words
+Comedies
+Health-related professions
+Characters from classic literature
+Signs of Christmas
+Children's diseases
+Most popular animals from cartoons
+Types of coffee
+Types of tea
+Things people often forget to say
+Horror movies
+Mountains
+Books with a child in the main role
+Shades of blue
+Insects that don't fly
+Sound recording devices
+Physically demanding professions
+Places you want to visit
+Types of transport that only move along a route
+Repair-related professions
+Green vegetables
+Historical figures named Olena
+Types of cheese
+Words starting with "E"
+Dishes not usually eaten for lunch
+Village professions
+Poisonous plants
+Poisonous animals
+Actors
+Berries that grow in the forest
+Elements of the periodic table
+Writers of the Golden Age
+Names ending with "lav"
+Public holidays
+Antique items still in use
+Historical movies
+Associations with the word "Expert"
+Items that can't be washed
+Countries bordered by an ocean
+Healthy habits
+Plays
+New Year's movies
+Types of delicacies
+Exotic fruits
+Asian cuisine dishes
+Fish dishes
+Signs of a graduate
+Types of milk
+Countries of Europe
+Things people usually do on New Year's
+Chemical phenomena
+Reasons to live in a village
+Chicken dishes
+Popular cat names
+Popular dog names
+Types of combat sports
+Units of weight measurement
+Types of sports
+Types of headwear
+Rhymes with the word "truth"
+Musicians
+Music bands
+Words that mean greeting
+Types of city-dwelling insects
+Rivers
+Countries starting with "K"
+Historical epochs
+Plants you can grow on a balcony
+Ingredients for cutlets
+Words that mean farewell
+Reasons to have tea
+Flowers that are red
+Documents needed for a job
+Potato dishes
+World religions
+Things in a private house
+Quotes from TV ads
+Songs from TV ads
+Candy brands
+Philosophers
+Philosopher writers
+Candy brands
+Types of edible "grass"
+Types of active rest
+Things you want to do but can't
+Famous witches
+Flowers that are white
+Food items considered side dishes
+Types of building materials
+Things people do at work
+"""
+
 #     CategoryModel(name: "Міста Азії", level: 5),
 array = listOfCategories.split("\n")
+array = allEnglishCategories.split("\n")
+
 for categ in array:
-  print(f'CategoryModel(name: "{categ}", level: 5),')
+  # print(f'CategoryModel(name: "{categ}", level: 5, language: .ukrainian),')
+  categ_escaped = categ.replace('\"', '\\\"')
+  print(f"CategoryModel(name: \"{categ_escaped}\", level: 5, language: .english),")
 print(len(array))

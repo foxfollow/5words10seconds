@@ -40,6 +40,7 @@ extension CloudMainModel {
             let record = try await dataBase.record(for: recId)
             record[CategoryRecordKeys.name.rawValue] = editedCategory.name
             record[CategoryRecordKeys.level.rawValue] = editedCategory.level
+            record[CategoryRecordKeys.language.rawValue] = editedCategory.language.rawValue
             try await dataBase.save(record)
         } catch {
             //
@@ -47,10 +48,16 @@ extension CloudMainModel {
     }
 
     func populateCategories(byDate _: String = "") async throws {
-        let predicate = NSPredicate(value: true)
-//        let predicate = NSPredicate(format: "dayOfMonth BEGINSWITH %@", "\(byDate)")
+        
+        let currentLanguage = Locale.current.language.languageCode?.identifier ?? "en"
+        let predicate = NSPredicate(format: "%K == %@", CategoryRecordKeys.language.rawValue, currentLanguage)
 
         let query = CKQuery(recordType: CategoryRecordKeys.type.rawValue, predicate: predicate)
+        
+//        let predicate = NSPredicate(value: true)
+//        let predicate = NSPredicate(format: "dayOfMonth BEGINSWITH %@", "\(byDate)")
+
+//        let query = CKQuery(recordType: CategoryRecordKeys.type.rawValue, predicate: predicate)
 //        query.sortDescriptors = [NSSortDescriptor(key: "startTime", ascending: true)]
 
         let result = try await dataBase.records(matching: query)
@@ -88,7 +95,7 @@ extension CloudMainModel {
         }
     }
 
-    func addDiverseCategories() async {
+    func addDiverseCategoriesUA() async {
         for category in diverseCategoriesUa {
             do {
                 try await addCategory(theItem: category)
@@ -96,6 +103,18 @@ extension CloudMainModel {
                 print("Failed to add category: \(category.name). Error: \(error)")
             }
         }
+        print("All UA categories UA added successfully")
+    }
+    
+    func addDiverseCategoriesEN() async {
+        for category in diverseCategoriesEn {
+            do {
+                try await addCategory(theItem: category)
+            } catch {
+                print("Failed to add EN category: \(category.name). Error: \(error)")
+            }
+        }
+        print("All EN categories added successfully")
     }
 }
 
@@ -123,6 +142,7 @@ extension CloudMainModel {
         } catch {
             print("Failed to remove all categories: \(error)")
         }
+        print("All categories removed successfully")
     }
 }
 
