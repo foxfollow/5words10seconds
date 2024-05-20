@@ -9,4 +9,16 @@ import UIKit
 
 class SetupViewController: RootViewController {
     
+    let hintLangugeTtl = UILabel()
+    let languagePicker = UIPickerView()
+    
+    let setupViewModel = SetupViewModel()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupPickerSubviews()
+        setupLanguagePicker() // in SetupLanguagePickerView.swift
+
+    }
+    
 }

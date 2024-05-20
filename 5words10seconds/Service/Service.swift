@@ -22,7 +22,7 @@ struct Service {
     }
 
     func fetchTeams(_ completion: @escaping (Result<Set<TeamModel>, Error>) -> Void) {
-        switch MenuViewModel().currentLanguage.value {
+        switch SetupViewModel().currentLanguage.value {
         case "uk":
             completion(.success(allTeamsUa))
         default:
@@ -31,7 +31,7 @@ struct Service {
     }
 
     func fetchCategories(_ completion: @escaping (Result<[CategoryModel], Error>) -> Void) {
-        switch MenuViewModel().currentLanguage.value {
+        switch SetupViewModel().currentLanguage.value {
         case "uk":
             completion(.success(categoriesTMPUa))
         default:

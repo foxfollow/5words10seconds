@@ -26,7 +26,7 @@ enum SupportedLanguages: String, CaseIterable {
 }
 
 
-class MenuViewModel {   // TODO: create and perfome leveling
+class SetupViewModel {   // TODO: create and perfome leveling
     var currentLanguage: ObservableObjectCustom<String?> {
         get {
             guard let lang: String = UserDefaults.standard.array(forKey: "AppleLanguages")?[0] as? String else { return ObservableObjectCustom(nil) }

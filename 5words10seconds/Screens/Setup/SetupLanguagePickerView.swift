@@ -7,12 +7,12 @@
 
 import UIKit
 
-extension MenuViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension SetupViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func setupLanguagePicker() {
         languagePicker.delegate = self
         languagePicker.dataSource = self
         
-        if let currentLanguageCode = menuViewModel.currentLanguage.value,
+        if let currentLanguageCode = setupViewModel.currentLanguage.value,
            let languageIndex = SupportedLanguages.allCases.firstIndex(where: { $0.rawValue == currentLanguageCode }) {
             languagePicker.selectRow(languageIndex, inComponent: 0, animated: false)
         }
@@ -35,7 +35,7 @@ extension MenuViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func pickerView(_: UIPickerView, didSelectRow row: Int, inComponent _: Int) {
         let selectedLanguage = SupportedLanguages.allCases[row]
-        menuViewModel.changeLanguage(changeTo: selectedLanguage)
+        setupViewModel.changeLanguage(changeTo: selectedLanguage)
         hintLangugeTtl.isHidden = false
         print("Selected language: \(selectedLanguage.rawValue)")
     }

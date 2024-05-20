@@ -26,6 +26,7 @@
 		BFA4DD802B0BDDA000A44C87 /* TeamsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4DD7F2B0BDDA000A44C87 /* TeamsCellViewModel.swift */; };
 		BFAE5E8A2BFB3A4500730E80 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE5E892BFB3A4400730E80 /* MainTabBarViewController.swift */; };
 		BFAE5E8D2BFB3AC300730E80 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE5E8C2BFB3AC300730E80 /* SetupViewController.swift */; };
+		BFAE5E8F2BFB6DC300730E80 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE5E8E2BFB6DC300730E80 /* SetupView.swift */; };
 		BFBD0E8A2B67BCEF00A212B5 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD0E892B67BCEF00A212B5 /* AlertView.swift */; };
 		BFCEDFEC2BF63E6800B1A027 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEDFEB2BF63E6800B1A027 /* RootViewController.swift */; };
 		BFD820432B4F206A00785BE8 /* CloudMainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD820422B4F206A00785BE8 /* CloudMainService.swift */; };
@@ -45,9 +46,9 @@
 		BFE820BF2AEFE4C900B303F9 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820BE2AEFE4C900B303F9 /* MenuView.swift */; };
 		BFE820C12AEFE4FA00B303F9 /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820C02AEFE4FA00B303F9 /* TeamsView.swift */; };
 		BFE820CB2AEFE68700B303F9 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820CA2AEFE68700B303F9 /* Service.swift */; };
-		BFE820CD2AEFE9B600B303F9 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820CC2AEFE9B600B303F9 /* MenuViewModel.swift */; };
+		BFE820CD2AEFE9B600B303F9 /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820CC2AEFE9B600B303F9 /* SetupViewModel.swift */; };
 		BFEDD8F82B1F0988006C6208 /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEDD8F72B1F0988006C6208 /* LanguageModel.swift */; };
-		BFEDD8FA2B1F2497006C6208 /* MenuLanguagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEDD8F92B1F2497006C6208 /* MenuLanguagePickerView.swift */; };
+		BFEDD8FA2B1F2497006C6208 /* SetupLanguagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEDD8F92B1F2497006C6208 /* SetupLanguagePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		BFA4DD7F2B0BDDA000A44C87 /* TeamsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCellViewModel.swift; sourceTree = "<group>"; };
 		BFAE5E892BFB3A4400730E80 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		BFAE5E8C2BFB3AC300730E80 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		BFAE5E8E2BFB6DC300730E80 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		BFBD0E892B67BCEF00A212B5 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		BFCEDFEB2BF63E6800B1A027 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		BFD820412B4F1E4C00785BE8 /* 5words10seconds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 5words10seconds.entitlements; sourceTree = "<group>"; };
@@ -91,9 +93,9 @@
 		BFE820BE2AEFE4C900B303F9 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		BFE820C02AEFE4FA00B303F9 /* TeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsView.swift; sourceTree = "<group>"; };
 		BFE820CA2AEFE68700B303F9 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		BFE820CC2AEFE9B600B303F9 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		BFE820CC2AEFE9B600B303F9 /* SetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewModel.swift; sourceTree = "<group>"; };
 		BFEDD8F72B1F0988006C6208 /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
-		BFEDD8F92B1F2497006C6208 /* MenuLanguagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuLanguagePickerView.swift; sourceTree = "<group>"; };
+		BFEDD8F92B1F2497006C6208 /* SetupLanguagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupLanguagePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,10 +127,8 @@
 		BF0A30982AF42972004A4301 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				BFE820CC2AEFE9B600B303F9 /* MenuViewModel.swift */,
 				BFE8209F2AEFD33F00B303F9 /* MenuViewController.swift */,
 				BFE820BE2AEFE4C900B303F9 /* MenuView.swift */,
-				BFEDD8F92B1F2497006C6208 /* MenuLanguagePickerView.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -188,6 +188,9 @@
 			isa = PBXGroup;
 			children = (
 				BFAE5E8C2BFB3AC300730E80 /* SetupViewController.swift */,
+				BFAE5E8E2BFB6DC300730E80 /* SetupView.swift */,
+				BFE820CC2AEFE9B600B303F9 /* SetupViewModel.swift */,
+				BFEDD8F92B1F2497006C6208 /* SetupLanguagePickerView.swift */,
 			);
 			path = Setup;
 			sourceTree = "<group>";
@@ -389,12 +392,13 @@
 				BF13409E2BEFBC89007DBE25 /* Extensions + UIColor.swift in Sources */,
 				BFCEDFEC2BF63E6800B1A027 /* RootViewController.swift in Sources */,
 				BF0A309E2AF44DE9004A4301 /* TeamsTableView.swift in Sources */,
-				BFEDD8FA2B1F2497006C6208 /* MenuLanguagePickerView.swift in Sources */,
-				BFE820CD2AEFE9B600B303F9 /* MenuViewModel.swift in Sources */,
+				BFEDD8FA2B1F2497006C6208 /* SetupLanguagePickerView.swift in Sources */,
+				BFE820CD2AEFE9B600B303F9 /* SetupViewModel.swift in Sources */,
 				BFEDD8F82B1F0988006C6208 /* LanguageModel.swift in Sources */,
 				BFE820B92AEFE12C00B303F9 /* GameLevelModel.swift in Sources */,
 				BFE774382B989BFB0053E873 /* TeamsMiniCellView.swift in Sources */,
 				BF13409C2BEFBC10007DBE25 /* AppAssetsConfigs.swift in Sources */,
+				BFAE5E8F2BFB6DC300730E80 /* SetupView.swift in Sources */,
 				BFE820BF2AEFE4C900B303F9 /* MenuView.swift in Sources */,
 				BF28C6152B94C0AD00940849 /* AlertCollectionView.swift in Sources */,
 				BFE820C12AEFE4FA00B303F9 /* TeamsView.swift in Sources */,
