@@ -43,7 +43,6 @@ extension TeamsViewController: UITableViewDelegate {
 
 extension TeamsViewController: TeamsCellViewModelDelegate {
     func deleteButtonTapped(at indexPath: IndexPath) {
-
         if let count = teamsViewModel.dataSourceTeams?.count, count > 1 {
             // Decrease the height of the table view by the height of one row
             self.teamsViewModel.deleteTeam(at: indexPath)
@@ -51,9 +50,36 @@ extension TeamsViewController: TeamsCellViewModelDelegate {
             self.tableViewHeight = CGFloat(count - 1) * 56
 
             // Update the height constraint of the table view
-            self.tableViewHeightConstraint?.constant = self.tableViewHeight
+            self.tableView.snp.updateConstraints { make in
+                make.height.equalTo(tableViewHeight)
+            }
+
+            // Check if addBtn is covering endBtn
+            let isAddBtnCoveringEndBtn = tableView.frame.origin.y + tableViewHeight + addBtn.frame.height > endBtn.frame.origin.y
+            if isAddBtnCoveringEndBtn {
+                // If it is, make addBtn.bottom = endBtn.top
+                addBtn.snp.remakeConstraints { make in
+                    make.left.right.equalToSuperview()
+                    make.bottom.equalTo(endBtn.snp.top)
+                    make.height.equalTo(56)
+                }
+            } else {
+                // If it's not, update the constraints of addBtn
+                self.tableView.contentInset.bottom = 0
+                addBtn.snp.remakeConstraints { make in
+                    make.top.equalTo(tableView.snp.bottom)
+                    make.left.right.equalToSuperview()
+                    make.height.equalTo(56)
+                }
+            }
+
             DispatchQueue.main.async {
                 self.view.layoutIfNeeded()
+
+                if isAddBtnCoveringEndBtn {
+                    // Decrease the bottom inset by the height of a row
+                    self.tableView.contentInset.bottom = max(0, self.tableView.contentInset.bottom - self.tableView.rowHeight)
+                }
             }
         }
     }

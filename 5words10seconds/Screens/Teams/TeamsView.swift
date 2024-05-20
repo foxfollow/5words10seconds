@@ -54,27 +54,22 @@ extension TeamsViewController {
     // MARK: Constraints
 
     private func addConstraints() {
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        addBtn.translatesAutoresizingMaskIntoConstraints = false
-        endBtn.translatesAutoresizingMaskIntoConstraints = false
+        tableView.snp.makeConstraints { make in
+            make.left.right.equalToSuperview()
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.height.equalTo(tableViewHeight)
+        }
 
-        let sALG = view.safeAreaLayoutGuide
-        tableViewHeightConstraint = tableView.heightAnchor.constraint(equalToConstant: tableViewHeight)
-        NSLayoutConstraint.activate([
-            tableView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            tableView.topAnchor.constraint(equalTo: sALG.topAnchor),
-            tableViewHeightConstraint!, // Use the constraint variable here
+        addBtn.snp.makeConstraints { make in
+            make.left.right.equalToSuperview()
+            make.top.equalTo(tableView.snp.bottom)
+            make.height.equalTo(56)
+        }
 
-            addBtn.leftAnchor.constraint(equalTo: view.leftAnchor),
-            addBtn.rightAnchor.constraint(equalTo: view.rightAnchor),
-            addBtn.topAnchor.constraint(equalTo: tableView.bottomAnchor),
-            addBtn.heightAnchor.constraint(equalToConstant: 50),
-
-            endBtn.leftAnchor.constraint(equalTo: view.leftAnchor),
-            endBtn.rightAnchor.constraint(equalTo: view.rightAnchor),
-            endBtn.bottomAnchor.constraint(equalTo: sALG.bottomAnchor),
-            endBtn.heightAnchor.constraint(equalToConstant: 50),
-        ])
+        endBtn.snp.makeConstraints { make in
+            make.left.right.equalToSuperview()
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(8)
+            make.height.equalTo(56)
+        }
     }
 }
