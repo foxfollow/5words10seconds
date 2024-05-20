@@ -41,7 +41,8 @@ class TeamsCellView: UITableViewCell {
     }
 
     private func setupSubviews() {
-//        contentView.backgroundColor = #colorLiteral(red: 0.7862124443, green: 0.9268439412, blue: 1, alpha: 1)
+        self.backgroundColor = AppAssetsConfigs.Colors.cellBackground
+        contentView.backgroundColor = .clear
 //        let cellHeight: CGFloat = 48
 
         contentView.addSubview(cellView)
@@ -49,12 +50,14 @@ class TeamsCellView: UITableViewCell {
         contentView.addSubview(crossImg)
 
         setupCellConstaints()
+        
+        
 
         crossImg.contentMode = .scaleAspectFit
         crossImg.clipsToBounds = true
         crossImg.isUserInteractionEnabled = true
         crossImg.setImage(UIImage(systemName: "trash.fill"), for: .normal)
-        crossImg.tintColor = .orange
+//        crossImg.tintColor = AppAssetsConfigs.Colors.buttonNeutralFull
         crossImg.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
     }
 }
@@ -64,7 +67,7 @@ extension TeamsCellView {
     func bind(to teamsViewModel: TeamsViewModel) {
         teamsViewModel.cellViewModels.bind { [weak self] arrayOfCells in // == to array of teams
             DispatchQueue.main.async {
-                self?.crossImg.tintColor = arrayOfCells?.count ?? 0 < 2 ? .gray : .orange
+                self?.crossImg.tintColor = arrayOfCells?.count ?? 0 < 2 ? .gray : AppAssetsConfigs.Colors.trashTint
             }
         }
     }

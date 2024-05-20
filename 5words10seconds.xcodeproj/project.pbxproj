@@ -11,6 +11,8 @@
 		BF0A309C2AF447FF004A4301 /* TeamsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A309B2AF447FF004A4301 /* TeamsCellView.swift */; };
 		BF0A309E2AF44DE9004A4301 /* TeamsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A309D2AF44DE9004A4301 /* TeamsTableView.swift */; };
 		BF0A30A02AF44F45004A4301 /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A309F2AF44F45004A4301 /* TeamsViewModel.swift */; };
+		BF13409C2BEFBC10007DBE25 /* AppAssetsConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13409B2BEFBC10007DBE25 /* AppAssetsConfigs.swift */; };
+		BF13409E2BEFBC89007DBE25 /* Extensions + UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13409D2BEFBC89007DBE25 /* Extensions + UIColor.swift */; };
 		BF28C6132B948FEE00940849 /* BlurOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF28C6122B948FEE00940849 /* BlurOverlayView.swift */; };
 		BF28C6152B94C0AD00940849 /* AlertCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF28C6142B94C0AD00940849 /* AlertCollectionView.swift */; };
 		BF3A81342B677A780035F109 /* endringing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF3A81332B677A780035F109 /* endringing.mp3 */; };
@@ -23,6 +25,7 @@
 		BF94BA7D2AF989FC0085C4ED /* PopupViewsFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA7C2AF989FC0085C4ED /* PopupViewsFuncs.swift */; };
 		BFA4DD802B0BDDA000A44C87 /* TeamsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4DD7F2B0BDDA000A44C87 /* TeamsCellViewModel.swift */; };
 		BFBD0E8A2B67BCEF00A212B5 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD0E892B67BCEF00A212B5 /* AlertView.swift */; };
+		BFCEDFEC2BF63E6800B1A027 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEDFEB2BF63E6800B1A027 /* RootViewController.swift */; };
 		BFD820432B4F206A00785BE8 /* CloudMainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD820422B4F206A00785BE8 /* CloudMainService.swift */; };
 		BFE774382B989BFB0053E873 /* TeamsMiniCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE774372B989BFB0053E873 /* TeamsMiniCellView.swift */; };
 		BFE7743B2B98A0A40053E873 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BFE7743A2B98A0A40053E873 /* SnapKit */; };
@@ -50,6 +53,8 @@
 		BF0A309B2AF447FF004A4301 /* TeamsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCellView.swift; sourceTree = "<group>"; };
 		BF0A309D2AF44DE9004A4301 /* TeamsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableView.swift; sourceTree = "<group>"; };
 		BF0A309F2AF44F45004A4301 /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
+		BF13409B2BEFBC10007DBE25 /* AppAssetsConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssetsConfigs.swift; sourceTree = "<group>"; };
+		BF13409D2BEFBC89007DBE25 /* Extensions + UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + UIColor.swift"; sourceTree = "<group>"; };
 		BF28C6122B948FEE00940849 /* BlurOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurOverlayView.swift; sourceTree = "<group>"; };
 		BF28C6142B94C0AD00940849 /* AlertCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCollectionView.swift; sourceTree = "<group>"; };
 		BF3A81332B677A780035F109 /* endringing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = endringing.mp3; sourceTree = "<group>"; };
@@ -62,6 +67,7 @@
 		BF94BA7C2AF989FC0085C4ED /* PopupViewsFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewsFuncs.swift; sourceTree = "<group>"; };
 		BFA4DD7F2B0BDDA000A44C87 /* TeamsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCellViewModel.swift; sourceTree = "<group>"; };
 		BFBD0E892B67BCEF00A212B5 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		BFCEDFEB2BF63E6800B1A027 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		BFD820412B4F1E4C00785BE8 /* 5words10seconds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 5words10seconds.entitlements; sourceTree = "<group>"; };
 		BFD820422B4F206A00785BE8 /* CloudMainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudMainService.swift; sourceTree = "<group>"; };
 		BFE774372B989BFB0053E873 /* TeamsMiniCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsMiniCellView.swift; sourceTree = "<group>"; };
@@ -174,6 +180,14 @@
 			path = Supported;
 			sourceTree = "<group>";
 		};
+		BFCEDFEA2BF63E5D00B1A027 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				BFCEDFEB2BF63E6800B1A027 /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		BFE8208F2AEFD33F00B303F9 = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +207,7 @@
 		BFE8209A2AEFD33F00B303F9 /* 5words10seconds */ = {
 			isa = PBXGroup;
 			children = (
+				BFCEDFEA2BF63E5D00B1A027 /* Root */,
 				BF3A81322B6538A40035F109 /* Sounds */,
 				BFD820412B4F1E4C00785BE8 /* 5words10seconds.entitlements */,
 				BFE7743C2B99FD6B0053E873 /* Assets.xcassets */,
@@ -241,6 +256,8 @@
 			children = (
 				BF4448C12B1DF74700999FC2 /* Localizable.xcstrings */,
 				BFE820A92AEFD34000B303F9 /* Info.plist */,
+				BF13409B2BEFBC10007DBE25 /* AppAssetsConfigs.swift */,
+				BF13409D2BEFBC89007DBE25 /* Extensions + UIColor.swift */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";
@@ -347,12 +364,15 @@
 				BFA4DD802B0BDDA000A44C87 /* TeamsCellViewModel.swift in Sources */,
 				BF4448BF2B16563500999FC2 /* TestViewController.swift in Sources */,
 				BF94BA7B2AF6B6FF0085C4ED /* TimerView.swift in Sources */,
+				BF13409E2BEFBC89007DBE25 /* Extensions + UIColor.swift in Sources */,
+				BFCEDFEC2BF63E6800B1A027 /* RootViewController.swift in Sources */,
 				BF0A309E2AF44DE9004A4301 /* TeamsTableView.swift in Sources */,
 				BFEDD8FA2B1F2497006C6208 /* MenuLanguagePickerView.swift in Sources */,
 				BFE820CD2AEFE9B600B303F9 /* MenuViewModel.swift in Sources */,
 				BFEDD8F82B1F0988006C6208 /* LanguageModel.swift in Sources */,
 				BFE820B92AEFE12C00B303F9 /* GameLevelModel.swift in Sources */,
 				BFE774382B989BFB0053E873 /* TeamsMiniCellView.swift in Sources */,
+				BF13409C2BEFBC10007DBE25 /* AppAssetsConfigs.swift in Sources */,
 				BFE820BF2AEFE4C900B303F9 /* MenuView.swift in Sources */,
 				BF28C6152B94C0AD00940849 /* AlertCollectionView.swift in Sources */,
 				BFE820C12AEFE4FA00B303F9 /* TeamsView.swift in Sources */,
@@ -441,7 +461,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -499,7 +519,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -527,6 +547,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,6 +579,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

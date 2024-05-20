@@ -19,7 +19,6 @@ extension CategoryViewController {
 
     private func initView() {
         title = String(localized: "Teams")
-        view.backgroundColor = .lightGray
     }
 
     private func setupLabels() {
@@ -39,7 +38,7 @@ extension CategoryViewController {
     }
 
     private func setupBackgroundRectangle() {
-        backgroundRectangle.backgroundColor = .orange.withAlphaComponent(0.7)
+        backgroundRectangle.backgroundColor = AppAssetsConfigs.Colors.wordBackground
         backgroundRectangle.layer.cornerRadius = 40
         view.addSubview(backgroundRectangle)
     }

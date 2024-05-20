@@ -16,10 +16,10 @@ class AlertView: UIView {
     lazy var bordersView: UIView = {
         var view = UIView()
         
-        view.backgroundColor = .lightGray
+        view.backgroundColor = AppAssetsConfigs.Colors.cellBackground
         
-        view.layer.borderWidth = 4
-        view.layer.borderColor = UIColor.darkGray.cgColor
+        view.layer.borderWidth = 2
+        view.layer.borderColor = AppAssetsConfigs.Colors.strokeAlert.cgColor
         
         view.layer.cornerRadius = 24
         view.layer.masksToBounds = true
@@ -30,7 +30,7 @@ class AlertView: UIView {
     var titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 24)
-        label.textColor = .black
+        label.textColor = AppAssetsConfigs.Colors.textMain
         label.numberOfLines = 0
         label.textAlignment = .center
         label.sizeToFit()
@@ -40,41 +40,43 @@ class AlertView: UIView {
     var messageLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 20)
-        label.textColor = .black
+        label.textColor = AppAssetsConfigs.Colors.textDescription
         label.numberOfLines = 0
         label.textAlignment = .center
         label.sizeToFit()
         return label
     }()
     
-    var acceptButtonsColor: UIColor? {
-        didSet {
-            guard let buttonsColor = acceptButtonsColor else { return }
-            acceptButton.setTitleColor(buttonsColor, for: .normal)
-            acceptButton.setTitleColor(.white, for: .highlighted)
-            acceptButton.layer.borderColor = buttonsColor.cgColor
-            acceptButton.backgroundColor = buttonsColor.withAlphaComponent(0.05)
-        }
-    }
-    
-    
-    var declineButtonsColor: UIColor? {
-        didSet {
-            guard let buttonsColor = declineButtonsColor else { return }
-            declineButton.setTitleColor(buttonsColor, for: .normal)
-            declineButton.setTitleColor(.white, for: .highlighted)
-            declineButton.layer.borderColor = buttonsColor.cgColor
-            declineButton.backgroundColor = buttonsColor.withAlphaComponent(0.05)        }
-    }
+//    var acceptButtonsColor: UIColor? {// = AppAssetsConfigs.Colors.acceptButton
+//        didSet {
+//            guard let buttonsColor = acceptButtonsColor else { return }
+//            acceptButton.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
+//            acceptButton.setTitleColor(AppAssetsConfigs.Colors.textContrast, for: .highlighted)
+//            acceptButton.backgroundColor = buttonsColor//.withAlphaComponent(0.05)
+//        }
+//    }
+//    
+//    
+//    var declineButtonsColor: UIColor? {
+//        didSet {
+//            guard let buttonsColor = declineButtonsColor else { return }
+//            declineButton.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
+//            declineButton.setTitleColor(AppAssetsConfigs.Colors.textContrast, for: .highlighted)
+//            declineButton.backgroundColor = buttonsColor//.withAlphaComponent(0.05)
+//        }
+//    }
     
     var acceptButton: UIButton = {
         let button = UIButton()
         button.setTitle("Delete", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 24, weight: .bold)
-        
-        button.backgroundColor = .lightGray
-        button.layer.borderWidth = 4
-        button.layer.cornerRadius = 32
+        button.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
+        button.setTitleColor(AppAssetsConfigs.Colors.cellBackground, for: .highlighted)
+
+        button.backgroundColor = AppAssetsConfigs.Colors.buttonAccept
+        button.layer.borderColor = AppAssetsConfigs.Colors.strokeButtons.cgColor
+        button.layer.borderWidth = 1
+        button.layer.cornerRadius = 24
         button.clipsToBounds = true
         return button
     }()
@@ -83,10 +85,13 @@ class AlertView: UIView {
         let button = UIButton()
         button.setTitle("Cancel", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 24, weight: .bold)
+        button.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
+        button.setTitleColor(AppAssetsConfigs.Colors.cellBackground, for: .highlighted)
         
-        button.backgroundColor = .lightGray
-        button.layer.borderWidth = 4
-        button.layer.cornerRadius = 32
+        button.backgroundColor = AppAssetsConfigs.Colors.buttonNeutral
+        button.layer.borderColor = AppAssetsConfigs.Colors.strokeButtons.cgColor
+        button.layer.borderWidth = 1
+        button.layer.cornerRadius = 24
         button.clipsToBounds = true
         return button
     }()
@@ -108,8 +113,8 @@ class AlertView: UIView {
     
     init(frame: CGRect, isFullWidthButtons: Bool = false) {
         self.isFullWidthButtons = isFullWidthButtons
-        self.acceptButtonsColor = .systemRed
-        self.declineButtonsColor = .systemOrange
+//        self.acceptButtonsColor = .systemRed
+//        self.declineButtonsColor = .systemOrange
         super.init(frame: frame)
         setupView()
         setupConstraints()
@@ -120,8 +125,8 @@ class AlertView: UIView {
     
     required init?(coder: NSCoder) {
         self.isFullWidthButtons = false
-        self.acceptButtonsColor = .systemRed
-        self.declineButtonsColor = .systemOrange
+//        self.acceptButtonsColor = .systemRed
+//        self.declineButtonsColor = .systemOrange
 
         super.init(coder: coder)
     }
@@ -167,7 +172,7 @@ class AlertView: UIView {
             buttonStackView.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 20),
             buttonStackView.leadingAnchor.constraint(equalTo: bordersView.leadingAnchor, constant: 24),
             buttonStackView.trailingAnchor.constraint(equalTo: bordersView.trailingAnchor, constant: -24),
-            buttonStackView.heightAnchor.constraint(equalToConstant: isFullWidthButtons ? 135 : 60),
+            buttonStackView.heightAnchor.constraint(equalToConstant: isFullWidthButtons ? 115 : 50),
             buttonStackView.bottomAnchor.constraint(equalTo: bordersView.bottomAnchor, constant: -20)
         ])
     }

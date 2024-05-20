@@ -8,7 +8,7 @@
 import AVFoundation
 import UIKit
 
-class CategoryViewController: UIViewController, AVAudioPlayerDelegate {
+class CategoryViewController: RootViewController, AVAudioPlayerDelegate {
     let descriptionLbl = UILabel()
     let categoryLbl = UILabel()
     let backgroundRectangle = UIView()
@@ -47,7 +47,7 @@ class CategoryViewController: UIViewController, AVAudioPlayerDelegate {
         // MARK: Timer binder
 
         timerViewModel.timerDidEnd.bind { [weak self] didEnd in
-            self?.timerView.circle.backgroundColor = didEnd ? .red : .white
+//            self?.timerView.circle.backgroundColor = didEnd ? .red : .white
             if didEnd && (self?.categoryViewModel.currentCtgr.value != nil) {
                 DispatchQueue.main.async {
                     self?.timerEndPopup()
@@ -123,6 +123,7 @@ class CategoryViewController: UIViewController, AVAudioPlayerDelegate {
 extension CategoryViewController {
     func setupNavigationBar() {
         let backButton = UIBarButtonItem(title: String(localized: "Quit"), style: .plain, target: self, action: #selector(backButtonTappedAlert))
+        backButton.tintColor = AppAssetsConfigs.Colors.textMain
         navigationItem.leftBarButtonItem = backButton
     }
 
@@ -138,8 +139,9 @@ extension CategoryViewController {
         alertView.messageLabel.text = String(localized: "The game wount be saved?")
         alertView.messageLabel.numberOfLines = 2
         
-        alertView.acceptButtonsColor = .red
-        alertView.declineButtonsColor = .orange
+//        alertView.acceptButtonsColor = AppAssetsConfigs.Colors.buttonReject
+//        alertView.declineButtonsColor = AppAssetsConfigs.Colors.buttonNeutral
+        alertView.acceptButton.backgroundColor = AppAssetsConfigs.Colors.buttonReject
         alertView.acceptButton.setTitle(String(localized: "Yes"), for: .normal)
         alertView.declineButton.setTitle(String(localized: "No"), for: .normal)
 //        alertView.adjustAlertViewHeight()

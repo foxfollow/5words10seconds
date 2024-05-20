@@ -48,7 +48,7 @@ extension CategoryViewController {
         alertView.overlayView = overlayView
         alertView.center = overlayView.center
         alertView.titleLabel.text = String(localized: "Teams")
-        alertView.buttonsColor = .red
+//        alertView.buttonsColor = AppAssetsConfigs.Colors.buttonAccept
         alertView.acceptButton.setTitle(String(localized: "Save"), for: .normal)
 //        alertView.declineButton.setTitle(String(localized: "Restore"), for: .normal) // TODO: make a restore changes button
         alertView.adjustAlertHeight()
@@ -83,8 +83,8 @@ extension CategoryViewController {
         alertView.titleLabel.text = "\(String(localized: "Is team")) \(categoryViewModel.currentTeam.value?.name ?? "No tracking team") \(String(localized: "ready?"))"
         alertView.messageLabel.text = String(localized: "Your turn, it starts immidiatly after your press")
         alertView.messageLabel.numberOfLines = 0
-        alertView.acceptButtonsColor = .green
-        alertView.declineButtonsColor = .orange
+//        alertView.acceptButtonsColor = AppAssetsConfigs.Colors.buttonAccept
+//        alertView.declineButtonsColor = AppAssetsConfigs.Colors.buttonNeutral
         alertView.acceptButton.setTitle(String(localized: "Ready"), for: .normal)
         alertView.declineButton.setTitle(String(localized: "Change teams score"), for: .normal)
 //        alertView.adjustAlertViewHeight()
@@ -114,8 +114,8 @@ extension CategoryViewController {
         alertView.titleLabel.text = String(localized: "Timer Ended")
         alertView.messageLabel.text = "\(String(localized: "Is the team")) \(categoryViewModel.currentTeam.value?.name ?? "No tracking team") \(String(localized: "get + 1 point to score"))"
         alertView.messageLabel.numberOfLines = 0
-        alertView.acceptButtonsColor = .green
-        alertView.declineButtonsColor = .orange
+//        alertView.acceptButtonsColor = AppAssetsConfigs.Colors.buttonAccept
+//        alertView.declineButtonsColor = AppAssetsConfigs.Colors.buttonNeutral
         alertView.acceptButton.setTitle(String(localized: "Yes"), for: .normal)
         alertView.declineButton.setTitle(String(localized: "No"), for: .normal)
         alertView.center = self.view.center

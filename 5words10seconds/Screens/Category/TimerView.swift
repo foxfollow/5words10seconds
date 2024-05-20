@@ -36,18 +36,18 @@ class TimerView: UIView {
 
 extension TimerView {
     private func setupCircle() {
-        circle.backgroundColor = .orange
-        circle.layer.cornerRadius = 50
+        circle.backgroundColor = AppAssetsConfigs.Colors.timerBackground
+        circle.layer.cornerRadius = 40
         circle.layer.masksToBounds = true
-        circle.layer.borderWidth = 2
-        circle.layer.borderColor = UIColor.black.cgColor
+//        circle.layer.borderWidth = 2
+//        circle.layer.borderColor = UIColor.black.cgColor
         addSubview(circle)
     }
 
     private func setupTimer() {
         label.text = "\(viewModel.timerValue.value)"
         label.font = .systemFont(ofSize: 30, weight: .bold)
-        label.textColor = .black
+        label.textColor = AppAssetsConfigs.Colors.textContrast
         label.textAlignment = .center
         addSubview(label)
     }

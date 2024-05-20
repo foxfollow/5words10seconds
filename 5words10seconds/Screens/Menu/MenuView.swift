@@ -21,10 +21,9 @@ extension MenuViewController {
     
     private func setupBackgroundView() {
         title = "Menu"
-        view.backgroundColor = .lightGray
         
-        backgroundViewUpper.backgroundColor = .orange
-        backgroundViewLower.backgroundColor = .orange
+        backgroundViewUpper.backgroundColor = .purple
+        backgroundViewLower.backgroundColor = .purple
         view.addSubview(backgroundViewUpper)
         view.addSubview(backgroundViewLower)
         
@@ -37,14 +36,14 @@ extension MenuViewController {
         testBtn.setTitle("go to test sounds", for: .normal)
         testBtn.isHidden = true
         
-        game5w10sBtn.setTitleColor(.orange, for: .normal)
-        game3w5sBtn.setTitleColor(.orange, for: .normal)
-        game5w10sBtn.setTitleColor(.red, for: .highlighted)
+        game5w10sBtn.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
+        game3w5sBtn.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
+        game5w10sBtn.setTitleColor(.purple, for: .highlighted)
         testBtn.setTitleColor(.white, for: .normal)
         game5w10sBtn.titleLabel?.numberOfLines = 2
         game3w5sBtn.titleLabel?.numberOfLines = 2
-        game5w10sBtn.backgroundColor = .darkGray
-        game3w5sBtn.backgroundColor = .darkGray
+        game5w10sBtn.backgroundColor = AppAssetsConfigs.Colors.cellBackground
+        game3w5sBtn.backgroundColor = AppAssetsConfigs.Colors.cellBackground
         game5w10sBtn.layer.cornerRadius = 16
         game3w5sBtn.layer.cornerRadius = 16
         
@@ -59,8 +58,8 @@ extension MenuViewController {
         hintLangugeTtl.numberOfLines = 0
         hintLangugeTtl.font = UIFont.systemFont(ofSize: 20)
         hintLangugeTtl.textAlignment = .center
-        hintLangugeTtl.textColor = .orange
-        hintLangugeTtl.backgroundColor = .darkGray
+        hintLangugeTtl.textColor = AppAssetsConfigs.Colors.textMain
+        hintLangugeTtl.backgroundColor = AppAssetsConfigs.Colors.cellBackground
         hintLangugeTtl.layer.cornerRadius = 8
         hintLangugeTtl.clipsToBounds = true
         hintLangugeTtl.isHidden = true

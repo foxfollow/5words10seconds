@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TeamsViewController: UIViewController {
+class TeamsViewController: RootViewController {
     var tableViewHeightConstraint: NSLayoutConstraint?
     var tableViewHeight: CGFloat = 112
 //    let textField = UITextField()

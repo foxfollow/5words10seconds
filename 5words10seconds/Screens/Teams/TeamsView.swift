@@ -18,13 +18,12 @@ extension TeamsViewController {
 
     private func setupBackgroundView() {
         title = String(localized: "Teams")
-        view.backgroundColor = .lightGray
     }
 
     // MARK: TableView
 
     private func setupTableView() {
-        tableView.backgroundColor = #colorLiteral(red: 0.7862124443, green: 0.9268439412, blue: 1, alpha: 1)
+        tableView.backgroundColor = .none
         tableView.rowHeight = 56
         view.addSubview(tableView)
     }
@@ -40,9 +39,9 @@ extension TeamsViewController {
 
     private func setupButtons() {
         addBtn.setTitle(String(localized: "Add new"), for: .normal)
-        addBtn.backgroundColor = .systemOrange
+        addBtn.backgroundColor = AppAssetsConfigs.Colors.buttonAccept
         endBtn.setTitle(String(localized: "Next"), for: .normal)
-        endBtn.backgroundColor = .systemOrange
+        endBtn.backgroundColor = AppAssetsConfigs.Colors.buttonAccept
 
         view.addSubview(addBtn)
         view.addSubview(endBtn)

@@ -40,10 +40,10 @@ class AlertCollectionView: UIView {
     lazy var bordersView: UIView = {
         var view = UIView()
         
-        view.backgroundColor = .lightGray
+        view.backgroundColor = AppAssetsConfigs.Colors.cellBackground
         
-        view.layer.borderWidth = 4
-        view.layer.borderColor = UIColor.darkGray.cgColor
+        view.layer.borderWidth = 2
+        view.layer.borderColor = AppAssetsConfigs.Colors.strokeAlert.cgColor
         
         view.layer.cornerRadius = 24
         view.layer.masksToBounds = true
@@ -61,15 +61,14 @@ class AlertCollectionView: UIView {
         return label
     }()
     
-    var buttonsColor: UIColor? {
-        didSet {
-            guard let buttonsColor else { return }
-            acceptButton.setTitleColor(buttonsColor, for: .normal)
-            acceptButton.setTitleColor(.white, for: .highlighted)
-            acceptButton.layer.borderColor = buttonsColor.cgColor
-            acceptButton.backgroundColor = buttonsColor.withAlphaComponent(0.1)
-        }
-    }
+//    var buttonsColor: UIColor? {
+//        didSet {
+//            guard let buttonsColor else { return }
+//            acceptButton.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
+//            acceptButton.setTitleColor(AppAssetsConfigs.Colors.textContrast, for: .highlighted)
+//            acceptButton.backgroundColor = buttonsColor//.withAlphaComponent(0.05)
+//        }
+//    }
     
     var acceptButton: UIButton = {
         let button = UIButton()
@@ -77,11 +76,14 @@ class AlertCollectionView: UIView {
 //        button.setTitleColor(.red, for: .normal)
 //        button.setTitleColor(UIColor(red: 1, green: 0, blue: 0, alpha: 0.5), for: .highlighted )
         button.titleLabel?.font = .systemFont(ofSize: 24, weight: .bold)
-        
-        button.backgroundColor = .lightGray
-        button.layer.borderWidth = 4
+        button.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
+        button.setTitleColor(AppAssetsConfigs.Colors.cellBackground, for: .highlighted)
+
+        button.backgroundColor = AppAssetsConfigs.Colors.buttonAccept
+        button.layer.borderColor = AppAssetsConfigs.Colors.strokeButtons.cgColor
+        button.layer.borderWidth = 1
 //        button.layer.borderColor = UIColor.red.cgColor
-        button.layer.cornerRadius = 32
+        button.layer.cornerRadius = 24
         button.clipsToBounds = true
         return button
     }()

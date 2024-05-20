@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class MenuViewController: UIViewController, AVAudioPlayerDelegate {
+class MenuViewController: RootViewController, AVAudioPlayerDelegate {
 
     let game5w10sBtn = UIButton()
     let game3w5sBtn = UIButton()
