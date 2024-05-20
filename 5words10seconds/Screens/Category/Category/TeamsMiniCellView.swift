@@ -28,15 +28,15 @@ class TeamsMiniCellView: UICollectionViewCell {
     
     let plusButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "plus.circle"), for: .normal)
-        button.setImage(UIImage(systemName: "plus.square"), for: .highlighted)
+        button.setImage(AppAssetsConfigs.Icons.plusNormal, for: .normal)
+        button.setImage(AppAssetsConfigs.Icons.plusHighlited, for: .highlighted)
         return button
     }()
 
     let minusButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "minus.circle"), for: .normal)
-        button.setImage(UIImage(systemName: "minus.square"), for: .highlighted)
+        button.setImage(AppAssetsConfigs.Icons.minusNormal, for: .normal)
+        button.setImage(AppAssetsConfigs.Icons.minusHighlited, for: .highlighted)
         return button
     }()
 

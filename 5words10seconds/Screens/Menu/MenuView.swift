@@ -20,7 +20,7 @@ extension MenuViewController {
     }
     
     private func setupBackgroundView() {
-        title = "Menu"
+        title = "Game"
         
         backgroundViewUpper.backgroundColor = .purple
         backgroundViewLower.backgroundColor = .purple

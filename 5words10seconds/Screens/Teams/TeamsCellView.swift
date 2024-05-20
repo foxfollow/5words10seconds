@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 enum cellsIdentifiers: String {
     case TeamsCellView
@@ -56,7 +57,7 @@ class TeamsCellView: UITableViewCell {
         crossImg.contentMode = .scaleAspectFit
         crossImg.clipsToBounds = true
         crossImg.isUserInteractionEnabled = true
-        crossImg.setImage(UIImage(systemName: "trash.fill"), for: .normal)
+        crossImg.setImage(AppAssetsConfigs.Icons.trash, for: .normal)
 //        crossImg.tintColor = AppAssetsConfigs.Colors.buttonNeutralFull
         crossImg.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
     }
@@ -75,26 +76,28 @@ extension TeamsCellView {
 
 extension TeamsCellView {
     func setupCellConstaints() {
-        cellView.translatesAutoresizingMaskIntoConstraints = false
-        teamNameLbl.translatesAutoresizingMaskIntoConstraints = false
-        crossImg.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            // // Cell View Constraints
-            cellView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            cellView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
-            cellView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
-            cellView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),
-
-            // Team Name Label Constraints
-            teamNameLbl.leadingAnchor.constraint(equalTo: cellView.leadingAnchor, constant: 16),
-            teamNameLbl.centerYAnchor.constraint(equalTo: cellView.centerYAnchor),
-
-            // Cross Image Button Constraints
-            crossImg.leadingAnchor.constraint(equalTo: teamNameLbl.trailingAnchor, constant: 8),
-            crossImg.centerYAnchor.constraint(equalTo: cellView.centerYAnchor),
-            crossImg.trailingAnchor.constraint(equalTo: cellView.trailingAnchor, constant: -16),
-            crossImg.widthAnchor.constraint(equalTo: crossImg.heightAnchor),
-        ])
+        cellView.snp.makeConstraints { make in
+            make.leading.equalTo(contentView).offset(8)
+            make.top.equalTo(contentView).offset(4)
+            make.trailing.equalTo(contentView).offset(-8)
+            make.bottom.equalTo(contentView).offset(-4)
+        }
+        
+        teamNameLbl.snp.makeConstraints { make in
+            make.leading.equalTo(cellView).offset(16)
+            make.centerY.equalTo(cellView)
+        }
+        
+        crossImg.snp.makeConstraints { make in
+            make.leading.equalTo(teamNameLbl.snp.trailing).offset(8)
+            make.centerY.equalTo(cellView)
+            make.trailing.equalTo(cellView).offset(-16)
+            make.width.equalTo(crossImg.snp.height)
+            make.height.width.equalTo(24)
+        }
+        
+        crossImg.imageView?.snp.makeConstraints({ make in
+            make.height.width.equalTo(24)
+        })
     }
 }

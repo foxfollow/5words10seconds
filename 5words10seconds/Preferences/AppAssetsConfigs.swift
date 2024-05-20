@@ -42,6 +42,17 @@ enum AppAssetsConfigs {
                 }
             }
         }()
+        
+        static let tabBarTint: UIColor = {
+            return UIColor { traitCollection in
+                switch traitCollection.userInterfaceStyle {
+                case .dark:
+                    UIColor(hex: "#1D1D2F")
+                default:
+                    UIColor(hex: "#EAFFFC")
+                }
+            }
+        }()
                 
         static let trashTint: UIColor = UIColor(hex: "#7A008E")
         
@@ -107,6 +118,17 @@ enum AppAssetsConfigs {
             }
         }()
         
+        static let textOpositeMain: UIColor = {
+            return UIColor { traitCollection in
+                switch traitCollection.userInterfaceStyle {
+                case .dark:
+                    UIColor(hex: "#010049")
+                default:
+                    UIColor(hex: "#DADADA")
+                }
+            }
+        }()
+        
         //MARK: Storke
         static let strokeAlert: UIColor = UIColor(hex: "#686686", alpha: 0.5)
         
@@ -120,6 +142,18 @@ enum AppAssetsConfigs {
                 }
             }
         }()
-
+    }
+    
+    struct Icons {
+        static let game = UIImage(named: "gamepad")
+        static let settings = UIImage(named: "settingshand")
+        
+        static let trash = UIImage(named: "delete") //UIImage(systemName: "trash.fill")
+        
+        static let plusNormal = UIImage(systemName: "plus.circle")
+        static let plusHighlited = UIImage(systemName: "plus.square")
+        static let minusNormal = UIImage(systemName: "minus.circle")
+        static let minusHighlited = UIImage(systemName: "minus.square")
+        
     }
 }

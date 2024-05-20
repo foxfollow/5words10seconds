@@ -24,6 +24,8 @@
 		BF94BA7B2AF6B6FF0085C4ED /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA7A2AF6B6FF0085C4ED /* TimerView.swift */; };
 		BF94BA7D2AF989FC0085C4ED /* PopupViewsFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA7C2AF989FC0085C4ED /* PopupViewsFuncs.swift */; };
 		BFA4DD802B0BDDA000A44C87 /* TeamsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA4DD7F2B0BDDA000A44C87 /* TeamsCellViewModel.swift */; };
+		BFAE5E8A2BFB3A4500730E80 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE5E892BFB3A4400730E80 /* MainTabBarViewController.swift */; };
+		BFAE5E8D2BFB3AC300730E80 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE5E8C2BFB3AC300730E80 /* SetupViewController.swift */; };
 		BFBD0E8A2B67BCEF00A212B5 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD0E892B67BCEF00A212B5 /* AlertView.swift */; };
 		BFCEDFEC2BF63E6800B1A027 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEDFEB2BF63E6800B1A027 /* RootViewController.swift */; };
 		BFD820432B4F206A00785BE8 /* CloudMainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD820422B4F206A00785BE8 /* CloudMainService.swift */; };
@@ -66,6 +68,8 @@
 		BF94BA7A2AF6B6FF0085C4ED /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		BF94BA7C2AF989FC0085C4ED /* PopupViewsFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewsFuncs.swift; sourceTree = "<group>"; };
 		BFA4DD7F2B0BDDA000A44C87 /* TeamsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCellViewModel.swift; sourceTree = "<group>"; };
+		BFAE5E892BFB3A4400730E80 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		BFAE5E8C2BFB3AC300730E80 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		BFBD0E892B67BCEF00A212B5 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		BFCEDFEB2BF63E6800B1A027 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		BFD820412B4F1E4C00785BE8 /* 5words10seconds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 5words10seconds.entitlements; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 		BF0A30972AF42958004A4301 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				BFAE5E8B2BFB3AA100730E80 /* Setup */,
+				BFAE5E882BFB3A3200730E80 /* Main */,
 				BFBD0E882B67BCD300A212B5 /* Supported */,
 				BF0A30982AF42972004A4301 /* Menu */,
 				BF0A30992AF42978004A4301 /* Teams */,
@@ -168,6 +174,22 @@
 				BFE774372B989BFB0053E873 /* TeamsMiniCellView.swift */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		BFAE5E882BFB3A3200730E80 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BFAE5E892BFB3A4400730E80 /* MainTabBarViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BFAE5E8B2BFB3AA100730E80 /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				BFAE5E8C2BFB3AC300730E80 /* SetupViewController.swift */,
+			);
+			path = Setup;
 			sourceTree = "<group>";
 		};
 		BFBD0E882B67BCD300A212B5 /* Supported */ = {
@@ -382,8 +404,10 @@
 				BF28C6132B948FEE00940849 /* BlurOverlayView.swift in Sources */,
 				BFE820B52AEFD41B00B303F9 /* CategoryModel.swift in Sources */,
 				BF94BA792AF6B6ED0085C4ED /* TimerViewModel.swift in Sources */,
+				BFAE5E8A2BFB3A4500730E80 /* MainTabBarViewController.swift in Sources */,
 				BF0A309C2AF447FF004A4301 /* TeamsCellView.swift in Sources */,
 				BF0A30A02AF44F45004A4301 /* TeamsViewModel.swift in Sources */,
+				BFAE5E8D2BFB3AC300730E80 /* SetupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

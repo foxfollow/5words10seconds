@@ -39,8 +39,12 @@ extension TeamsViewController {
 
     private func setupButtons() {
         addBtn.setTitle(String(localized: "Add new"), for: .normal)
+        addBtn.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
+        addBtn.setTitleColor(AppAssetsConfigs.Colors.textOpositeMain, for: .highlighted)
         addBtn.backgroundColor = AppAssetsConfigs.Colors.buttonAccept
         endBtn.setTitle(String(localized: "Next"), for: .normal)
+        endBtn.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
+        endBtn.setTitleColor(AppAssetsConfigs.Colors.textOpositeMain, for: .highlighted)
         endBtn.backgroundColor = AppAssetsConfigs.Colors.buttonAccept
 
         view.addSubview(addBtn)
