@@ -9,6 +9,9 @@ import UIKit
 
 class SetupViewController: RootViewController {
     
+    let howToPlayButton = UIButton()
+    let feedbackButton = UIButton()
+    
     let hintLangugeTtl = UILabel()
     let languagePicker = UIPickerView()
     
@@ -16,9 +19,27 @@ class SetupViewController: RootViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupPickerSubviews()
-        setupLanguagePicker() // in SetupLanguagePickerView.swift
 
+        setupButtons()
+        setupsSubviews() // in SetupView.swift
+        setupLanguagePicker() // in SetupLanguagePickerView.swift
+        
+        addConstraints() // in SetupView.swift
+    }
+    
+    private func setupButtons() {
+        howToPlayButton.addTarget(self, action: #selector(howToPlayButtonTapped), for: .touchUpInside)
+        feedbackButton.addTarget(self, action: #selector(feedbackButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func howToPlayButtonTapped() {
+        let vc = HowToPlayViewController()
+        self.navigationController?.present(vc, animated: true)
+    }
+    
+    @objc private func feedbackButtonTapped() {
+        let vc = FeedbackViewController()
+        self.navigationController?.present(vc, animated: true)
     }
     
 }

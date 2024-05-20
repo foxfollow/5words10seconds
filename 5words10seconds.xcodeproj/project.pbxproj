@@ -27,6 +27,8 @@
 		BFAE5E8A2BFB3A4500730E80 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE5E892BFB3A4400730E80 /* MainTabBarViewController.swift */; };
 		BFAE5E8D2BFB3AC300730E80 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE5E8C2BFB3AC300730E80 /* SetupViewController.swift */; };
 		BFAE5E8F2BFB6DC300730E80 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE5E8E2BFB6DC300730E80 /* SetupView.swift */; };
+		BFAE5E932BFB7C1500730E80 /* HowToPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE5E922BFB7C1500730E80 /* HowToPlayViewController.swift */; };
+		BFAE5E962BFB7F3400730E80 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE5E952BFB7F3400730E80 /* FeedbackViewController.swift */; };
 		BFBD0E8A2B67BCEF00A212B5 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD0E892B67BCEF00A212B5 /* AlertView.swift */; };
 		BFCEDFEC2BF63E6800B1A027 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEDFEB2BF63E6800B1A027 /* RootViewController.swift */; };
 		BFD820432B4F206A00785BE8 /* CloudMainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD820422B4F206A00785BE8 /* CloudMainService.swift */; };
@@ -72,6 +74,8 @@
 		BFAE5E892BFB3A4400730E80 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		BFAE5E8C2BFB3AC300730E80 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		BFAE5E8E2BFB6DC300730E80 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		BFAE5E922BFB7C1500730E80 /* HowToPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayViewController.swift; sourceTree = "<group>"; };
+		BFAE5E952BFB7F3400730E80 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
 		BFBD0E892B67BCEF00A212B5 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		BFCEDFEB2BF63E6800B1A027 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		BFD820412B4F1E4C00785BE8 /* 5words10seconds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 5words10seconds.entitlements; sourceTree = "<group>"; };
@@ -187,12 +191,30 @@
 		BFAE5E8B2BFB3AA100730E80 /* Setup */ = {
 			isa = PBXGroup;
 			children = (
+				BFAE5E942BFB7F2B00730E80 /* Feedback */,
+				BFAE5E912BFB7C0800730E80 /* HowToPlay */,
 				BFAE5E8C2BFB3AC300730E80 /* SetupViewController.swift */,
 				BFAE5E8E2BFB6DC300730E80 /* SetupView.swift */,
 				BFE820CC2AEFE9B600B303F9 /* SetupViewModel.swift */,
 				BFEDD8F92B1F2497006C6208 /* SetupLanguagePickerView.swift */,
 			);
 			path = Setup;
+			sourceTree = "<group>";
+		};
+		BFAE5E912BFB7C0800730E80 /* HowToPlay */ = {
+			isa = PBXGroup;
+			children = (
+				BFAE5E922BFB7C1500730E80 /* HowToPlayViewController.swift */,
+			);
+			path = HowToPlay;
+			sourceTree = "<group>";
+		};
+		BFAE5E942BFB7F2B00730E80 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				BFAE5E952BFB7F3400730E80 /* FeedbackViewController.swift */,
+			);
+			path = Feedback;
 			sourceTree = "<group>";
 		};
 		BFBD0E882B67BCD300A212B5 /* Supported */ = {
@@ -379,6 +401,7 @@
 				BF94BA742AF6885E0085C4ED /* CategoryViewModel.swift in Sources */,
 				BFE820A02AEFD33F00B303F9 /* MenuViewController.swift in Sources */,
 				BFD820432B4F206A00785BE8 /* CloudMainService.swift in Sources */,
+				BFAE5E962BFB7F3400730E80 /* FeedbackViewController.swift in Sources */,
 				BFE820CB2AEFE68700B303F9 /* Service.swift in Sources */,
 				BFE820B72AEFDFD600B303F9 /* TeamModel.swift in Sources */,
 				BFE8209C2AEFD33F00B303F9 /* AppDelegate.swift in Sources */,
@@ -390,6 +413,7 @@
 				BF4448BF2B16563500999FC2 /* TestViewController.swift in Sources */,
 				BF94BA7B2AF6B6FF0085C4ED /* TimerView.swift in Sources */,
 				BF13409E2BEFBC89007DBE25 /* Extensions + UIColor.swift in Sources */,
+				BFAE5E932BFB7C1500730E80 /* HowToPlayViewController.swift in Sources */,
 				BFCEDFEC2BF63E6800B1A027 /* RootViewController.swift in Sources */,
 				BF0A309E2AF44DE9004A4301 /* TeamsTableView.swift in Sources */,
 				BFEDD8FA2B1F2497006C6208 /* SetupLanguagePickerView.swift in Sources */,

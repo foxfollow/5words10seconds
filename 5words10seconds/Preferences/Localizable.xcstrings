@@ -69,12 +69,31 @@
         }
       }
     },
+    "Feedback" : {
+
+    },
     "get + 1 point to score" : {
       "localizations" : {
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "отримує +1 бал"
+          }
+        }
+      }
+    },
+    "How to play" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This game consists of 220+ categories. The game always starts with the words \"Tell 5 words related to the category...\", followed by a word or phrase from a particular category. For example: \"Geometric shapes\". The player's task is to name 5 words that correspond to this category within 10 seconds. For example: \"Square, triangle, rectangle, circle, rhombus\".\n\nOnce you have chosen the number of teams, after pressing the Ready button, the active team has 10 seconds to name the appropriate words for the category that just appeared. If a player said five words, but someone from the players considers the answer incorrect or wrong, the players can together decide whether to accept this answer. If the active player named less than five words for the given category, he does not receive any points. A new turn begins with the next team becoming the active player.\n\nVictory:\nThe player who collects the most points becomes the winner. You can agree in advance to how many points you will play or play until the categories in the game run out."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ця гра складається з 220+ категорій. Гра завжди починаються зі слів «Розкажіть 5 слів повʼязаних з категорією…», а далі йде слово або слово сполучення тієї чи іншої категорії.\nНаприклад: «Геометричні фігури». Завдання гравця в тому, щоб за 10 секунд назвати 5 слів, які відповідають цій категорії. Наприклад: «Квадрат,\nтрикутник, прямокутник, коло, ромб». \n\nКоли ви обрали кількість команди. Після натискання на кнопку Готова - у активної команди є 10 секунд, щоб назвати відповідні слова до категорії яка щойно зʼявилася.\nЯкщо гравець сказав пʼять слів, але хтось з гравців вважає відповідь некоректною або неправильною, гравці можуть разом вирішити чи приймати дану відповідь. Якщо активний гравець назвав менше пʼяти слів на задану категорію, він не отримує ніяких балів.\nНовий хід починається з того, що активним гравцем стає наступна команда.\n\nПеремога:\nГравець, який збере найбільшу кількість балів, стає переможцем.\nВи можете заздалегідь домовитися до якої кількості балів будете грати або грати, поки не закінчаться категорії в грі."
           }
         }
       }
@@ -140,6 +159,9 @@
         }
       }
     },
+    "Rate us in AppStore" : {
+
+    },
     "Ready" : {
       "localizations" : {
         "uk" : {
@@ -161,6 +183,9 @@
       }
     },
     "Save" : {
+
+    },
+    "Send feedback to email" : {
 
     },
     "Start 3words5sec" : {
