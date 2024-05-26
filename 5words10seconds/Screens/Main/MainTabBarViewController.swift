@@ -14,12 +14,12 @@ final class MainTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.view.isMultipleTouchEnabled = false
         self.tabBar.isHidden = true
-    
     }
+    
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         contentReady()
     }
     
@@ -46,11 +46,16 @@ final class MainTabBarViewController: UITabBarController {
         setupVC.tabBarItem.image = setupBar?.resizeImage(targetSize: size)
         setupVC.tabBarItem.setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 16)], for: .normal)
 
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            let titleOffset: UIOffset = UIOffset(horizontal: 0, vertical: -24)
+            menuVC.tabBarItem.titlePositionAdjustment = titleOffset
+            setupVC.tabBarItem.titlePositionAdjustment = titleOffset
+        }
+
         self.viewControllers = [menuVC, setupVC]
     }
     
     func configureTabBar() {
-
         self.tabBar.tintColor = AppAssetsConfigs.Colors.textContrast
         self.tabBar.unselectedItemTintColor = AppAssetsConfigs.Colors.textDescription
         self.tabBar.backgroundColor = AppAssetsConfigs.Colors.tabBarTint
@@ -66,5 +71,4 @@ extension MainTabBarViewController {
         configureTabBar()
         configViewControllers()
     }
-    
 }

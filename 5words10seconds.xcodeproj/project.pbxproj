@@ -12,7 +12,7 @@
 		BF0A309E2AF44DE9004A4301 /* TeamsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A309D2AF44DE9004A4301 /* TeamsTableView.swift */; };
 		BF0A30A02AF44F45004A4301 /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A309F2AF44F45004A4301 /* TeamsViewModel.swift */; };
 		BF13409C2BEFBC10007DBE25 /* AppAssetsConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13409B2BEFBC10007DBE25 /* AppAssetsConfigs.swift */; };
-		BF13409E2BEFBC89007DBE25 /* Extensions + UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13409D2BEFBC89007DBE25 /* Extensions + UIColor.swift */; };
+		BF13409E2BEFBC89007DBE25 /* Extensions + UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF13409D2BEFBC89007DBE25 /* Extensions + UI.swift */; };
 		BF28C6132B948FEE00940849 /* BlurOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF28C6122B948FEE00940849 /* BlurOverlayView.swift */; };
 		BF28C6152B94C0AD00940849 /* AlertCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF28C6142B94C0AD00940849 /* AlertCollectionView.swift */; };
 		BF3A81342B677A780035F109 /* endringing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF3A81332B677A780035F109 /* endringing.mp3 */; };
@@ -59,7 +59,7 @@
 		BF0A309D2AF44DE9004A4301 /* TeamsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableView.swift; sourceTree = "<group>"; };
 		BF0A309F2AF44F45004A4301 /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
 		BF13409B2BEFBC10007DBE25 /* AppAssetsConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssetsConfigs.swift; sourceTree = "<group>"; };
-		BF13409D2BEFBC89007DBE25 /* Extensions + UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + UIColor.swift"; sourceTree = "<group>"; };
+		BF13409D2BEFBC89007DBE25 /* Extensions + UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + UI.swift"; sourceTree = "<group>"; };
 		BF28C6122B948FEE00940849 /* BlurOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurOverlayView.swift; sourceTree = "<group>"; };
 		BF28C6142B94C0AD00940849 /* AlertCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCollectionView.swift; sourceTree = "<group>"; };
 		BF3A81332B677A780035F109 /* endringing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = endringing.mp3; sourceTree = "<group>"; };
@@ -304,7 +304,7 @@
 				BF4448C12B1DF74700999FC2 /* Localizable.xcstrings */,
 				BFE820A92AEFD34000B303F9 /* Info.plist */,
 				BF13409B2BEFBC10007DBE25 /* AppAssetsConfigs.swift */,
-				BF13409D2BEFBC89007DBE25 /* Extensions + UIColor.swift */,
+				BF13409D2BEFBC89007DBE25 /* Extensions + UI.swift */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";
@@ -412,7 +412,7 @@
 				BFA4DD802B0BDDA000A44C87 /* TeamsCellViewModel.swift in Sources */,
 				BF4448BF2B16563500999FC2 /* TestViewController.swift in Sources */,
 				BF94BA7B2AF6B6FF0085C4ED /* TimerView.swift in Sources */,
-				BF13409E2BEFBC89007DBE25 /* Extensions + UIColor.swift in Sources */,
+				BF13409E2BEFBC89007DBE25 /* Extensions + UI.swift in Sources */,
 				BFAE5E932BFB7C1500730E80 /* HowToPlayViewController.swift in Sources */,
 				BFCEDFEC2BF63E6800B1A027 /* RootViewController.swift in Sources */,
 				BF0A309E2AF44DE9004A4301 /* TeamsTableView.swift in Sources */,
