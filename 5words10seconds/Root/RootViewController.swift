@@ -8,25 +8,39 @@
 import UIKit
 
 class RootViewController: UIViewController {
-    
-    
+    static var currentTheme: UIUserInterfaceStyle?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
-        setupBaseColor()
+        if RootViewController.currentTheme == nil {
+            RootViewController.currentTheme = traitCollection.userInterfaceStyle
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupBaseColorWithoutAnimation()
     }
 
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
 
-        if traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) {
-            setupBaseColor()
+        if traitCollection.userInterfaceStyle != RootViewController.currentTheme {
+            RootViewController.currentTheme = traitCollection.userInterfaceStyle
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                UIView.animate(withDuration: 2.5) {
+                    self.setupBaseColor()
+                }
+            }
         }
     }
+
     func setupBaseColor() {
-        view.setGradientBackground(toView: self.view, topColor: AppAssetsConfigs.Colors.backgroundTop, bottomColor: AppAssetsConfigs.Colors.backgroundBottom)
+        view.setGradientBackground(toView: view, topColor: AppAssetsConfigs.Colors.backgroundTop, bottomColor: AppAssetsConfigs.Colors.backgroundBottom)
     }
-    
-    
+
+    func setupBaseColorWithoutAnimation() {
+        view.setGradientBackgroundWithoutAnimation(toView: view, topColor: AppAssetsConfigs.Colors.backgroundTop, bottomColor: AppAssetsConfigs.Colors.backgroundBottom)
+    }
 }

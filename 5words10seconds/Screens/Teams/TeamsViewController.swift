@@ -37,9 +37,22 @@ class TeamsViewController: RootViewController {
     }
     
     private func setupButtonTargets() {
+        let backButtonImage = AppAssetsConfigs.Icons.back?.resizeImage(targetSize: CGSize(width: 24, height: 24))
+        let backButton = UIBarButtonItem(image: backButtonImage, style: .plain, target: self, action: #selector(backButtonnTapped))
+        navigationItem.leftBarButtonItem = backButton
+
         addBtn.addTarget(self, action: #selector(addTeamBtmClick), for: .touchUpInside)
         
         endBtn.addTarget(self, action: #selector(endBtnClick), for: .touchUpInside)
+    }
+    
+    @objc func backButtonnTapped() {
+        if let parentViewController = navigationController?.viewControllers.dropLast().last as? MainTabBarViewController {
+            parentViewController.menuVC.setupBaseColorWithoutAnimation()
+            parentViewController.setupVC.setupBaseColorWithoutAnimation()
+        }
+
+        navigationController?.popViewController(animated: true)
     }
     
     @objc func addTeamBtmClick() {

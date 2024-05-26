@@ -14,7 +14,7 @@ enum AppAssetsConfigs {
             return UIColor { traitCollection in
                 switch traitCollection.userInterfaceStyle {
                 case .dark:
-                    UIColor(hex: "#697D9A")
+                    UIColor(hex: "#3C495E")
                 default:
                     UIColor(hex: "#B1D0FF")
                 }
@@ -25,7 +25,7 @@ enum AppAssetsConfigs {
             return UIColor { traitCollection in
                 switch traitCollection.userInterfaceStyle {
                 case .dark:
-                    UIColor(hex: "#3C495E")
+                    UIColor(hex: "#697D9A")
                 default:
                     UIColor(hex: "#4F79B7")
                 }
@@ -147,6 +147,8 @@ enum AppAssetsConfigs {
     struct Icons {
         static let game = UIImage(named: "gamepad")
         static let settings = UIImage(named: "settingshand")
+        
+        static let back = UIImage(named: "backaction")
         
         static let trash = UIImage(named: "delete") //UIImage(systemName: "trash.fill")
         

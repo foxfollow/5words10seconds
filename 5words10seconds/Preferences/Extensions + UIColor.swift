@@ -25,36 +25,64 @@ extension UIColor {
 }
 
 extension UIView {
-
+    
     func setGradientBackground(_ toViews: UIView, topColor: UIColor, bottomColor: UIColor) {
-
-        let colorTop =  topColor.cgColor
+        
+        let colorTop = topColor.cgColor
         let colorBottom = bottomColor.cgColor
-                    
+        
         toViews.layer.sublayers?.first(where: { $0 is CAGradientLayer })?.removeFromSuperlayer()
-
+        
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop, colorBottom]
         gradientLayer.locations = [0.0, 1.0]
         gradientLayer.frame = toViews.bounds
-                
+        
         toViews.layer.addSublayer(gradientLayer)
     }
     
-    func setGradientBackground(toView: UIView, topColor: UIColor, bottomColor: UIColor) {
-
+    func setGradientBackgroundWithoutAnimation(toView: UIView, topColor: UIColor, bottomColor: UIColor) {
+        
         let colorTop =  topColor.cgColor
         let colorBottom = bottomColor.cgColor
-                    
+        
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [colorTop, colorBottom]
         gradientLayer.locations = [0.0, 1.0]
         gradientLayer.frame = toView.bounds
-                    
+        
         if let oldLayer = toView.layer.sublayers?.first(where: { $0 is CAGradientLayer }) {
             oldLayer.removeFromSuperlayer()
         }
         toView.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    func setGradientBackground(toView: UIView, topColor: UIColor, bottomColor: UIColor) {
+        let colorTop = topColor.cgColor
+        let colorBottom = bottomColor.cgColor
+        
+        let gradientLayer: CAGradientLayer
+        if let oldLayer = toView.layer.sublayers?.first(where: { $0 is CAGradientLayer }) as? CAGradientLayer {
+            gradientLayer = oldLayer
+        } else {
+            gradientLayer = CAGradientLayer()
+            toView.layer.insertSublayer(gradientLayer, at: 0)
+        }
+        
+        gradientLayer.frame = toView.bounds
+        gradientLayer.locations = [0.0, 1.0]
+        
+        let animation = CABasicAnimation(keyPath: "colors")
+        animation.fromValue = gradientLayer.colors
+        animation.toValue = [colorTop, colorBottom]
+        animation.duration = 1.0
+        
+        CATransaction.begin()
+        CATransaction.setDisableActions(true)
+        gradientLayer.colors = [colorTop, colorBottom]
+        CATransaction.commit()
+        
+        gradientLayer.add(animation, forKey: nil)
     }
 }
 

@@ -35,7 +35,7 @@ class MenuViewController: RootViewController, AVAudioPlayerDelegate {
     
     @objc func fiveTenButtonClicked() {
         let controller = TeamsViewController()
-        navigationItem.backButtonTitle = String(localized: "Back")
+//        navigationItem.backButtonTitle = String(localized: "Back")
         navigationController?.navigationBar.tintColor = AppAssetsConfigs.Colors.textMain
         navigationController?.pushViewController(controller, animated: true)
         //        present(controller, animated: true)

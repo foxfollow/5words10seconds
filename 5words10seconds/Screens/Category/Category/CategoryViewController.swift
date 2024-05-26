@@ -126,6 +126,16 @@ extension CategoryViewController {
         backButton.tintColor = AppAssetsConfigs.Colors.textMain
         navigationItem.leftBarButtonItem = backButton
     }
+    
+    private func backButtonOnQuit() {
+        if let parentViewController = navigationController?.viewControllers.first(where: { $0 is MainTabBarViewController }) as? MainTabBarViewController {
+
+            parentViewController.menuVC.setupBaseColorWithoutAnimation()
+            parentViewController.setupVC.setupBaseColorWithoutAnimation()
+        }
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
 
     @objc func backButtonTappedAlert() {
         // TODO: stop the timer
@@ -144,11 +154,11 @@ extension CategoryViewController {
         alertView.acceptButton.backgroundColor = AppAssetsConfigs.Colors.buttonReject
         alertView.acceptButton.setTitle(String(localized: "Yes"), for: .normal)
         alertView.declineButton.setTitle(String(localized: "No"), for: .normal)
-//        alertView.adjustAlertViewHeight()
         alertView.center = self.view.center
 
         alertView.acceptAction = {
-            self.navigationController?.popToRootViewController(animated: true)
+//            self.navigationController?.popToRootViewController(animated: true)
+            self.backButtonOnQuit()
         }
         
 //        alertView.declineAction = {
