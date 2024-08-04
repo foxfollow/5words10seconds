@@ -9,8 +9,9 @@ import UIKit
 
 class SetupViewController: RootViewController {
     
-    let howToPlayButton = UIButton()
-    let feedbackButton = UIButton()
+    let howToPlayButton = AditionalButton()
+    let feedbackButton = AditionalButton()
+    let donateButton = AditionalButton()
     
     let hintLangugeTtl = UILabel()
     let languagePicker = UIPickerView()

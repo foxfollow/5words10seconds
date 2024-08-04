@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "knowl512x512+r.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

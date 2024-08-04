@@ -7,21 +7,23 @@
 
 import UIKit
 import MessageUI
+import StoreKit
 
-class FeedbackViewController: RootViewController, MFMailComposeViewControllerDelegate {
-
-    let feedbackLabel = UILabel()
-    let linkToEmail = UILabel()
-    let linkToAppStore = UILabel()
+class FeedbackViewController: RootViewController {
     
+    let feedbackLabel = UILabel()
+    let linkToEmail = AditionalButton()
+    let linkToAppStore = AditionalButton()
+    let linkToShareApp = AditionalButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupFeedback()
         setupConstraints()
+        setupButtonActions()
         
-        setupLinkToEmail()
-        setupRateUs()
+        // Set the presentation controller delegate
+        self.presentationController?.delegate = self
     }
     
     func setupFeedback() {
@@ -30,26 +32,34 @@ class FeedbackViewController: RootViewController, MFMailComposeViewControllerDel
         feedbackLabel.textColor = AppAssetsConfigs.Colors.textMain
         feedbackLabel.textAlignment = .center
         
-        linkToEmail.text = String(localized: "Send feedback to email")
-        linkToEmail.font = UIFont.systemFont(ofSize: 20)
-        linkToEmail.textColor = AppAssetsConfigs.Colors.textMain
-        linkToEmail.textAlignment = .center
+        linkToEmail.setTitle(String(localized: "Send feedback to email"), for: .normal)
+        linkToEmail.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        linkToEmail.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
+        linkToEmail.titleLabel?.textAlignment = .center
         linkToEmail.backgroundColor = AppAssetsConfigs.Colors.cellBackground
         linkToEmail.layer.cornerRadius = 16
         linkToEmail.clipsToBounds = true
         
-        linkToAppStore.text = String(localized: "Rate us in AppStore")
-        linkToAppStore.font = UIFont.systemFont(ofSize: 20)
-        linkToAppStore.textColor = AppAssetsConfigs.Colors.textMain
-        linkToAppStore.textAlignment = .center
+        linkToAppStore.setTitle(String(localized: "Rate us in AppStore"), for: .normal)
+        linkToAppStore.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        linkToAppStore.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
+        linkToAppStore.titleLabel?.textAlignment = .center
         linkToAppStore.backgroundColor = AppAssetsConfigs.Colors.cellBackground
         linkToAppStore.layer.cornerRadius = 16
         linkToAppStore.clipsToBounds = true
-        linkToAppStore.isHidden = true
+        
+        linkToShareApp.setTitle(String(localized: "Share the app"), for: .normal)
+        linkToShareApp.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        linkToShareApp.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
+        linkToShareApp.titleLabel?.textAlignment = .center
+        linkToShareApp.backgroundColor = AppAssetsConfigs.Colors.cellBackground
+        linkToShareApp.layer.cornerRadius = 16
+        linkToShareApp.clipsToBounds = true
         
         view.addSubview(feedbackLabel)
         view.addSubview(linkToEmail)
         view.addSubview(linkToAppStore)
+        view.addSubview(linkToShareApp)
     }
     
     func setupConstraints() {
@@ -71,20 +81,19 @@ class FeedbackViewController: RootViewController, MFMailComposeViewControllerDel
             make.height.equalTo(50)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(padding)
         }
+        
+        linkToShareApp.snp.makeConstraints { make in
+            make.top.equalTo(linkToAppStore.snp.bottom).offset(padding)
+            make.height.equalTo(50)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(padding)
+        }
     }
     
-    func setupLinkToEmail() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(emailTapped))
-        linkToEmail.isUserInteractionEnabled = true
-        linkToEmail.addGestureRecognizer(tap)
+    private func setupButtonActions() {
+        linkToEmail.addTarget(self, action: #selector(emailTapped), for: .touchUpInside)
+        linkToAppStore.addTarget(self, action: #selector(rateUsTapped), for: .touchUpInside)
+        linkToShareApp.addTarget(self, action: #selector(shareTheAppTapped), for: .touchUpInside)
     }
-    
-    func setupRateUs() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(rateUsTapped))
-        linkToAppStore.isUserInteractionEnabled = true
-        linkToAppStore.addGestureRecognizer(tap)
-    }
-    
     
     @objc func emailTapped() {
         if MFMailComposeViewController.canSendMail() {
@@ -93,7 +102,6 @@ class FeedbackViewController: RootViewController, MFMailComposeViewControllerDel
             mail.setToRecipients(["d3f0ld@protonmail.com"]) // replace with your email
             mail.setSubject("Feedback for 5words10seconds")
             mail.setMessageBody("Here is my feedback:", isHTML: false)
-
             present(mail, animated: true)
         } else {
             // show failure alert
@@ -101,16 +109,36 @@ class FeedbackViewController: RootViewController, MFMailComposeViewControllerDel
     }
     
     @objc func rateUsTapped() {
-//        if let url = URL(string: "itms-apps://itunes.apple.com/app/idYOUR_APP_ID") { // replace with your app id
-//            if UIApplication.shared.canOpenURL(url) {
-//                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-//            }
-//        }
+        if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+            SKStoreReviewController.requestReview(in: scene)
+        }
     }
+    
+    @objc func shareTheAppTapped() {
+        guard let bunchProposeLuminousBracket = URL(string: "https://itunes.apple.com/app/id6479040398") else { return }
+        
+        let activityViewController = UIActivityViewController(activityItems: [bunchProposeLuminousBracket], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+}
 
-    // MFMailComposeViewControllerDelegate
-
+// MFMailComposeViewControllerDelegate
+extension FeedbackViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true)
+    }
+}
+
+// UIAdaptivePresentationControllerDelegate
+extension FeedbackViewController: UIAdaptivePresentationControllerDelegate {
+    
+    func presentationControllerDidAttemptToDismiss(_ presentationController: UIPresentationController) {
+        if linkToEmail.isTouchInside || linkToAppStore.isTouchInside || linkToShareApp.isTouchInside {
+            // Prevent dismissal
+        } else {
+            // Allow dismissal
+            dismiss(animated: true, completion: nil)
+        }
     }
 }

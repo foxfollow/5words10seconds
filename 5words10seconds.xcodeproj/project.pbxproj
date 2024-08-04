@@ -18,6 +18,7 @@
 		BF3A81342B677A780035F109 /* endringing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BF3A81332B677A780035F109 /* endringing.mp3 */; };
 		BF4448BF2B16563500999FC2 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4448BE2B16563500999FC2 /* TestViewController.swift */; };
 		BF4448C22B1DF74700999FC2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = BF4448C12B1DF74700999FC2 /* Localizable.xcstrings */; };
+		BF609F212C5E66BC00CA7FA2 /* AditionalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF609F202C5E66BC00CA7FA2 /* AditionalButton.swift */; };
 		BF94BA742AF6885E0085C4ED /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA732AF6885E0085C4ED /* CategoryViewModel.swift */; };
 		BF94BA762AF688800085C4ED /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA752AF688800085C4ED /* CategoryView.swift */; };
 		BF94BA792AF6B6ED0085C4ED /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF94BA782AF6B6ED0085C4ED /* TimerViewModel.swift */; };
@@ -65,6 +66,7 @@
 		BF3A81332B677A780035F109 /* endringing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = endringing.mp3; sourceTree = "<group>"; };
 		BF4448BE2B16563500999FC2 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		BF4448C12B1DF74700999FC2 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = 5words10seconds/Preferences/Localizable.xcstrings; sourceTree = SOURCE_ROOT; };
+		BF609F202C5E66BC00CA7FA2 /* AditionalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AditionalButton.swift; sourceTree = "<group>"; };
 		BF94BA732AF6885E0085C4ED /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		BF94BA752AF688800085C4ED /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		BF94BA782AF6B6ED0085C4ED /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
@@ -169,6 +171,13 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		BF609F222C5E67EE00CA7FA2 /* Donate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Donate;
+			sourceTree = "<group>";
+		};
 		BF94BA802AF991010085C4ED /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +200,8 @@
 		BFAE5E8B2BFB3AA100730E80 /* Setup */ = {
 			isa = PBXGroup;
 			children = (
+				BF609F202C5E66BC00CA7FA2 /* AditionalButton.swift */,
+				BF609F222C5E67EE00CA7FA2 /* Donate */,
 				BFAE5E942BFB7F2B00730E80 /* Feedback */,
 				BFAE5E912BFB7C0800730E80 /* HowToPlay */,
 				BFAE5E8C2BFB3AC300730E80 /* SetupViewController.swift */,
@@ -400,6 +411,7 @@
 			files = (
 				BF94BA742AF6885E0085C4ED /* CategoryViewModel.swift in Sources */,
 				BFE820A02AEFD33F00B303F9 /* MenuViewController.swift in Sources */,
+				BF609F212C5E66BC00CA7FA2 /* AditionalButton.swift in Sources */,
 				BFD820432B4F206A00785BE8 /* CloudMainService.swift in Sources */,
 				BFAE5E962BFB7F3400730E80 /* FeedbackViewController.swift in Sources */,
 				BFE820CB2AEFE68700B303F9 /* Service.swift in Sources */,
@@ -594,11 +606,12 @@
 				DEVELOPMENT_TEAM = 729B6K44G8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 5words10seconds/Preferences/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Knowl;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -626,11 +639,12 @@
 				DEVELOPMENT_TEAM = 729B6K44G8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 5words10seconds/Preferences/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Knowl;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

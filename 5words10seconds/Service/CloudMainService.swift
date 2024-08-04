@@ -146,36 +146,36 @@ extension CloudMainModel {
     }
 }
 
-extension CloudMainModel {
-    private func copyRecordsToProductionEnvironment() {
-        let container = CKContainer(identifier: "iCloud.com.d3f0ld.5words10seconds")
-        let publicDatabase = container.publicCloudDatabase
-
-        // Fetch records from the development environment
-        let predicate = NSPredicate(value: true)
-        let query = CKQuery(recordType: "CategoryModel", predicate: predicate)
-
-        publicDatabase.perform(query, inZoneWith: nil) { records, error in
-            if let error = error {
-                // Handle error
-                print("Error fetching records: \(error)")
-            } else if let records = records {
-                // Switch to the production environment
-                let productionContainer = CKContainer(identifier: "iCloud.com.d3f0ld.5words10seconds")
-                let productionDatabase = productionContainer.publicCloudDatabase
-
-                // Save records to the production environment
-                let operation = CKModifyRecordsOperation(recordsToSave: records, recordIDsToDelete: nil)
-                operation.modifyRecordsCompletionBlock = { _, _, error in
-                    if let error = error {
-                        // Handle error
-                        print("Error saving records: \(error)")
-                    } else {
-                        print("Records successfully copied to the production environment")
-                    }
-                }
-                productionDatabase.add(operation)
-            }
-        }
-    }
-}
+//extension CloudMainModel {
+//    private func copyRecordsToProductionEnvironment() {
+//        let container = CKContainer(identifier: "iCloud.com.d3f0ld.5words10seconds")
+//        let publicDatabase = container.publicCloudDatabase
+//
+//        // Fetch records from the development environment
+//        let predicate = NSPredicate(value: true)
+//        let query = CKQuery(recordType: "CategoryModel", predicate: predicate)
+//
+//        publicDatabase.perform(query, inZoneWith: nil) { records, error in
+//            if let error = error {
+//                // Handle error
+//                print("Error fetching records: \(error)")
+//            } else if let records = records {
+//                // Switch to the production environment
+//                let productionContainer = CKContainer(identifier: "iCloud.com.d3f0ld.5words10seconds")
+//                let productionDatabase = productionContainer.publicCloudDatabase
+//
+//                // Save records to the production environment
+//                let operation = CKModifyRecordsOperation(recordsToSave: records, recordIDsToDelete: nil)
+//                operation.modifyRecordsCompletionBlock = { _, _, error in
+//                    if let error = error {
+//                        // Handle error
+//                        print("Error saving records: \(error)")
+//                    } else {
+//                        print("Records successfully copied to the production environment")
+//                    }
+//                }
+//                productionDatabase.add(operation)
+//            }
+//        }
+//    }
+//}
