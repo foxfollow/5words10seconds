@@ -9,7 +9,6 @@ import Foundation
 
 class CategoryViewModel {
     var teams: ObservableObjectCustom<[TeamModel]>
-    
     var currentTeam: ObservableObjectCustom<TeamModel?> = ObservableObjectCustom(nil)
     var currentCtgr: ObservableObjectCustom<CategoryModel?> = ObservableObjectCustom(nil)
     
@@ -21,14 +20,14 @@ class CategoryViewModel {
     }
     
     func fetchCategory() {
-        // If allCategories is nil, fetch categories
         if allCategories == nil {
-            // Fetch categories from CloudKit
             Task {
                 do {
-                    try await CloudMainModel.shared.populateCategories()
-                    self.allCategories = CloudMainModel.shared.categories
-//                    self.selectRandomCategory()
+                    // Sync CloudKit to local database before fetching
+                    try await CloudKitManager.shared.syncCategories()
+                    // Fetch categories from the local database
+                    let localCategories = try await LocalDatabaseManager.shared.fetchCategories()
+                    self.allCategories = localCategories
                 } catch {
                     print("Failed to fetch categories: \(error)")
                 }
@@ -37,25 +36,7 @@ class CategoryViewModel {
             selectRandomCategory()
         }
     }
-
-    // MARK: Fetching from service
-//    func fetchCategory() {
-//        // If allCategories is nil, fetch categories
-//        if allCategories == nil {
-//            Service.shared.fetchCategories { [weak self] result in
-//                switch result {
-//                case let .success(data):
-//                    self?.allCategories = data
-//                    self?.selectRandomCategory()
-//                case let .failure(err):
-//                    print(err.localizedDescription)
-//                }
-//            }
-//        } else {
-//            selectRandomCategory()
-//        }
-//    }
-
+    
     private func selectRandomCategory() {
         guard let allCategories = allCategories, !allCategories.isEmpty else {
             currentCtgr.value = CategoryModel(name: String(localized: "No categories, sorry"), level: 0, language: .english)
@@ -69,8 +50,7 @@ class CategoryViewModel {
         self.allCategories?.remove(at: indexOfCtgr)
         currentCtgr.value = copiedCtgr
     }
-
-
+    
     func fetchCurrentTeam() {
         if currentTeam.value == nil || currentTeam.value == teams.value.last {
             currentTeam.value = teams.value.first
@@ -88,7 +68,7 @@ class CategoryViewModel {
             currentTeam.value?.score += 1
         }
     }
-        
+
     func changeScore(isIncrement: Bool, index: Int) {
         if isIncrement {
             teams.value[index].score += 1

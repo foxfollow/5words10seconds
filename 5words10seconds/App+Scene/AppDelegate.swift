@@ -14,9 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Task {
-//            await CloudMainModel.shared.addDiverseCategoriesUA()
-//            await CloudMainModel.shared.addDiverseCategoriesEN()
-//            await CloudMainModel.shared.removeAllCategories()
+//            await CloudKitManager.shared.addDiverseCategoriesUA()
+//            await CloudKitManager.shared.addDiverseCategoriesEN()
+//            await CloudKitManager.shared.removeAllCategories()
         }
         return true
     }

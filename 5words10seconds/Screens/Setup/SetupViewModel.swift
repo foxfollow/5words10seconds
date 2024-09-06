@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SupportedLanguages: String, CaseIterable {
+enum SupportedLanguages: String, CaseIterable, Codable {
     case ukrainian = "uk"
     case english = "en"
     
