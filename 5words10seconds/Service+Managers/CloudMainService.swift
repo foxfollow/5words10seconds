@@ -25,34 +25,50 @@ final class CloudKitManager {
         
         // Fetch records from CloudKit
         let result = try await dataBase.records(matching: query)
-        var cloudRecords: [CategoryModel] = []
+        var cloudRecords: [(category: CategoryModel, record: CKRecord)] = []
         
         for record in result.matchResults.compactMap({ try? $0.1.get() }) {
             if let category = CategoryModel(record: record) {
-                cloudRecords.append(category)
+                cloudRecords.append((category: category, record: record))
+            }
+        }
+
+//        cloudRecords.forEach { print($0.category.name) }
+
+        // Dictionary to track the newest category by name
+        var uniqueCategories: [String: (category: CategoryModel, record: CKRecord)] = [:]
+        var duplicates: [CKRecord.ID] = []
+        
+        // Identify duplicates in CloudKit and mark them for deletion
+        for cloudCategory in cloudRecords {
+            if let existingCategory = uniqueCategories[cloudCategory.category.name] {
+                // Compare based on modification date (newer takes priority)
+                if cloudCategory.category.modificationDate > existingCategory.category.modificationDate {
+                    duplicates.append(existingCategory.record.recordID) // Mark older record for deletion
+                    uniqueCategories[cloudCategory.category.name] = cloudCategory
+                } else {
+                    duplicates.append(cloudCategory.record.recordID) // Mark this record for deletion
+                }
+            } else {
+                uniqueCategories[cloudCategory.category.name] = cloudCategory
             }
         }
         
-        // Fetch local categories
-        var localCategories = try await localDatabase.fetchCategories()
+        // Delete duplicates from CloudKit
+        for recordID in duplicates {
+            try await dataBase.deleteRecord(withID: recordID)
+        }
         
-        // Sync categories
-        for cloudCategory in cloudRecords {
-            if let existingLocalCategory = localCategories.first(where: { $0.name == cloudCategory.name }) {
-                if existingLocalCategory.recordId != cloudCategory.recordId {
-                    // Delete older one if names match but recordId is different
-                    try await localDatabase.deleteCategory(existingLocalCategory)
-                    localCategories.removeAll(where: { $0.name == cloudCategory.name })
-                }
-            }
-            // Insert/Update the new or updated CloudKit category in the local database
-            _ = try await localDatabase.addCategory(name: cloudCategory.name, level: cloudCategory.level, language: cloudCategory.language)
+        // Sync categories from CloudKit to local database
+        for cloudCategory in uniqueCategories.values {
+            try await localDatabase.addCategory(from: cloudCategory.category)
         }
         
         // Save the final state in the local database
         try await localDatabase.save()
     }
 
+    
     // Add a new category to CloudKit
     func addCategoryToCloud(_ category: CategoryModel) async throws {
         let record = category.record
