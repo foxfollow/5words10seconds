@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            await CloudKitManager.shared.addDiverseCategoriesUA()
 //            await CloudKitManager.shared.addDiverseCategoriesEN()
 //            await CloudKitManager.shared.removeAllCategories()
+//            try? await CloudKitManager.shared.addCategoryToCloud(CategoryModel(name: "Test", level: 0, language: .english))
         }
         return true
     }

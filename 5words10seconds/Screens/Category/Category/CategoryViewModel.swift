@@ -23,8 +23,6 @@ class CategoryViewModel {
         if allCategories == nil {
             Task {
                 do {
-                    // Sync CloudKit to local database before fetching
-                    try await CloudKitManager.shared.syncCategories()
                     // Fetch categories from the local database
                     let localCategories = try await LocalDatabaseManager.shared.fetchCategories()
                     self.allCategories = localCategories

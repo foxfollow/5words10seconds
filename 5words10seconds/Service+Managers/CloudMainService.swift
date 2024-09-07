@@ -18,7 +18,6 @@ final class CloudKitManager {
         dataBase = CKContainer(identifier: "iCloud.com.d3f0ld.5words10seconds").publicCloudDatabase
     }
     
-    // Fetch categories from CloudKit and sync with local database
     func syncCategories() async throws {
         let currentLanguage = Locale.current.language.languageCode?.identifier ?? "en"
         let predicate = NSPredicate(format: "%K == %@", CategoryRecordKeys.language.rawValue, currentLanguage)
@@ -41,7 +40,7 @@ final class CloudKitManager {
         for cloudCategory in cloudRecords {
             if let existingLocalCategory = localCategories.first(where: { $0.name == cloudCategory.name }) {
                 if existingLocalCategory.recordId != cloudCategory.recordId {
-                    // If a local category with the same name but different recordId exists, delete older one
+                    // Delete older one if names match but recordId is different
                     try await localDatabase.deleteCategory(existingLocalCategory)
                     localCategories.removeAll(where: { $0.name == cloudCategory.name })
                 }
@@ -49,13 +48,16 @@ final class CloudKitManager {
             // Insert/Update the new or updated CloudKit category in the local database
             _ = try await localDatabase.addCategory(name: cloudCategory.name, level: cloudCategory.level, language: cloudCategory.language)
         }
+        
+        // Save the final state in the local database
+        try await localDatabase.save()
     }
-    
+
     // Add a new category to CloudKit
     func addCategoryToCloud(_ category: CategoryModel) async throws {
         let record = category.record
         let savedRecord = try await dataBase.save(record)
-        guard let newCategory = CategoryModel(record: savedRecord) else { return }
+        guard CategoryModel(record: savedRecord) != nil else { return }
         try await syncCategories()
     }
     

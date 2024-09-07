@@ -11,7 +11,7 @@ import CloudKit
 import SwiftData
 
 enum CategoryRecordKeys: String {
-    case type = "CategoryModel"
+    case type = "CategoryDataModel"
     case name
     case level
     case language
@@ -20,16 +20,16 @@ enum CategoryRecordKeys: String {
 @Model
 final class CategoryModel: Identifiable {
     // SwiftData requires a unique identifier
-    @Attribute(.unique) var id: UUID
-    
+    @Attribute var id: UUID = UUID() // Default value set
+
     // Optional CloudKit record ID
-    var recordId: String?
-    
+    var recordId: String? // Optional to accommodate CloudKit
+
     // Category properties
-    var name: String
-    var level: Int
-    var language: SupportedLanguages
-    
+    var name: String = "" // Default value set
+    var level: Int = 0 // Default value set
+    var language: SupportedLanguages = SupportedLanguages.english // Default value set
+
     // Initializer
     init(id: UUID = UUID(), recordId: String? = nil, name: String, level: Int, language: SupportedLanguages) {
         self.id = id
@@ -48,7 +48,7 @@ final class CategoryModel: Identifiable {
         record[CategoryRecordKeys.language.rawValue] = language.rawValue as CKRecordValue
         return record
     }
-    
+
     // Initializer to create CategoryModel from CKRecord
     convenience init?(record: CKRecord) {
         guard let idString = record["id"] as? String,
@@ -58,7 +58,7 @@ final class CategoryModel: Identifiable {
               let languageString = record[CategoryRecordKeys.language.rawValue] as? String,
               let language = SupportedLanguages(rawValue: languageString)
         else { return nil }
-        
+
         self.init(id: id, recordId: record.recordID.recordName, name: name, level: level, language: language)
     }
 }

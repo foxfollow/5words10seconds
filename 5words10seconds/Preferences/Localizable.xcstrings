@@ -139,7 +139,6 @@
       }
     },
     "No categories, sorry" : {
-      "extractionState" : "stale",
       "localizations" : {
         "uk" : {
           "stringUnit" : {
