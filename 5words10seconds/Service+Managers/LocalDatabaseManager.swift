@@ -37,7 +37,7 @@ class LocalDatabaseManager {
         let language = SupportedLanguages(rawValue: languageCode) ?? .english
         
         // Filter categories by the current language
-        categories = categories.filter { $0.language == language }
+        categories = categories.filter { $0.language == language.rawValue }
         
         // Dictionary to store the latest category by name
         var uniqueCategories: [String: CategoryModel] = [:]
@@ -72,7 +72,7 @@ class LocalDatabaseManager {
         guard let context = container?.mainContext else {
             throw NSError(domain: "LocalDatabaseManager", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to access the main context"])
         }
-        let category = CategoryModel(name: name, level: level, language: language)
+        let category = CategoryModel(name: name, level: level, language: language.rawValue)
         context.insert(category)
         return category
     }
@@ -101,4 +101,23 @@ class LocalDatabaseManager {
             try context.save()
         }
     }
+    
+    @MainActor func reloadSampleData() throws {
+        guard let context = container?.mainContext else {
+            throw NSError(domain: "LocalDatabaseManager", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to access the main context"])
+        }
+        
+        // Fetch all categories
+        let request = FetchDescriptor<CategoryModel>() // Fetch all categories
+        let categories = try context.fetch(request)
+        
+        // Delete all categories
+        for category in categories {
+            context.delete(category)
+        }
+        
+        // Save changes after adding sample data
+        try save()
+    }
+
 }

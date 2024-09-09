@@ -16,17 +16,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
         
-        let vc = MainTabBarViewController()
-        let navigationController = UINavigationController()
-        navigationController.viewControllers = [vc]
-        window?.rootViewController = navigationController
-        
         Task {
+//            await CloudKitManager.shared.addDiverseCategoriesUA()
+//            await CloudKitManager.shared.addDiverseCategoriesEN()
+            //            await CloudKitManager.shared.
+//            try await CloudKitManager.shared.addCategoryToCloud(CategoryModel(name: "Test2", level: 1, language: SupportedLanguages.english.rawValue))
+//        }
+//        Task {
+//            try LocalDatabaseManager.shared.reloadSampleData()
             do {
                 try await CloudKitManager.shared.syncCategories()
             } catch {
                 print("Failed to sync categories: \(error)")
             }
+            
+            let vc = MainTabBarViewController()
+            let navigationController = UINavigationController()
+            navigationController.viewControllers = [vc]
+            window?.rootViewController = navigationController
+ 
         }
     }
     

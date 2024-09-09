@@ -7,7 +7,7 @@
 
 import Foundation
 
-class TimerViewModel: NSObject {
+class TimerViewModel {
     var timerValue = ObservableObjectCustom<Int>(0)
     var timerDidEnd = ObservableObjectCustom<Bool>(true)
 

@@ -27,14 +27,13 @@ final class CloudKitManager {
         let result = try await dataBase.records(matching: query)
         var cloudRecords: [(category: CategoryModel, record: CKRecord)] = []
         
+        // Fetch the records and convert them to CategoryModel
         for record in result.matchResults.compactMap({ try? $0.1.get() }) {
             if let category = CategoryModel(record: record) {
                 cloudRecords.append((category: category, record: record))
             }
         }
-
-//        cloudRecords.forEach { print($0.category.name) }
-
+        
         // Dictionary to track the newest category by name
         var uniqueCategories: [String: (category: CategoryModel, record: CKRecord)] = [:]
         var duplicates: [CKRecord.ID] = []
@@ -43,7 +42,7 @@ final class CloudKitManager {
         for cloudCategory in cloudRecords {
             if let existingCategory = uniqueCategories[cloudCategory.category.name] {
                 // Compare based on modification date (newer takes priority)
-                if cloudCategory.category.modificationDate > existingCategory.category.modificationDate {
+                if cloudCategory.record.modificationDate ?? Date() > existingCategory.record.modificationDate ?? Date() {
                     duplicates.append(existingCategory.record.recordID) // Mark older record for deletion
                     uniqueCategories[cloudCategory.category.name] = cloudCategory
                 } else {
@@ -68,7 +67,6 @@ final class CloudKitManager {
         try await localDatabase.save()
     }
 
-    
     // Add a new category to CloudKit
     func addCategoryToCloud(_ category: CategoryModel) async throws {
         let record = category.record
@@ -84,7 +82,7 @@ final class CloudKitManager {
         
         record[CategoryRecordKeys.name.rawValue] = category.name
         record[CategoryRecordKeys.level.rawValue] = category.level
-        record[CategoryRecordKeys.language.rawValue] = category.language.rawValue
+        record[CategoryRecordKeys.language.rawValue] = category.language
         
         _ = try await dataBase.save(record)
         try await syncCategories()
@@ -95,5 +93,40 @@ final class CloudKitManager {
         guard let recordId = category.recordId else { return }
         try await dataBase.deleteRecord(withID: CKRecord.ID(recordName: recordId))
         try await syncCategories()
+    }
+}
+
+extension CloudKitManager {
+    func addFastCategoriesUA() async {
+        for category in diverseCategoriesUa {
+            do {
+                try await addCategoryToCloud(category)
+            } catch {
+                print("Failed to add category: \(category.name). Error: \(error)")
+            }
+        }
+        print("All UA categories added successfully")
+    }
+    
+    func addDiverseCategoriesUA() async {
+        for category in diverseCategoriesUa {
+            do {
+                try await addCategoryToCloud(category)
+            } catch {
+                print("Failed to add category: \(category.name). Error: \(error)")
+            }
+        }
+        print("All UA categories UA added successfully")
+    }
+    
+    func addDiverseCategoriesEN() async {
+        for category in diverseCategoriesEn {
+            do {
+                try await addCategoryToCloud(category)
+            } catch {
+                print("Failed to add EN category: \(category.name). Error: \(error)")
+            }
+        }
+        print("All EN categories added successfully")
     }
 }
