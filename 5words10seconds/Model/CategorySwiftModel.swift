@@ -11,7 +11,7 @@ import CloudKit
 import SwiftData
 
 enum CategoryRecordKeys: String {
-    case type = "CategoryDataModel"
+    case type = "CategorySwiftModel"
     case name
     case level
     case language

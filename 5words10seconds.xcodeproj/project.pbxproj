@@ -34,7 +34,7 @@
 		BFAE5E962BFB7F3400730E80 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAE5E952BFB7F3400730E80 /* FeedbackViewController.swift */; };
 		BFBD0E8A2B67BCEF00A212B5 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD0E892B67BCEF00A212B5 /* AlertView.swift */; };
 		BFCEDFEC2BF63E6800B1A027 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEDFEB2BF63E6800B1A027 /* RootViewController.swift */; };
-		BFD820432B4F206A00785BE8 /* CloudMainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD820422B4F206A00785BE8 /* CloudMainService.swift */; };
+		BFD820432B4F206A00785BE8 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD820422B4F206A00785BE8 /* CloudKitManager.swift */; };
 		BFE774382B989BFB0053E873 /* TeamsMiniCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE774372B989BFB0053E873 /* TeamsMiniCellView.swift */; };
 		BFE7743B2B98A0A40053E873 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BFE7743A2B98A0A40053E873 /* SnapKit */; };
 		BFE7743D2B99FD6B0053E873 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE7743C2B99FD6B0053E873 /* Assets.xcassets */; };
@@ -43,7 +43,7 @@
 		BFE820A02AEFD33F00B303F9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8209F2AEFD33F00B303F9 /* MenuViewController.swift */; };
 		BFE820A32AEFD33F00B303F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE820A12AEFD33F00B303F9 /* Main.storyboard */; };
 		BFE820A82AEFD34000B303F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE820A62AEFD34000B303F9 /* LaunchScreen.storyboard */; };
-		BFE820B52AEFD41B00B303F9 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820B42AEFD41B00B303F9 /* CategoryModel.swift */; };
+		BFE820B52AEFD41B00B303F9 /* CategorySwiftModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820B42AEFD41B00B303F9 /* CategorySwiftModel.swift */; };
 		BFE820B72AEFDFD600B303F9 /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820B62AEFDFD600B303F9 /* TeamModel.swift */; };
 		BFE820B92AEFE12C00B303F9 /* GameLevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820B82AEFE12C00B303F9 /* GameLevelModel.swift */; };
 		BFE820BB2AEFE17B00B303F9 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE820BA2AEFE17A00B303F9 /* TeamsViewController.swift */; };
@@ -85,7 +85,7 @@
 		BFBD0E892B67BCEF00A212B5 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		BFCEDFEB2BF63E6800B1A027 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		BFD820412B4F1E4C00785BE8 /* 5words10seconds.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 5words10seconds.entitlements; sourceTree = "<group>"; };
-		BFD820422B4F206A00785BE8 /* CloudMainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudMainService.swift; sourceTree = "<group>"; };
+		BFD820422B4F206A00785BE8 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		BFE774372B989BFB0053E873 /* TeamsMiniCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsMiniCellView.swift; sourceTree = "<group>"; };
 		BFE7743C2B99FD6B0053E873 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFE820982AEFD33F00B303F9 /* 5words10seconds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 5words10seconds.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +95,7 @@
 		BFE820A22AEFD33F00B303F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFE820A72AEFD34000B303F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFE820A92AEFD34000B303F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFE820B42AEFD41B00B303F9 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		BFE820B42AEFD41B00B303F9 /* CategorySwiftModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySwiftModel.swift; sourceTree = "<group>"; };
 		BFE820B62AEFDFD600B303F9 /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
 		BFE820B82AEFE12C00B303F9 /* GameLevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLevelModel.swift; sourceTree = "<group>"; };
 		BFE820BA2AEFE17A00B303F9 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
@@ -288,7 +288,7 @@
 		BFE820AF2AEFD35B00B303F9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BFE820B42AEFD41B00B303F9 /* CategoryModel.swift */,
+				BFE820B42AEFD41B00B303F9 /* CategorySwiftModel.swift */,
 				BFE820B62AEFDFD600B303F9 /* TeamModel.swift */,
 				BFE820B82AEFE12C00B303F9 /* GameLevelModel.swift */,
 				BFEDD8F72B1F0988006C6208 /* LanguageModel.swift */,
@@ -329,7 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				BFE820CA2AEFE68700B303F9 /* Service.swift */,
-				BFD820422B4F206A00785BE8 /* CloudMainService.swift */,
+				BFD820422B4F206A00785BE8 /* CloudKitManager.swift */,
 				BF2611B72C8B29B600A5F433 /* LocalDatabaseManager.swift */,
 			);
 			path = "Service+Managers";
@@ -418,7 +418,7 @@
 				BF94BA742AF6885E0085C4ED /* CategoryViewModel.swift in Sources */,
 				BFE820A02AEFD33F00B303F9 /* MenuViewController.swift in Sources */,
 				BF609F212C5E66BC00CA7FA2 /* AditionalButton.swift in Sources */,
-				BFD820432B4F206A00785BE8 /* CloudMainService.swift in Sources */,
+				BFD820432B4F206A00785BE8 /* CloudKitManager.swift in Sources */,
 				BFAE5E962BFB7F3400730E80 /* FeedbackViewController.swift in Sources */,
 				BF2611B82C8B29B600A5F433 /* LocalDatabaseManager.swift in Sources */,
 				BFE820CB2AEFE68700B303F9 /* Service.swift in Sources */,
@@ -449,7 +449,7 @@
 				BFE820BD2AEFE24A00B303F9 /* CategoryViewController.swift in Sources */,
 				BF94BA762AF688800085C4ED /* CategoryView.swift in Sources */,
 				BF28C6132B948FEE00940849 /* BlurOverlayView.swift in Sources */,
-				BFE820B52AEFD41B00B303F9 /* CategoryModel.swift in Sources */,
+				BFE820B52AEFD41B00B303F9 /* CategorySwiftModel.swift in Sources */,
 				BF94BA792AF6B6ED0085C4ED /* TimerViewModel.swift in Sources */,
 				BFAE5E8A2BFB3A4500730E80 /* MainTabBarViewController.swift in Sources */,
 				BF0A309C2AF447FF004A4301 /* TeamsCellView.swift in Sources */,

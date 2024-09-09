@@ -16,7 +16,7 @@ class LocalDatabaseManager {
     private init() {
         do {
             // Initialize the ModelContainer with the CategoryModel
-            container = try ModelContainer(for: CategoryModel.self)
+            container = try ModelContainer(for: CategorySwiftModel.self)
         } catch {
             print("Failed to initialize ModelContainer: \(error)")
             container = nil // Handle gracefully by setting container to nil
@@ -24,12 +24,12 @@ class LocalDatabaseManager {
     }
     
     // Fetch all categories and delete duplicates
-    @MainActor func fetchCategories() throws -> [CategoryModel] {
+    @MainActor func fetchCategories() throws -> [CategorySwiftModel] {
         guard let context = container?.mainContext else {
             throw NSError(domain: "LocalDatabaseManager", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to access the main context"])
         }
         
-        let request = FetchDescriptor<CategoryModel>() // Fetch all categories
+        let request = FetchDescriptor<CategorySwiftModel>() // Fetch all categories
         var categories = try context.fetch(request)
         
         // Determine the current language
@@ -40,7 +40,7 @@ class LocalDatabaseManager {
         categories = categories.filter { $0.language == language.rawValue }
         
         // Dictionary to store the latest category by name
-        var uniqueCategories: [String: CategoryModel] = [:]
+        var uniqueCategories: [String: CategorySwiftModel] = [:]
         
         // Iterate over the fetched categories
         for category in categories {
@@ -68,16 +68,16 @@ class LocalDatabaseManager {
     }
 
     // Add a new category
-    @MainActor func addCategory(name: String, level: Int, language: SupportedLanguages) throws -> CategoryModel {
+    @MainActor func addCategory(name: String, level: Int, language: SupportedLanguages) throws -> CategorySwiftModel {
         guard let context = container?.mainContext else {
             throw NSError(domain: "LocalDatabaseManager", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to access the main context"])
         }
-        let category = CategoryModel(name: name, level: level, language: language.rawValue)
+        let category = CategorySwiftModel(name: name, level: level, language: language.rawValue)
         context.insert(category)
         return category
     }
     
-    @MainActor func addCategory(from category: CategoryModel) throws {
+    @MainActor func addCategory(from category: CategorySwiftModel) throws {
         guard let context = container?.mainContext else {
             throw NSError(domain: "LocalDatabaseManager", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to access the main context"])
         }
@@ -85,7 +85,7 @@ class LocalDatabaseManager {
     }
     
     // Delete a category
-    @MainActor func deleteCategory(_ category: CategoryModel) throws {
+    @MainActor func deleteCategory(_ category: CategorySwiftModel) throws {
         guard let context = container?.mainContext else {
             throw NSError(domain: "LocalDatabaseManager", code: 1, userInfo: [NSLocalizedDescriptionKey: "Failed to access the main context"])
         }
@@ -108,7 +108,7 @@ class LocalDatabaseManager {
         }
         
         // Fetch all categories
-        let request = FetchDescriptor<CategoryModel>() // Fetch all categories
+        let request = FetchDescriptor<CategorySwiftModel>() // Fetch all categories
         let categories = try context.fetch(request)
         
         // Delete all categories

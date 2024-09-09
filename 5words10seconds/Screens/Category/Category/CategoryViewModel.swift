@@ -10,10 +10,10 @@ import Foundation
 class CategoryViewModel {
     var teams: ObservableObjectCustom<[TeamModel]>
     var currentTeam: ObservableObjectCustom<TeamModel?> = ObservableObjectCustom(nil)
-    var currentCtgr: ObservableObjectCustom<CategoryModel?> = ObservableObjectCustom(nil)
+    var currentCtgr: ObservableObjectCustom<CategorySwiftModel?> = ObservableObjectCustom(nil)
     
-    var playedCategories = [CategoryModel]()
-    var allCategories: [CategoryModel]?
+    var playedCategories = [CategorySwiftModel]()
+    var allCategories: [CategorySwiftModel]?
 
     init(teams: [TeamModel]) {
         self.teams = ObservableObjectCustom(teams)
@@ -37,7 +37,7 @@ class CategoryViewModel {
     
     private func selectRandomCategory() {
         guard let allCategories = allCategories, !allCategories.isEmpty else {
-            currentCtgr.value = CategoryModel(name: String(localized: "No categories, sorry"), level: 0, language: SupportedLanguages.english.rawValue)
+            currentCtgr.value = CategorySwiftModel(name: String(localized: "No categories, sorry"), level: 0, language: SupportedLanguages.english.rawValue)
             print("Failed to fetch Categories")
             return
         }

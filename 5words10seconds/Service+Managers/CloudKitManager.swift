@@ -25,17 +25,17 @@ final class CloudKitManager {
         
         // Fetch records from CloudKit
         let result = try await dataBase.records(matching: query)
-        var cloudRecords: [(category: CategoryModel, record: CKRecord)] = []
+        var cloudRecords: [(category: CategorySwiftModel, record: CKRecord)] = []
         
         // Fetch the records and convert them to CategoryModel
         for record in result.matchResults.compactMap({ try? $0.1.get() }) {
-            if let category = CategoryModel(record: record) {
+            if let category = CategorySwiftModel(record: record) {
                 cloudRecords.append((category: category, record: record))
             }
         }
         
         // Dictionary to track the newest category by name
-        var uniqueCategories: [String: (category: CategoryModel, record: CKRecord)] = [:]
+        var uniqueCategories: [String: (category: CategorySwiftModel, record: CKRecord)] = [:]
         var duplicates: [CKRecord.ID] = []
         
         // Identify duplicates in CloudKit and mark them for deletion
@@ -68,15 +68,15 @@ final class CloudKitManager {
     }
 
     // Add a new category to CloudKit
-    func addCategoryToCloud(_ category: CategoryModel) async throws {
+    func addCategoryToCloud(_ category: CategorySwiftModel) async throws {
         let record = category.record
         let savedRecord = try await dataBase.save(record)
-        guard CategoryModel(record: savedRecord) != nil else { return }
+        guard CategorySwiftModel(record: savedRecord) != nil else { return }
         try await syncCategories()
     }
     
     // Update an existing category in CloudKit
-    func updateCategoryInCloud(_ category: CategoryModel) async throws {
+    func updateCategoryInCloud(_ category: CategorySwiftModel) async throws {
         guard let recordId = category.recordId else { return }
         let record = try await dataBase.record(for: CKRecord.ID(recordName: recordId))
         
@@ -89,7 +89,7 @@ final class CloudKitManager {
     }
     
     // Delete a category from CloudKit and sync with local
-    func deleteCategoryFromCloud(_ category: CategoryModel) async throws {
+    func deleteCategoryFromCloud(_ category: CategorySwiftModel) async throws {
         guard let recordId = category.recordId else { return }
         try await dataBase.deleteRecord(withID: CKRecord.ID(recordName: recordId))
         try await syncCategories()

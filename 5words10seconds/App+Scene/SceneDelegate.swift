@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //            await CloudKitManager.shared.addDiverseCategoriesUA()
 //            await CloudKitManager.shared.addDiverseCategoriesEN()
             //            await CloudKitManager.shared.
-//            try await CloudKitManager.shared.addCategoryToCloud(CategoryModel(name: "Test2", level: 1, language: SupportedLanguages.english.rawValue))
+//            try await CloudKitManager.shared.addCategoryToCloud(CategorySwiftModel(name: "Test2", level: 1, language: SupportedLanguages.english.rawValue))
 //        }
 //        Task {
 //            try LocalDatabaseManager.shared.reloadSampleData()
