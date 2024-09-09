@@ -9,6 +9,7 @@ import UIKit
 import MessageUI
 import StoreKit
 
+// TODO: add buttons to Terms of Use and Privacy Policy
 class FeedbackViewController: RootViewController {
     
     let feedbackLabel = UILabel()
@@ -99,7 +100,7 @@ class FeedbackViewController: RootViewController {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setToRecipients(["d3f0ld@protonmail.com"]) // replace with your email
+            mail.setToRecipients(["d3f0ld@proton.me"]) // replace with your email
             mail.setSubject("Feedback for 5words10seconds")
             mail.setMessageBody("Here is my feedback:", isHTML: false)
             present(mail, animated: true)

@@ -1,5 +1,5 @@
-# 5words10seconds
-![from iOS 16](https://img.shields.io/badge/iOS-16+-red.svg)
+# Knowl - Words quiz | 5words10seconds
+![from iOS 17](https://img.shields.io/badge/iOS-17+-red.svg)
 ![Languages](https://img.shields.io/badge/Languages-UA%2C%20EN-brightgreen)
 
 Board game
@@ -18,6 +18,7 @@ Get the app on [TestFlight](https://testflight.apple.com/join/QVVorjMd)
 ### Features
 - Supports both English and Ukrainian languages
 - Supports dark and light themes
+- Saved data from cloud to local database - SwiftData
 - Includes instructions on how to play
 
 ### TODO in the future
@@ -27,6 +28,10 @@ Get the app on [TestFlight](https://testflight.apple.com/join/QVVorjMd)
 - Increase the game's word dictionary
 - Create an online mode to play with friends
 - Get new TODOs from the community testers
+
+## Terms of Use and Privacy Policy
+- [Terms of Use](./TermsOfUse.md)
+- [Privacy Policy](./PrivacyPolicy.md)
 
 ## License
 
