@@ -58,14 +58,28 @@ final class CloudKitManager {
             try await dataBase.deleteRecord(withID: recordID)
         }
         
-        // Sync categories from CloudKit to local database
+        // Fetch categories from local database
+        let localCategories = try await localDatabase.fetchCategories()
+        
+        // Check if there are any differences between local and cloud data
+        var cloudHasChanges = false
         for cloudCategory in uniqueCategories.values {
-            try await localDatabase.addCategory(from: cloudCategory.category)
+            if !localCategories.contains(where: { $0.name == cloudCategory.category.name }) {
+                cloudHasChanges = true
+                break
+            }
         }
         
-        // Save the final state in the local database
-        try await localDatabase.save()
+        // Sync categories from CloudKit to local database only if there are changes
+        if cloudHasChanges || localCategories.isEmpty {
+            for cloudCategory in uniqueCategories.values {
+                try await localDatabase.addCategory(from: cloudCategory.category)
+            }
+            // Save the final state in the local database
+            try await localDatabase.save()
+        }
     }
+
 
     // Add a new category to CloudKit
     func addCategoryToCloud(_ category: CategorySwiftModel) async throws {
