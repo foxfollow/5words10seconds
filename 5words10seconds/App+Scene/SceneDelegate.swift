@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
+    
+    @AppStorage("isLaunchFirstTime") private var isLaunchFirstTime = true
     
     func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options _: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -17,6 +20,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
         
         Task {
+            let currentLanguage = Locale.current.language.languageCode?.identifier ?? "en"
+            
+            if currentLanguage == "uk" {
+                UserDefaults.standard.set(["uk"], forKey: "AppleLanguages")
+            } else {
+                UserDefaults.standard.set(["en"], forKey: "AppleLanguages")
+            }
+            UserDefaults.standard.synchronize()
+
+            
 //            await CloudKitManager.shared.addDiverseCategoriesUA()
 //            await CloudKitManager.shared.addDiverseCategoriesEN()
             //            await CloudKitManager.shared.
@@ -35,6 +48,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             navigationController.viewControllers = [vc]
             window?.rootViewController = navigationController
  
+        }
+    }
+    
+    private func setupFirstLanguage() {
+        if isLaunchFirstTime {
+            let currentLanguage = Locale.current.language.languageCode?.identifier ?? "en"
+            
+            if currentLanguage == "uk" {
+                UserDefaults.standard.set(["uk"], forKey: "AppleLanguages")
+            } else {
+                UserDefaults.standard.set(["en"], forKey: "AppleLanguages")
+            }
+            UserDefaults.standard.synchronize()
+            isLaunchFirstTime = false
         }
     }
     

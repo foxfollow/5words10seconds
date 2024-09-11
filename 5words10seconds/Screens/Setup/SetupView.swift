@@ -46,7 +46,7 @@ extension SetupViewController {
         hintLangugeTtl.textAlignment = .center
         hintLangugeTtl.textColor = AppAssetsConfigs.Colors.textMain
         hintLangugeTtl.backgroundColor = AppAssetsConfigs.Colors.cellBackground
-        hintLangugeTtl.layer.cornerRadius = 16
+        hintLangugeTtl.layer.cornerRadius = 8
         hintLangugeTtl.clipsToBounds = true
         hintLangugeTtl.isHidden = true
         

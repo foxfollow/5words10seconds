@@ -43,15 +43,16 @@ class MenuViewController: RootViewController, AVAudioPlayerDelegate {
     
     @objc func threeFiveTenButtonClicked() {
         print(String(localized: "Doesn't work yet (in dev)"))
+        // obselete tests
         //        private func playEndSound() {
-        guard let url = Bundle.main.url(forResource: "endringing", withExtension: "mp3", subdirectory: "Sounds") else { print("failed sound"); return }
-        do {
-            endSoundPlayer = try AVAudioPlayer(contentsOf: url)
-            endSoundPlayer?.delegate = self
-            endSoundPlayer?.play()
-        } catch {
-            print("Failed to play end sound: \(error.localizedDescription)")
-        }
+//        guard let url = Bundle.main.url(forResource: "endringing", withExtension: "mp3", subdirectory: "Sounds") else { print("failed sound"); return }
+//        do {
+//            endSoundPlayer = try AVAudioPlayer(contentsOf: url)
+//            endSoundPlayer?.delegate = self
+//            endSoundPlayer?.play()
+//        } catch {
+//            print("Failed to play end sound: \(error.localizedDescription)")
+//        }
         //        }
     }
 

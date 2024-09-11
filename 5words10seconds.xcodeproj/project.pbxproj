@@ -167,12 +167,13 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
-		BF3A81322B6538A40035F109 /* Sounds */ = {
+		BF3A81322B6538A40035F109 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				BFE7743C2B99FD6B0053E873 /* Assets.xcassets */,
 				BF3A81332B677A780035F109 /* endringing.mp3 */,
 			);
-			path = Sounds;
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		BF609F222C5E67EE00CA7FA2 /* Donate */ = {
@@ -246,6 +247,7 @@
 		BFCEDFEA2BF63E5D00B1A027 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				BF0A30952AF4139A004A4301 /* ObservableObjectCustom.swift */,
 				BFCEDFEB2BF63E6800B1A027 /* RootViewController.swift */,
 			);
 			path = Root;
@@ -270,17 +272,15 @@
 		BFE8209A2AEFD33F00B303F9 /* 5words10seconds */ = {
 			isa = PBXGroup;
 			children = (
-				BFCEDFEA2BF63E5D00B1A027 /* Root */,
-				BF3A81322B6538A40035F109 /* Sounds */,
 				BFD820412B4F1E4C00785BE8 /* 5words10seconds.entitlements */,
-				BFE7743C2B99FD6B0053E873 /* Assets.xcassets */,
 				BFE820C62AEFE55300B303F9 /* App+Scene */,
-				BFE820C72AEFE56000B303F9 /* Storyboards */,
-				BFE820C82AEFE5AC00B303F9 /* Preferences */,
 				BFE820AF2AEFD35B00B303F9 /* Model */,
+				BFE820C82AEFE5AC00B303F9 /* Preferences */,
+				BFCEDFEA2BF63E5D00B1A027 /* Root */,
 				BF0A30972AF42958004A4301 /* Screens */,
 				BFE820C92AEFE63A00B303F9 /* Service+Managers */,
-				BF0A30952AF4139A004A4301 /* ObservableObjectCustom.swift */,
+				BF3A81322B6538A40035F109 /* Assets */,
+				BFE820C72AEFE56000B303F9 /* Storyboards */,
 			);
 			path = 5words10seconds;
 			sourceTree = "<group>";
@@ -626,7 +626,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.7.7;
+				MARKETING_VERSION = 0.7.8;
 				PRODUCT_BUNDLE_IDENTIFIER = d3f0ld.5words10seconds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -660,7 +660,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.7.7;
+				MARKETING_VERSION = 0.7.8;
 				PRODUCT_BUNDLE_IDENTIFIER = d3f0ld.5words10seconds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
