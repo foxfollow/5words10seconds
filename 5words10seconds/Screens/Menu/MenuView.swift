@@ -31,13 +31,15 @@ extension MenuViewController {
     // MARK: Menu buttons
     private func setupButtonsView() {
         game5w10sBtn.setTitle(String(localized: "Start 5words10sec"), for: .normal)
-        game3w5sBtn.setTitle(String(localized: "Start 3words5sec") + "\nSorry, did released yet", for: .normal)
+        game3w5sBtn.setTitle(String(localized: "Start 3words5sec") + "\n" + String(localized: "Doesn't work yet (in dev)"), for: .normal)
         
+        game5w10sBtn.titleLabel?.textAlignment = .center
+        game3w5sBtn.titleLabel?.textAlignment = .center
         game5w10sBtn.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
         game3w5sBtn.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
         game5w10sBtn.setTitleColor(.purple, for: .highlighted)
-        game5w10sBtn.titleLabel?.numberOfLines = 2
-        game3w5sBtn.titleLabel?.numberOfLines = 2
+        game5w10sBtn.titleLabel?.numberOfLines = 3
+        game3w5sBtn.titleLabel?.numberOfLines = 3
         game5w10sBtn.backgroundColor = AppAssetsConfigs.Colors.cellBackground
         game3w5sBtn.backgroundColor = AppAssetsConfigs.Colors.cellBackground
         game5w10sBtn.layer.cornerRadius = 16

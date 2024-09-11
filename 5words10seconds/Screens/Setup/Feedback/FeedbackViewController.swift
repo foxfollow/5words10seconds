@@ -9,13 +9,13 @@ import UIKit
 import MessageUI
 import StoreKit
 
-// TODO: add buttons to Terms of Use and Privacy Policy
 class FeedbackViewController: RootViewController {
     
     let feedbackLabel = UILabel()
     let linkToEmail = AditionalButton()
     let linkToAppStore = AditionalButton()
     let linkToShareApp = AditionalButton()
+    let linkToGitHub = AditionalButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +37,7 @@ class FeedbackViewController: RootViewController {
         linkToEmail.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         linkToEmail.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
         linkToEmail.titleLabel?.textAlignment = .center
+        linkToEmail.titleLabel?.numberOfLines = 2
         linkToEmail.backgroundColor = AppAssetsConfigs.Colors.cellBackground
         linkToEmail.layer.cornerRadius = 16
         linkToEmail.clipsToBounds = true
@@ -57,14 +58,24 @@ class FeedbackViewController: RootViewController {
         linkToShareApp.layer.cornerRadius = 16
         linkToShareApp.clipsToBounds = true
         
+        linkToGitHub.setTitle(String(localized: "View on GitHub"), for: .normal)
+        linkToGitHub.titleLabel?.font = UIFont.systemFont(ofSize: 20)
+        linkToGitHub.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
+        linkToGitHub.titleLabel?.textAlignment = .center
+        linkToGitHub.backgroundColor = AppAssetsConfigs.Colors.cellBackground
+        linkToGitHub.layer.cornerRadius = 16
+        linkToGitHub.clipsToBounds = true
+        
         view.addSubview(feedbackLabel)
         view.addSubview(linkToEmail)
         view.addSubview(linkToAppStore)
         view.addSubview(linkToShareApp)
+        view.addSubview(linkToGitHub)
     }
     
     func setupConstraints() {
         let padding: CGFloat = 20
+        let cellHeight: CGFloat = 68
         
         feedbackLabel.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(padding * 2)
@@ -73,19 +84,25 @@ class FeedbackViewController: RootViewController {
         
         linkToEmail.snp.makeConstraints { make in
             make.top.equalTo(feedbackLabel.snp.bottom).offset(padding)
-            make.height.equalTo(50)
+            make.height.equalTo(cellHeight)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(padding)
         }
         
         linkToAppStore.snp.makeConstraints { make in
             make.top.equalTo(linkToEmail.snp.bottom).offset(padding)
-            make.height.equalTo(50)
+            make.height.equalTo(cellHeight)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(padding)
         }
         
         linkToShareApp.snp.makeConstraints { make in
             make.top.equalTo(linkToAppStore.snp.bottom).offset(padding)
-            make.height.equalTo(50)
+            make.height.equalTo(cellHeight)
+            make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(padding)
+        }
+        
+        linkToGitHub.snp.makeConstraints { make in
+            make.top.equalTo(linkToShareApp.snp.bottom).offset(padding)
+            make.height.equalTo(cellHeight)
             make.leading.trailing.equalTo(view.safeAreaLayoutGuide).inset(padding)
         }
     }
@@ -94,13 +111,14 @@ class FeedbackViewController: RootViewController {
         linkToEmail.addTarget(self, action: #selector(emailTapped), for: .touchUpInside)
         linkToAppStore.addTarget(self, action: #selector(rateUsTapped), for: .touchUpInside)
         linkToShareApp.addTarget(self, action: #selector(shareTheAppTapped), for: .touchUpInside)
+        linkToGitHub.addTarget(self, action: #selector(githubTapped), for: .touchUpInside)
     }
     
     @objc func emailTapped() {
         if MFMailComposeViewController.canSendMail() {
             let mail = MFMailComposeViewController()
             mail.mailComposeDelegate = self
-            mail.setToRecipients(["d3f0ld@proton.me"]) // replace with your email
+            mail.setToRecipients(["d3f0ld@proton.me"])
             mail.setSubject("Feedback for 5words10seconds")
             mail.setMessageBody("Here is my feedback:", isHTML: false)
             present(mail, animated: true)
@@ -122,6 +140,12 @@ class FeedbackViewController: RootViewController {
         activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
         self.present(activityViewController, animated: true, completion: nil)
     }
+    
+    @objc func githubTapped() {
+        guard let url = URL(string: "https://github.com/foxfollow/5words10seconds") else { return }
+        UIApplication.shared.open(url)
+    }
+                            
 }
 
 // MFMailComposeViewControllerDelegate

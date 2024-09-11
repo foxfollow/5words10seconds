@@ -17,7 +17,7 @@ extension SetupViewController {
     }
     
     private func setupFeedbacks() {
-        feedbackButton.setTitle("Feedback", for: .normal)
+        feedbackButton.setTitle(String(localized: "Feedback"), for: .normal)
         feedbackButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         feedbackButton.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
         feedbackButton.backgroundColor = AppAssetsConfigs.Colors.cellBackground
@@ -28,7 +28,7 @@ extension SetupViewController {
     }
     
     private func setupHowToPlay() {
-        howToPlayButton.setTitle("How to play", for: .normal)
+        howToPlayButton.setTitle(String(localized: "How to play title"), for: .normal)
         howToPlayButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
         howToPlayButton.setTitleColor(AppAssetsConfigs.Colors.textMain, for: .normal)
         howToPlayButton.backgroundColor = AppAssetsConfigs.Colors.cellBackground

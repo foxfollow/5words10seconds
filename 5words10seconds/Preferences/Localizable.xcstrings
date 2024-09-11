@@ -25,6 +25,12 @@
     "Back" : {
       "extractionState" : "manual",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -45,10 +51,16 @@
     },
     "Doesn't work yet (in dev)" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sorry, it's not working yet. \nIn development"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Перепрошуємо, поки не працює, в розробці"
+            "value" : "Перепрошуємо, поки що не працює. \nВ розробці"
           }
         }
       }
@@ -70,10 +82,29 @@
       }
     },
     "Feedback" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feedback"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зворотній зв'язок"
+          }
+        }
+      }
     },
     "get + 1 point to score" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "get + 1 point to score"
+          }
+        },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
@@ -87,13 +118,23 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "This game consists of 220+ categories. The game always starts with the words \"Tell 5 words related to the category...\", followed by a word or phrase from a particular category. For example: \"Geometric shapes\". The player's task is to name 5 words that correspond to this category within 10 seconds. For example: \"Square, triangle, rectangle, circle, rhombus\".\n\nOnce you have chosen the number of teams, after pressing the Ready button, the active team has 10 seconds to name the appropriate words for the category that just appeared. If a player said five words, but someone from the players considers the answer incorrect or wrong, the players can together decide whether to accept this answer. If the active player named less than five words for the given category, he does not receive any points. A new turn begins with the next team becoming the active player.\n\nVictory:\nThe player who collects the most points becomes the winner. You can agree in advance to how many points you will play or play until the categories in the game run out."
+            "value" : "This game consists of 220+ categories. The game always starts with the words, \"Name 5 words related to the category...\", followed by a word or phrase from a particular category. For example: \"Geometric shapes.\" The player's task is to name 5 words that correspond to this category within 10 seconds. For example: \"Square, triangle, rectangle, circle, rhombus.\"\n\nOnce you have chosen the number of teams, after pressing the \"Ready\" button, the active team has 10 seconds to name the appropriate words for the category that just appeared. If a player names five words, but someone from the group considers the answer incorrect, the players can decide together whether to accept it. If the active player names fewer than five words for the given category, they do not receive any points. A new turn begins with the next team becoming the active player.\n\nVictory: The player who collects the most points becomes the winner. You can agree in advance on how many points to play to, or play until the categories in the game run out.\n"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ця гра складається з 220+ категорій. Гра завжди починаються зі слів «Розкажіть 5 слів повʼязаних з категорією…», а далі йде слово або слово сполучення тієї чи іншої категорії.\nНаприклад: «Геометричні фігури». Завдання гравця в тому, щоб за 10 секунд назвати 5 слів, які відповідають цій категорії. Наприклад: «Квадрат,\nтрикутник, прямокутник, коло, ромб». \n\nКоли ви обрали кількість команди. Після натискання на кнопку Готова - у активної команди є 10 секунд, щоб назвати відповідні слова до категорії яка щойно зʼявилася.\nЯкщо гравець сказав пʼять слів, але хтось з гравців вважає відповідь некоректною або неправильною, гравці можуть разом вирішити чи приймати дану відповідь. Якщо активний гравець назвав менше пʼяти слів на задану категорію, він не отримує ніяких балів.\nНовий хід починається з того, що активним гравцем стає наступна команда.\n\nПеремога:\nГравець, який збере найбільшу кількість балів, стає переможцем.\nВи можете заздалегідь домовитися до якої кількості балів будете грати або грати, поки не закінчаться категорії в грі."
+            "value" : "Ця гра складається з 220+ категорій. Гра завжди починається зі слів: \"Назвіть 5 слів, що стосуються категорії...\", за якими йде слово або фраза з певної категорії. Наприклад: \"Геометричні фігури\". Завдання гравця – назвати 5 слів, які відповідають цій категорії, за 10 секунд. Наприклад: \"Квадрат, трикутник, прямокутник, коло, ромб.\"\n\nПісля вибору кількості команд, натиснувши кнопку \"Готово\", активна команда має 10 секунд, щоб назвати відповідні слова до категорії, яка щойно з’явилася. Якщо гравець назвав п'ять слів, але хтось із гравців вважає відповідь неправильною, вони можуть разом вирішити, чи прийняти відповідь. Якщо активний гравець назвав менше ніж п'ять слів у даній категорії, він не отримує жодних балів. Наступний хід починається з того, що інша команда стає активною.\n\nПеремога: Гравець, який набере найбільшу кількість балів, стає переможцем. Ви можете заздалегідь домовитися, до якої кількості балів грати, або грати, поки не закінчаться категорії в грі.\n"
+          }
+        }
+      }
+    },
+    "How to play title" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Як грати"
           }
         }
       }
@@ -160,7 +201,14 @@
       }
     },
     "Rate us in AppStore" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оцініть нас в AppStore"
+          }
+        }
+      }
     },
     "Ready" : {
       "localizations" : {
@@ -183,13 +231,34 @@
       }
     },
     "Save" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зберегти"
+          }
+        }
+      }
     },
     "Send feedback to email" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Надіслати відгук на\nелектронну пошту"
+          }
+        }
+      }
     },
     "Share the app" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поділіться додатком"
+          }
+        }
+      }
     },
     "Start 3words5sec" : {
       "extractionState" : "manual",
@@ -277,6 +346,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Українська"
+          }
+        }
+      }
+    },
+    "View on GitHub" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Переглянути на GitHub"
           }
         }
       }

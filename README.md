@@ -29,8 +29,15 @@ Get the app on [TestFlight](https://testflight.apple.com/join/QVVorjMd)
 - Create an online mode to play with friends
 - Get new TODOs from the community testers
 
-## Terms of Use and Privacy Policy
+## Support
+
+### How to play
+- [How to play](./HowToPlay.md)
+
+### Terms of Use
 - [Terms of Use](./TermsOfUse.md)
+
+### Privacy Policy
 - [Privacy Policy](./PrivacyPolicy.md)
 
 ## License

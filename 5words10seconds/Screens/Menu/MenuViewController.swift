@@ -10,7 +10,7 @@ import AVFoundation
 
 class MenuViewController: RootViewController, AVAudioPlayerDelegate {
 
-    let game5w10sBtn = UIButton()
+    let game5w10sBtn = AditionalButton()
     let game3w5sBtn = UIButton()
 
     let backgroundViewUpper = UIView()

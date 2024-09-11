@@ -626,7 +626,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.7.6;
+				MARKETING_VERSION = 0.7.7;
 				PRODUCT_BUNDLE_IDENTIFIER = d3f0ld.5words10seconds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -660,7 +660,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.7.6;
+				MARKETING_VERSION = 0.7.7;
 				PRODUCT_BUNDLE_IDENTIFIER = d3f0ld.5words10seconds;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
